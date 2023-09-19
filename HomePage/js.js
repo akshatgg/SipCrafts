@@ -1,4 +1,4 @@
-function fun(){
-    var dis = document.querySelector(".login_page");
+// function fun(){
+//     var dis = document.querySelector(".login_page");
     
-}
+// }

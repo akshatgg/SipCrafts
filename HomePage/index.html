@@ -5,24 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sip Crafts</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/d0e69c3701.js" crossorigin="anonymous"></script>
+    <style>
+        /* Add CSS styles for the pop-up container */
+        .popup-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 999;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
+
     <div class="nav">
         <img src="./assest/WhatsApp Image 2023-09-18 at 11.30.26 PM.jpeg" class="logo"/>
-     <ul class="info">
-        <li>About</li>
-        <li>Contact</li>
-        <li>FAQs</li>
-
-     </ul>
-         
-        <button class="btn" onclick="fun()">Login</button>
-     
+        <ul class="info">
+            <li class="hov">About</li>
+            <li class="hov">Contact</li>
+            <li class="hov">FAQs</li>
+        </ul>
+        <button class="btn" onclick="showPopup()">Login</button>
     </div>
 
-    <div class="login_page" >
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis?
+    <div class="popup-container" id="loginPopup">
+        <div class="container">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h1>Sign up</h1>
+            <form>
+                <div class="input-group">
+                    <div class="input-field">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="name">
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="email" placeholder="Email">
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="password" placeholder="Password">
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
-    
+
+    <!-- JavaScript code -->
+    <script>
+        // Function to show the login pop-up
+        function showPopup() {
+            var loginPopup = document.getElementById('loginPopup');
+            loginPopup.style.display = 'block';
+        }
+
+        // Function to close the login pop-up
+        function closePopup() {
+            var loginPopup = document.getElementById('loginPopup');
+            loginPopup.style.display = 'none';
+        }
+
+        // Automatically show the login pop-up when the page loads
+        window.onload = showPopup;
+    </script>
 </body>
 </html>
