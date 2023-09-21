@@ -55,24 +55,24 @@
     <div class="popup-container" id="loginPopup">
         <div class="container">
             <span class="close-btn" onclick="closePopup()" >&times;</span>
-            <h1>Sign up</h1>
+            <h1 id="title">Sign up</h1>
             <br>
             <form>
                 <br>
                 <br>
                 <br>
                 <div class="input-group">
-                    <div class="input-field">
+                    <div class="input-field" id="firstN">
                         <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="Name">
+                        <input type="text" placeholder="Name"  >
                     </div>
 
-                    <div class="input-field">
+                    <div class="input-field" id="lastN">
                         <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="Last name">
+                        <input type="text" placeholder="Last name" >
                     </div>
                     
-                    <div class="input-field">
+                    <div class="input-field" >
                         <i class="fa-solid fa-user"></i>
                         <input type="email" placeholder="Email">
                     </div>
@@ -82,18 +82,19 @@
                         <input  type="password" placeholder="Password">
                     </div>
                     <div>
-                        <p>Lost Pssword <a href="#">Click here</a></p>
+                        <p>Lost Pssword <a href="#">Click here</a></p>  
                     </div>
                     <div class="button">
-                    <button>
+                    <button id="signupbtn" onclick="setup()">
                         Sign up
                     </button>
-                    <button>
+                    <button id="signinbtn" onclick="setup()">
                         Sign in
                     </button>
                     </div>
                 </div>
             </form>
+            
         </div>
     </div>
     
