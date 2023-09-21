@@ -25,23 +25,21 @@ let login=true;
 // login=!login;
 // }
 
-function setup(){
-    signinbtn.addEventListener("click",()=>{login=true})
-    signupbtn.addEventListener("click",()=>{login=false})
-    console.log(login);
-    if(login==true){
-
-title.innerText="Sign in";
-firstN.style.display='none';
-lastN.style.display='none';
-}
-else
-{
-    firstN.style.display='block';
-lastN.style.display='block';
-    title.innerText="Sign Up"
-}
+function setup() {
+    signinbtn.addEventListener("click", () => {
+        login = true;
+        title.innerText = "Sign in";
+        firstN.style.display = 'none';
+        lastN.style.display = 'none';
+    });
 // changelogin();
+    signupbtn.addEventListener("click", () => {
+        login = false;
+        title.innerText = "Sign Up";
+        firstN.style.display = 'block';
+        lastN.style.display = 'block';
+    });
 }
+
 
 
