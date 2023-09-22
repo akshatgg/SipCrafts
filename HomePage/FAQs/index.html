@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/d0e69c3701.js" crossorigin="anonymous"></script>
+
+    <style>
+        /* Add CSS styles for the pop-up container */
+        .popup-container {
+        display: none;
+        position: fixed;
+        top: 10px;
+        left: 1px;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        
+    }
+    
+    .container {
+        position: absolute;
+        top: 100px;
+        left: 30px;
+        background-color: white;
+        padding: 20px;
+        text-align: center;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <img src="../assest/WhatsApp Image 2023-09-18 at 11.30.26 PM.jpeg" class="logo"/>
+        <ul class="info">
+            <li class="hov">About</li>
+            <li class="hov">Contact</li>
+            <li class="hov">FAQs</li>
+        </ul>
+        <button class="btn" onclick="showPopup()">Login</button>
+    </div>
+
+    <div class="popup-container" id="loginPopup">
+        <div class="container">
+            <span class="close-btn" onclick="closePopup()" >&times;</span>
+            <h1 id="title">Sign up</h1>
+            <br>
+            <form>
+                <br>
+                <br>
+                <br>
+                <div class="input-group">
+                    <div class="input-field" id="firstN">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Name"  >
+                    </div>
+
+
+                    <div class="input-field" id="lastN">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Last name" >
+                    </div>
+                    
+                    <div class="input-field" >
+                        <i class="fa-solid fa-user"></i>
+                        <input type="email" placeholder="Email">
+                    </div>
+                    
+                    <div class="input-field">
+                        <i class="fa-solid fa-user"></i>
+                        <input  type="password" placeholder="Password">
+                    </div>
+                    <div>
+                        <p>Lost Pssword <a href="#">Click here</a></p>  
+                    </div>
+                    <div class="button">
+                    <button id="signupbtn" onclick="setup()">
+                        Sign up
+                    </button>
+                    <button id="signinbtn" onclick="setup()">
+                        Sign in
+                    </button>
+                    </div>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+    
+    <script src="./script.js"></script>
+    
+</body>
+</html>
