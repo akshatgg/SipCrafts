@@ -45,16 +45,17 @@
     <div class="nav">
         <img src="./assest/WhatsApp Image 2023-09-18 at 11.30.26 PM.jpeg" class="logo"/>
         <ul class="info">
-            <li class="hov">About</li>
-            <li class="hov">Contact</li>
-            <li class="hov"><a href="./FAQs/index.html">FAQs</a></li>
+            <li class="hov">Home</li>           
+            <li>About</li>
+            <li>Contact</li>
+            <li><a href="./FAQs/index.html">FAQs</a></li>
         </ul>
         <button class="btn" onclick="showPopup()">Login</button>
     </div>
 
     <div class="popup-container" id="loginPopup">
         <div class="container">
-            <span class="close-btn" onclick="closePopup()" >&times;</span>
+            <span class="close-btn" onclick="closePopup()">&times;</span>
             <h1 id="title">Sign up</h1>
             <br>
             <form>
@@ -62,40 +63,32 @@
                 <br>
                 <br>
                 <div class="input-group">
+                    <div class="button">
+                        <button id="signupbtn">Sign up</button>
+                        <button id="signinbtn">Sign in</button>
+                    </div>
                     <div class="input-field" id="firstN">
                         <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="Name"  >
+                        <input type="text" placeholder="Name">
                     </div>
-
-
                     <div class="input-field" id="lastN">
                         <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="Last name" >
+                        <input type="text" placeholder="Last name">
                     </div>
-                    
-                    <div class="input-field" >
+                    <div class="input-field">
                         <i class="fa-solid fa-user"></i>
                         <input type="email" placeholder="Email">
                     </div>
-                    
                     <div class="input-field">
                         <i class="fa-solid fa-user"></i>
-                        <input  type="password" placeholder="Password">
+                        <input type="password" placeholder="Password">
                     </div>
                     <div>
-                        <p>Lost Pssword <a href="#">Click here</a></p>  
+                        <p>Lost Password <a href="#">Click here</a></p>  
                     </div>
-                    <div class="button">
-                    <button id="signupbtn" onclick="setup()">
-                        Sign up
-                    </button>
-                    <button id="signinbtn" onclick="setup()">
-                        Sign in
-                    </button>
-                    </div>
+                    <button class="submit" id="Login">Register</button>
                 </div>
             </form>
-            
         </div>
     </div>
     

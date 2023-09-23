@@ -33,7 +33,7 @@ body {
     text-decoration: none;
     list-style: none;
     margin-top: 32px;
-    margin-left: 470px;
+    margin-left: 400px;
     
 
 }
@@ -41,7 +41,7 @@ body {
     height: 52px;
     width: 143px;
     margin-top: 25px;
-    margin-left: 515px;
+    margin-left: 480px;
     font-size: 26px;
     font-weight: bold;
     border-radius: 10px;
@@ -59,12 +59,7 @@ body {
     width:700px;
     background-color: #fff;
 }
-.hov{
-    transition: transform 0.5s;
-}
-.hov:hover{
-    transform:scale(1.1);
-}
+
 .container{
     display: flex;
     justify-content: center;
@@ -90,6 +85,14 @@ p1{
     color: rgb(84, 84, 84);
     margin-left:285px;
 
+}
+a{
+    /* text-decoration: none; */
+    color: #ede0e3;
+   text-decoration: none;
+}
+.hov {
+    color: gray;
 }
 
 
