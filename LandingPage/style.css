@@ -39,6 +39,7 @@ border-radius: 20px;
 }
 
 
+
 .content .title{
     display: flex;
     justify-content: center;
@@ -139,7 +140,7 @@ body {
     height: 100vh;
 }
 .nav{
-    background-color: black;
+    background-color: linear-gradient(to top right,#CC64A2,#5c3075);;
     height: 100px;
     display: flex;
     
@@ -202,10 +203,11 @@ a{
     /* text-decoration: none; */
     color: #ede0e3;
    text-decoration: none;
+   font-weight: 1000;
 }
 .hov {
     
-    color: rgb(133, 130, 130);
+    color: rgb(242, 238, 238);
 }
 
 
@@ -217,6 +219,29 @@ a{
 
 
 
+/* Style for the list items */
+.des {
+    position: relative;
+    list-style: none; /* Remove default list bullet */
+}
+
+/* Create the small block */
+.des::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px; /* Adjust the height as needed */
+    bottom: 0;
+    left: 0;
+    background-color: #d7a4f0; /* Color of the block */
+    transition: width 0.3s ease-in-out;
+    transform-origin: left; /* Make the block expand from the left */
+}
+
+/* Show the block when hovering over the list item */
+.des:hover::before {
+    width: 100%; /* Expand to 100% width on hover */
+}
 
 
 
