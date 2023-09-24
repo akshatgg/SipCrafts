@@ -67,3 +67,13 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+
+
+
+
+
+
+let product=[...document.querySelectorAll('.scrolling')]
+let aftbtn=[...document.querySelectorAll('.nextbtn')]
+let prebtn=[...document.querySelectorAll('prebtn')]

@@ -245,3 +245,63 @@ a{
 
 
 
+
+
+
+
+.advertise{
+    margin-top: 50px;
+    margin-left: 0px;
+}
+.offer{
+    display: flex;  
+    align-items: center;
+}
+.prebtn,
+.aftbtn{
+    border: none;
+  background:linear-gradient(to top right,#CC64A2,#5c3075);
+cursor: pointer;
+}
+.prebtn i,
+.aftbtn i{
+    
+    opacity: 0.5;
+    transition: transform 0.4s;
+    font-size: 3em;
+
+}
+.prebtn:hover i,
+.aftbtn:hover i{
+    opacity: 1;
+    transform: scale(1.1);
+}
+.prebtn{
+    position: absolute;
+    left:0;
+}
+.aftbtn{
+    position: absolute;
+    right: 0;
+}
+.image{
+    margin-left: 45px;
+}
+.scrolling{
+    display: flex;
+    
+}
+.scrolling {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.scrolling img {
+    display: inline-block;
+    margin-right: 20px; /* Adjust the spacing between ads as needed */
+    transition: transform 1s ease-in-out;
+}
+
+
+
