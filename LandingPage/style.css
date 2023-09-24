@@ -24,6 +24,7 @@ grid-gap: 20px;
 .item .imag img{
     height: 250px;
     transition: transform 0.2s; 
+    
 }
 
 .item .imag img:hover{

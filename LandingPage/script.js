@@ -87,8 +87,22 @@ product.forEach((item,i)=>
 
     aftbtn[i].addEventListener('click',()=>{
         item.scrollLeft += containerwidth;
+        
     })
     prebtn[i].addEventListener('click',()=>{
         item.scrollLeft -= containerwidth;
     })
+    
+    function scrollToNextImage() {
+        item.scrollLeft += containerwidth;
+    }
+
+    // Function to scroll to the next image every 5 seconds
+    function autoSlide() {
+        setInterval(scrollToNextImage, 7000); // 5000 milliseconds (5 seconds)
+        
+    }
+
+    autoSlide();
+    
 })
