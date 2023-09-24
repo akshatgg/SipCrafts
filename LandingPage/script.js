@@ -75,5 +75,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 let product=[...document.querySelectorAll('.scrolling')]
-let aftbtn=[...document.querySelectorAll('.nextbtn')]
-let prebtn=[...document.querySelectorAll('prebtn')]
+let aftbtn=[...document.querySelectorAll('.aftbtn')]
+let prebtn=[...document.querySelectorAll('.prebtn')]
+
+
+product.forEach((item,i)=>
+{
+    let containerdimension=item.getBoundingClientRect();
+    let containerwidth=containerdimension.width;
+
+
+    aftbtn[i].addEventListener('click',()=>{
+        item.scrollLeft += containerwidth;
+    })
+    prebtn[i].addEventListener('click',()=>{
+        item.scrollLeft -= containerwidth;
+    })
+})

@@ -302,6 +302,9 @@ cursor: pointer;
     margin-right: 20px; /* Adjust the spacing between ads as needed */
     transition: transform 1s ease-in-out;
 }
+.scrolling {
+    scroll-behavior: smooth;
+}
 
 
 
