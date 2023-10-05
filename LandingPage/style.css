@@ -5,10 +5,11 @@
 
 body{
     background-image: linear-gradient(to top right,#CC64A2,#5c3075);
-    min-height: 1000vh;
+    min-height: 200vh;
     font-family: 'Poppins', sans-serif;
 }
 .container{
+
     height: 1000px;
     width:900px;
     margin-left: 550px;
@@ -24,6 +25,7 @@ grid-gap: 20px;
 .item .imag img{
     height: 250px;
     transition: transform 0.2s; 
+    
     
 }
 
@@ -308,4 +310,66 @@ cursor: pointer;
 }
 
 
+
+
+
+
+
+.footer {
+    background-color: #371b3d;
+    color: #fff;
+    /* text-align: center; */
+
+    margin-top: 410px;
+    padding-top: 0px;
+}
+.reserved{
+    margin-left: 900px;
+    /* margin-bottom: 50px; */
+    position: relative;
+    top: -10px;
+   
+}
+.footlogo{
+   position: relative;
+   top: 12px;
+}
+
+.grid{
+    
+    list-style-type: none;
+    text-decoration: none;
+    display: grid;
+    grid-template-rows: repeat(3,25px);
+    margin-left:1700px ;
+}
+.icon{
+    margin-left: 1000px;
+    
+    
+}
+.icon i{
+    margin-right: 10px;
+}
+
+/* Define the animation keyframes */
+@keyframes beat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Apply the animation to the element */
+.fa-beat-fade {
+    animation: beat-fade 0.5s infinite; /* Adjust the animation duration and other properties as needed */
+    transform-origin: center; /* Optional: Set the transform origin to the center for a better effect */
+}
+
+/* Pause the animation when not hovering */
+.fa-beat-fade:not(:hover) {
+    animation-play-state: paused;
+}
+.touch{
+    font-size: 20px;
+}
 

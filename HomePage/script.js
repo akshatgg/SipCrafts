@@ -18,30 +18,32 @@ var lastN = document.getElementById("lastN");
 var loginbutton=document.getElementById("Login");
 
 
-let login = true;
 
-function setup() {
+
+
     
     signupbtn.addEventListener("click", () => {
-        login = false;
+
         title.innerText = "Sign up";
         firstN.style.display = 'block';
         lastN.style.display = 'block';
         loginbutton.innerText = "Register";
-        return false; 
+        
     });
     
     signinbtn.addEventListener("click", () => {
-        login = true;
+        
         title.innerText = "Sign in";
         firstN.style.display = 'none';
         lastN.style.display = 'none';
         loginbutton.innerText = "Login";
-        return false; 
+        
     });
     
-}
 
 
-// Call the setup function to set up the event listeners
-setup();
+
+
+
+
+
