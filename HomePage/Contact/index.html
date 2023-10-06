@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/d0e69c3701.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+        /* Add CSS styles for the pop-up container */
+        .popup-container {
+          display: none;
+          position: fixed;
+          top: 10px;
+          left: 1px;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.7);
+        }
+  
+        .container {
+          position: absolute;
+          top: 100px;
+          left: 30px;
+          background-color: white;
+          padding: 20px;
+          text-align: center;
+          border-radius: 5px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+  
+        .close-btn {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          font-size: 24px;
+          cursor: pointer;
+        }
+      </style>
+</head>
+<body>
+    <div class="nav">
+        <img
+          src="../assest/WhatsApp Image 2023-09-18 at 11.30.26 PM.jpeg"
+          class="logo"
+        />
+        <ul class="info">
+          <li><a href="../index.html" class="des" id="hov">Home</a></li>
+          <li><a href="../About/index.html" class="des">About</a></li>
+          <li><a href="../Contact/index.html" class="des" id="colorContact">Contact</a></li>
+          <li><a href="../FAQs/index.html" class="des">FAQs</a></li>
+           </ul>
+        <button class="btn" onclick="showPopup()" id="logi">Login</button>
+      </div>
+  
+      <div class="popup-container" id="loginPopup">
+        <div class="container">
+          <span class="close-btn" onclick="closePopup()">&times;</span>
+          <h1 id="title">Sign up</h1>
+          <br />
+          <form onsubmit="return false;" onsubmit="signup(event)">
+            <br />
+            <br />
+            <br />
+            <div class="input-group">
+              <div class="button">
+                <button id="signupbtn">Sign up</button>
+                <button id="signinbtn">Sign in</button>
+              </div>
+              <div class="input-field" id="firstN">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" placeholder="Name" />
+              </div>
+              <div class="input-field" id="lastN">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" placeholder="Last name" />
+              </div>
+  
+              <div class="input-field" id="Email">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" placeholder="Email" />
+              </div>
+              <div class="input-field" id="password">
+                <i class="fa-solid fa-user"></i>
+                <input type="password" placeholder="Password" />
+              </div>
+              <div>
+                <p>Lost Password <a href="#">Click here</a></p>
+              </div>
+              <button class="submit"  id="Login">
+                Register
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    <div class="GetInTouch">Get In Touch </div>
+
+    <div class="flex">
+        <div class="cont">  
+            <p>
+            If you have any questions, please contact us via email, phone, or <br>
+            send us a message using the contact form.</p>
+            <br>
+            <br>
+            <br>
+            
+            <br>
+            <br>
+            <br>
+
+            <p1>Email</p1><br>
+            <p2>akshatggggg@gmail.com</p2>
+<br>
+<br>
+<br>
+<p1>Phone (call/text/WhatsApp)</p1><br>
+<p2>+1 425-780-9593</p2>
+<br>
+<br>
+<br>
+<br>
+<img src="../assest/pablo-de-la-fuente-aD3i5aWJUKM-unsplash.jpg">
+
+        </div>
+        <div class="form">
+            <p1>Name</p1><br>
+            <input placeholder="" type="text" class="input">
+            <br>
+            <br>
+            <br>
+
+            <p1>Email</p1><span>(required)</span><br>
+            <input placeholder="" type="text" class="input">
+            <br>
+            <br>
+
+            <br> <p1>Phone</p1><br>
+            <input placeholder="" type="text" class="input">
+            <br>
+            <br>
+
+            <br> <p1>Subject</p1><span>(required)</span><br>
+            <input placeholder="" type="text" class="input">
+            <br>
+            <br>
+
+            <br> <p1>Message</p1><span>(required)</span><br>
+            <textarea id="largeinput" rows="4" placeholder="Enter your message" class="input"></textarea>
+            <br>
+            <br>
+
+            <button id="mailButton">Send</button>
+        </div>
+    </div>
+
+      <script src="app.js" type="module"></script>
+      <script src="./script.js"></script>
+</body>
+</html>

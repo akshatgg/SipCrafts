@@ -17,13 +17,12 @@ var firstN = document.getElementById("firstN");
 var lastN = document.getElementById("lastN");
 var loginbutton=document.getElementById("Login");
 
+      
 
-
-
-
-    
+    let login=true;
+        
     signupbtn.addEventListener("click", () => {
-
+        login=true;
         title.innerText = "Sign up";
         firstN.style.display = 'block';
         lastN.style.display = 'block';
@@ -32,14 +31,14 @@ var loginbutton=document.getElementById("Login");
     });
     
     signinbtn.addEventListener("click", () => {
-        
+        login=false;
         title.innerText = "Sign in";
         firstN.style.display = 'none';
         lastN.style.display = 'none';
         loginbutton.innerText = "Login";
         
     });
-    
+   
 
 
 

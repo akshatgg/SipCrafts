@@ -1,0 +1,344 @@
+*{
+    margin:0;
+}
+
+body{
+    background: rgb(249, 245, 245);
+}
+
+.nav{
+    background-color: black;
+    height: 100px;
+    display: flex;
+    
+
+}
+.logo{
+    height: 70px;
+    margin-top:15px;
+    padding-left:30px ;
+}
+.info{
+    color: antiquewhite;
+    display: flex;
+    gap: 135px; 
+    
+    
+    font-size: 30px;
+    text-decoration: none;
+    list-style: none;
+    margin-top: 32px;
+    margin-left: 410px;
+    
+
+}
+.btn{
+    height: 52px;
+    width: 143px;
+    margin-top: 25px;
+    margin-left: 450px;
+    font-size: 26px;
+    font-weight: bold;
+    border-radius: 10px;
+    
+
+}
+.btn:hover{
+    color: #ede0e3;
+    background-color: black;
+    
+}
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    background-color: rgb(245, 242, 242);
+    height: 800px;
+    width: 800px;
+    margin-left: 650px;
+    margin-top: 50px;
+}
+a{
+    /* text-decoration: none; */
+    color: #ede0e3;
+   text-decoration: none;
+}
+#hov {
+    color: rgb(248, 242, 242);
+}
+
+#colorContact{
+    color: grey;
+}
+
+
+
+
+
+
+
+
+/* Style for the list items */
+.des {
+    position: relative;
+    list-style: none; /* Remove default list bullet */
+    
+}
+
+/* Create the small block */
+.des::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;    
+    bottom: 0;
+    left: 0;
+    background-color: #f4f0f6; /* Color of the block */
+    transition: width 0.4s ease-in-out;
+    transform-origin: left; /* Make the block expand from the left */
+}
+
+/* Show the block when hovering over the list item */
+.des:hover::before {
+    width: 100%; /* Expand to 100% width on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style for form input fields */
+.input-field {
+    margin: 20px 0;
+    position: relative;
+}
+
+.input-field i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #888;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 10px 30px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    color: #f4ecec;
+}
+
+/* Style for the buttons */
+.button {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.button button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#signupbtn {
+    background-color: #ff5722;
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#signinbtn {
+    background-color: #2196F3;
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Hover effect for buttons */
+#signupbtn:hover {
+    background-color: #e64a19;
+}
+
+#signinbtn:hover {
+    background-color: #1976D2;
+}
+
+/* Style for lost password link */
+a.lost-password {
+    color: #2196F3;
+    text-decoration: none;
+}
+
+a.lost-password:hover {
+    text-decoration: underline;
+}
+
+/* Style for close button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #888;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+
+.submit {
+    background-color: #4CAF50; /* Green color for register button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.submit:hover {
+    background-color: #45a049; /* Darker green color on hover */
+}
+.input-group{
+position: relative;
+top: 100px;
+left: -120px;
+}
+#title{
+    position: relative;
+    left: 120px;
+    top: 30px;
+    font-size: 60px;
+}
+ 
+
+
+
+
+.GetInTouch{
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    margin-top: 130px;
+}
+.cont img{
+height: 600px;
+border-radius: 20px;
+}
+.input{
+    width: 550px;
+    height: 50px;
+
+}
+
+
+
+/* Style for the parent flex container */
+.flex {
+    display: flex;
+    justify-content: space-between; /* Add space between "cont" and "form" */
+  }
+  
+  /* Style for the "cont" class */
+  .cont {
+    flex: 1;
+    padding: 20px;
+    border-radius: 5px;
+    margin-right: 20px; /* Add a gap between "cont" and "form" */
+    margin-left: 300px;
+    margin-top: 100px;
+  }
+  
+  /* Style for the "form" class */
+  .form {
+    margin-top: 100px;
+    flex: 1;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  .cont p{
+color: grey;
+font-size: 25px;
+  }
+  .cont p1{
+    color: rgb(93, 88, 88);
+    font-size: 22px;
+    font-weight: 900;
+  }
+  .cont p2{
+    color:grey ;
+    font-size:20px ;
+  }
+.form p1 {
+    font-size: 25px;
+    color: grey;
+}
+.form input{
+    background-color: rgb(241, 236, 236);
+    font-size: 20px;
+}
+.form span{
+    font-size: 25px;
+    color: grey;  
+}
+#largeinput{
+    height: 150px;
+}
+  #mailButton{
+    height: 70px;
+    width: 120px;
+    font-size: larger;
+    color: whitesmoke;
+    background-color: #333;
+
+  }
+
+  #mailButton:hover {
+    background-color: #625f5f; /* Change the background color on hover */
+  }
+  #largeinput{
+    font-size: 20px;
+    background-color: rgb(241, 236, 236);
+
+  }
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
