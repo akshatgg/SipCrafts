@@ -127,7 +127,7 @@
 <img src="../assest/pablo-de-la-fuente-aD3i5aWJUKM-unsplash.jpg">
 
         </div>
-        <div class="form">
+        <form class="form" onsubmit="sendEmail(); reset(); return false;">
             <p1>Name</p1><br>
             <input placeholder="" type="text" class="input">
             <br>
@@ -135,7 +135,7 @@
             <br>
 
             <p1>Email</p1><span>(required)</span><br>
-            <input placeholder="" type="text" class="input">
+            <input placeholder="" type="text" class="input" id="emails">
             <br>
             <br>
 
@@ -145,20 +145,22 @@
             <br>
 
             <br> <p1>Subject</p1><span>(required)</span><br>
-            <input placeholder="" type="text" class="input">
+            <input placeholder="" type="text" class="input" id="subject">
             <br>
             <br>
 
             <br> <p1>Message</p1><span>(required)</span><br>
-            <textarea id="largeinput" rows="4" placeholder="Enter your message" class="input"></textarea>
+            <textarea id="largeinput" rows="4" placeholder="Enter your message" class="input" ></textarea>
             <br>
             <br>
 
-            <button id="mailButton">Send</button>
-        </div>
+            <button id="mailButton" type="submit">Send</button>
+        </form>
     </div>
-
-      <script src="app.js" type="module"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
       <script src="./script.js"></script>
+
+      <script src="./mail.js"></script>   
 </body>
 </html>
