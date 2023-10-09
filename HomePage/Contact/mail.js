@@ -1,4 +1,4 @@
-
+function sendEmail(){
     Email.send({
       SecureToken: "aa3d3299-8213-469d-917a-3be9d89af810",
       // Host : "smtp.elasticemail.com",
@@ -18,3 +18,4 @@
         }
       }
     );
+}
