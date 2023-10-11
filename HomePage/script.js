@@ -16,16 +16,20 @@ var title = document.getElementById("title");
 var firstN = document.getElementById("firstN");
 var lastN = document.getElementById("lastN");
 var loginbutton=document.getElementById("Login");
-
+var emailsignup=document.getElementById("Email");
+var passignup=document.getElementById("password");
+var emailsignin=document.getElementById("emails");
+var passsignin=document.getElementById("passwords");
       
 
     let login=true;
+    document.getElementById("signincont").style.display="none";
         
     signupbtn.addEventListener("click", () => {
         login=true;
         title.innerText = "Sign up";
-        firstN.style.display = 'block';
-        lastN.style.display = 'block';
+        document.getElementById("signupcont").style.display="block";
+        document.getElementById("signincont").style.display="none";
         loginbutton.innerText = "Register";
         
     });
@@ -33,16 +37,13 @@ var loginbutton=document.getElementById("Login");
     signinbtn.addEventListener("click", () => {
         login=false;
         title.innerText = "Sign in";
-        firstN.style.display = 'none';
-        document.getElementById("thiss").value = null;
-        lastN.style.display = 'none';
+        document.getElementById("signupcont").style.display="none";
+        document.getElementById("signincont").style.display="block  ";
         loginbutton.innerText = "Login";
-        
+
+    
     });
-   
-
-
-
+  
 
 
 
