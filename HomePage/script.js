@@ -24,12 +24,14 @@ var passsignin=document.getElementById("passwords");
 
     let login=true;
     document.getElementById("signincont").style.display="none";
-        
+        document.getElementById("Logins").style.display="none";
     signupbtn.addEventListener("click", () => {
         login=true;
         title.innerText = "Sign up";
         document.getElementById("signupcont").style.display="block";
         document.getElementById("signincont").style.display="none";
+        document.getElementById("Logins").style.display="none";
+        document.getElementById("Login").style.display="block";
         loginbutton.innerText = "Register";
         
     });
@@ -39,9 +41,9 @@ var passsignin=document.getElementById("passwords");
         title.innerText = "Sign in";
         document.getElementById("signupcont").style.display="none";
         document.getElementById("signincont").style.display="block  ";
-        loginbutton.innerText = "Login";
+        loginbutton.style.display="none";   
+        document.getElementById("Logins").style.display="block";
 
-    
     });
   
 
