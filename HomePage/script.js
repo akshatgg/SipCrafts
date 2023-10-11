@@ -34,6 +34,7 @@ var loginbutton=document.getElementById("Login");
         login=false;
         title.innerText = "Sign in";
         firstN.style.display = 'none';
+        document.getElementById("thiss").value = null;
         lastN.style.display = 'none';
         loginbutton.innerText = "Login";
         
