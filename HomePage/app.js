@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
-import {getDatabase } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
+import {getDatabase,set,ref } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
 import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
 
 // import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js";
@@ -18,7 +18,7 @@ const firebaseConfig = {
   messagingSenderId: "1079707843778",
   appId: "1:1079707843778:web:22dc2b96b2e30b37c24f5b",
   measurementId: "G-29SJL1LY0X"
-};
+};    
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const database=getDatabase(app);
@@ -77,8 +77,15 @@ loginbutton.addEventListener('click',(e)=>{
   .then((userCredential) => {
     // Signed up 
     const user = userCredential.user;
+    set(ref(database, 'users/'  +  user.uid),{
+      email: Email,
+      firstN: firstN,
+      lastN:lastN
+      
+    })
     alert('user created');
     // ...
+
   })
   .catch((error) => {
     const errorCode = error.code;
