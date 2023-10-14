@@ -78,9 +78,9 @@ loginbutton.addEventListener('click',(e)=>{
     // Signed up 
     const user = userCredential.user;
     set(ref(database, 'users/'  +  user.uid),{
-      email: Email,
+      email: email,
       firstN: firstN,
-      lastN:lastN
+      lastN: lastN
       
     })
     alert('user created');
