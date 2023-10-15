@@ -105,3 +105,7 @@ product.forEach((item,i)=>
     autoSlide();
     
 })
+
+
+
+
