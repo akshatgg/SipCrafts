@@ -108,4 +108,23 @@ product.forEach((item,i)=>
 
 
 
+const shop=document.getElementById("shop")
 
+let generateshop=()=>{
+    
+    shop.innerHTML=shopItems.map((x)=>{
+        let {id,name,price,content,img}=x
+
+
+        return `
+        <div>
+        
+        </div>
+        `
+       
+        
+    
+    })
+}
+
+generateshop();
