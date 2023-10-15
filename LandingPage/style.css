@@ -185,7 +185,8 @@ body {
     
 }
 .cart {
-    margin-top: 30px;
+    padding-top:10px ;
+    margin-top: 25px;
     margin-left: 290px;
     height: 50px;
     width: 50px;
@@ -213,15 +214,15 @@ body {
     
     button{
         padding: 0px;
-        
     }
     .count{
-transform: translate(-10px,8px);
+transform: translate(-10px,0px);
         border-radius: 50px;
         height: 40px;
+        padding-top: 20px;
         font-size: 30px;
         font-weight: 900;
-        background-color: #d7a4f0;
+        background-color: #dbd3de;
         padding: 0px;
         display: inline-block;
     }
