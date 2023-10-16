@@ -120,6 +120,7 @@ product.forEach((item,i)=>
 
 const shop=document.getElementById("shop")
 
+let basket = JSON.parse(localStorage.getItem('data')) || [];
 let generateshop=()=>{
     
     shop.innerHTML=shopItems.map((x)=>{
@@ -136,7 +137,7 @@ let generateshop=()=>{
             <div class="details">${content}
                 </div>
                  <div class="price">${price}</div>
-                 <button class="add" onclick="addCart('${id}','${name}','${price}','${img}')">Add to cart</button>
+                 <button class="add" id="add" onclick="addCart('${id}','${name}','${price}','${img}')">Add to cart</button>
         </div>
     </div> 
         `
@@ -148,6 +149,32 @@ let generateshop=()=>{
 }
 
 let addCart=(id,name,price,img)=>{
-
+basket.push({
+  id:id,
+  item:1,
+  name:name,
+  price:price,
+  img:img
+})
+localStorage.setItem('data',JSON.stringify(basket))
+calculate()
 }
+
+// number of cart items //
+
+let calculate=()=>{
+  let cart_count=document.getElementById("cart_count")
+  // let BtnAddToCart=document.getElementById("add")
+  // let count=0;
+  // BtnAddToCart.addEventListener('onclick',()=>{
+  //   count=count+1
+  //   cart_count.innerHTML=count;
+  //   })
+    let cart_amount=basket.length
+    cart_count.innerHTML=cart_amount
+    
+    
+  }
+  
+  calculate()
 generateshop();
