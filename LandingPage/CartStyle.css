@@ -125,3 +125,59 @@ a{
    font-weight: 1000;
 }
 
+
+
+
+
+
+
+/* Cart Items Style */
+
+
+
+
+
+
+
+.cartpage{
+    padding-top: 100px;
+}
+
+.cartpage .cart_item{
+display: flex;
+justify-content: space-around;
+align-items: center;
+border: 2px solid #e4bbf2;
+background-color: #d69ad2;
+margin-left: 20px;
+margin-right: 20px;
+border-radius: 20px;
+
+}
+img{
+    height: 300px;
+}
+
+
+p{
+    font-size: 25px;
+    color: #070707;
+    font-weight: 900;
+}
+.rmv_btn{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right:30px;
+    font-size: 20px;
+    background-color: #887b8f;
+    border-radius: 20px;
+    transition: transform 0.5s; 
+    opacity: 0.8; /* Adjust the opacity value (0.7) as needed (0 is completely transparent, 1 is fully opaque) */
+    transition: opacity 0.3s;
+}
+.rmv_btn:hover{
+ transform: scale(1.1); /* Scale the button by a factor of 1.1 (10% increase) */
+    transition: transform 0.5s; 
+    opacity:1.1
+}

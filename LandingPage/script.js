@@ -118,6 +118,8 @@ product.forEach((item,i)=>
 
 
 
+// local storage of cart
+
 const shop=document.getElementById("shop")
 
 let basket = JSON.parse(localStorage.getItem('data')) || [];
@@ -146,7 +148,7 @@ let generateshop=()=>{
     
     })
 
-}
+}                                                     
 
 let addCart=(id,name,price,img)=>{
 basket.push({
