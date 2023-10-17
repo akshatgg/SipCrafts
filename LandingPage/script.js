@@ -172,8 +172,6 @@ let calculate=()=>{
   //   })
     let cart_amount=basket.length
     cart_count.innerHTML=cart_amount
-    
-    
   }
   
   calculate()
