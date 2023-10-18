@@ -1,21 +1,21 @@
-function showPopup() {
-    const loginPopup = document.getElementById('loginPopup');
-    loginPopup.style.display = 'block';
-}
+        function showPopup() {
+            const loginPopup = document.getElementById('loginPopup');
+            loginPopup.style.display = 'block';
+        }
 
-function closePopup() {
-    const loginPopup = document.getElementById('loginPopup');
-    loginPopup.style.display = 'none';
-}
+        function closePopup() {
+            const loginPopup = document.getElementById('loginPopup');
+            loginPopup.style.display = 'none';
+        }
 
-// window.onload = showPopup;   
+        // window.onload = showPopup;   
 
-var signinbtn = document.getElementById("signinbtn");
-var signupbtn = document.getElementById("signupbtn");
-var title = document.getElementById("title");
-var firstN = document.getElementById("firstN");
-var lastN = document.getElementById("lastN");
-var loginbutton=document.getElementById("Login");
+        var signinbtn = document.getElementById("signinbtn");
+        var signupbtn = document.getElementById("signupbtn");
+        var title = document.getElementById("title");
+        var firstN = document.getElementById("firstN");
+        var lastN = document.getElementById("lastN");
+        var loginbutton=document.getElementById("Login");
 
       
 
