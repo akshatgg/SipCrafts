@@ -1,76 +1,86 @@
 document.addEventListener('DOMContentLoaded', function () {
-    let thispage = 1;
-    const limit = 6;
-    const list = document.querySelectorAll('.list .item');
+    let currentPage = 1;
+    const itemsPerPage = 6;
+    const totalItems = shopItems.length;
+    const totalPages = Math.ceil(totalItems / itemsPerPage);
+    const listContainer = document.getElementById('shop');
+    const prevButton = document.querySelector('.Previ');
+    const nextButton = document.querySelector('.Nexts');
+    const pageButtons = document.querySelectorAll('.listpage li');
 
     function loadItems() {
-        const begin = limit * (thispage - 1);
-        const end = limit * thispage - 1;
+      listContainer.innerHTML = ''; // Clear the list container
+      const startIndex = (currentPage - 1) * itemsPerPage;
+      const endIndex = Math.min(startIndex + itemsPerPage, totalItems);
 
-        list.forEach((item, key) => {
-            if (key >= begin && key <= end) {
-                item.style.display = 'block';
-            } else {
-                item.style.display = 'none';
-            }
-        });
+      for (let i = startIndex; i < endIndex; i++) {
+        const item = shopItems[i];
+        const itemElement = createItemElement(item);
+        listContainer.appendChild(itemElement);
+      }
 
-        updatePagination();
-        
+      updatePagination();
     }
+
+    function createItemElement(item) {
+      // Create and return an HTML element for the shop item
+      const itemElement = document.createElement('div');
+      itemElement.classList.add('item');
+      itemElement.innerHTML = `
+        <div class="imag">
+          <img src="${item.img}" alt="${item.name}" />
+        </div>
+        <div class="content">
+          <div class="title">${item.name}</div>
+          <div class="details">${item.content}</div>
+          <div class="price">${item.price}</div>
+          <button class="add" onclick="addCart(${item.id}, '${item.name}', ${item.price}, '${item.img}')">Add to cart</button>
+        </div>
+      `;
+      return itemElement;
+    }
+
     function updatePagination() {
-        const count = Math.ceil(list.length / limit);
-        const prevButton = document.querySelector('.Previ');
-        const nextButton = document.querySelector('.Nexts');
-
-        if (thispage > 1) {
-            prevButton.classList.remove('disabled');
-        } else {
-            prevButton.classList.add('disabled');
+      pageButtons.forEach((button) => {
+        const pageNumber = parseInt(button.textContent);
+        button.classList.remove('active');
+        if (pageNumber === currentPage) {
+          button.classList.add('active');
         }
+      });
 
-        if (thispage < count) {
-            nextButton.classList.remove('disabled');
-        } else {
-            nextButton.classList.add('disabled');
-        }
+      prevButton.disabled = currentPage === 1;
+      nextButton.disabled = currentPage === totalPages;
     }
 
     function changePage(page) {
-        thispage = page;
+      if (page >= 1 && page <= totalPages) {
+        currentPage = page;
         loadItems();
+      }
     }
 
+    // Initial page load
     loadItems();
 
-    const prevButton = document.querySelector('.Previ');
-    const nextButton = document.querySelector('.Nexts');
-    const pageButtons = document.querySelectorAll('.active');
-
-    
+    // Previous button click event
     prevButton.addEventListener('click', () => {
-        if (thispage > 1) {
-            changePage(thispage - 1);
-        }
+      changePage(currentPage - 1);
     });
 
+    // Next button click event
     nextButton.addEventListener('click', () => {
-        const count = Math.ceil(list.length / limit);
-        if (thispage < count) {
-            changePage(thispage + 1);
-        }
+      changePage(currentPage + 1);
     });
 
-    pageButtons.forEach((button, index) => {
-        button.addEventListener('click', () => {
-            changePage(index + 1);
-        });
+    // Page button click events
+    pageButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const pageNumber = parseInt(button.textContent);
+        changePage(pageNumber);
+      });
     });
-});
-
-
-
-
+  });
 
 
 
@@ -108,8 +118,11 @@ product.forEach((item,i)=>
 
 
 
+// local storage of cart
+
 const shop=document.getElementById("shop")
 
+let basket = JSON.parse(localStorage.getItem('data')) || [];
 let generateshop=()=>{
     
     shop.innerHTML=shopItems.map((x)=>{
@@ -117,14 +130,85 @@ let generateshop=()=>{
 
 
         return `
-        <div>
-        
+        <div class="item">
+        <div class="imag">
+            <img src="${img}" alt="" />
         </div>
+        <div class="content">   
+            <div class="title">${name}</div>
+            <div class="details">${content}
+                </div>
+                 <div class="price">${price}</div>
+                 <button class="add" id="add" onclick="addCart('${id}','${name}','${price}','${img}')">Add to cart</button>
+        </div>
+    </div> 
         `
        
         
     
     })
+
+}                                                     
+
+let addCart=(id,name,price,img)=>{
+basket.push({
+  id:id,
+  item:1,
+  name:name,
+  price:price,
+  img:img
+})
+localStorage.setItem('data',JSON.stringify(basket))
+calculate()
 }
 
+// number of cart items //
+
+let calculate=()=>{
+  let cart_count=document.getElementById("cart_count")
+  // let BtnAddToCart=document.getElementById("add")
+  // let count=0;
+  // BtnAddToCart.addEventListener('onclick',()=>{
+  //   count=count+1
+  //   cart_count.innerHTML=count;
+  //   })
+    let cart_amount=basket.length
+    cart_count.innerHTML=cart_amount
+  }
+  
+  calculate()
 generateshop();
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  let description = document.getElementById("description");
+
+  let shopItems = []; // Initialize an empty array to hold the data
+
+  let hoverjuice = () => {
+    description.addEventListener('mouseover', () => {
+      // Use fetch to load the shopItems from an external JSON file
+      fetch('shopItems.json')
+        .then(response => response.json())
+        .then(data => {
+          shopItems = data; // Assign the loaded data to the shopItems array
+          description.innerHTML = shopItems.map((y) => {
+            let { id, name, price, content, img } = y;
+            return `
+              <div class="hover">
+                <img src="${img}" alt="${name}" />
+                <div class="con">
+                  ${content}
+                </div>
+              </div>
+            `;
+          }).join('');
+        })
+        .catch(error => console.error('Error loading shopItems:', error));
+    });
+  }
+
+  hoverjuice();
+});

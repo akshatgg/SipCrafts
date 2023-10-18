@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>shakes</title>
-    <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap" rel="stylesheet" >
+<link rel="stylesheet" href="./style.css">
 <script src="https://kit.fontawesome.com/d0e69c3701.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -22,8 +22,8 @@
             <li><a href="../HomePage/FAQs/index.html" class="des">FAQs</a></li>
         </ul>
         
-        <button style="background-color: white;"  class="cart"><i class="fa-solid fa-cart-arrow-down fa-2xl"></i></button>
-<div class="count">0</div>
+        <button  onclick="window.location.href='./Cart.html';"   style="background-color: white;"  class="cart"><i class="fa-solid fa-cart-arrow-down fa-2xl"></i></button>
+<div class="count" id="cart_count">0</div>
         <button class="btn" onclick="showPopup()">Login</button>
     </div>
     
@@ -62,329 +62,37 @@
 
 
 
-<div class="container">
-<div class="list">
 
-    <div class="item">
-        <div class="imag">
-            <img src="./assest/Negroni.png">
-        </div>
-        <div class="content">   
-            <div class="title">Red Shake 1</div>
-            <div class="details">Lorem, ipsum dolor sit amet consectetur 
-                adipisicing elit. Architecto ad 
-                 nulla sed veritatis a earum dolores.</div>
-                 <div class="price">$299</div>
-                 <button class="add">Add to cart</button>
-        </div>
-    </div>  
+
+<div class="main-cont">
     
+    <div class="container"  >
+        <div class="list-box">
 
-<div class="item">
-    <div class="imag">
-        <img src="./assest/Negroni.png">
+        
+            <div class="list"  id="shop">
+
+            </div>  
+            <div>   
+                <ul class="listpage">
+                    <li class="Previ">Prev</li>
+                    <li class="active">1</li>
+                    <li class="active">2</li>
+                    <li class="active">3</li>
+                    <li class="Nexts">Next</li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <div class="content">   
-        <div class="title">Red Shake 1</div>
-        <div class="details">Lorem, ipsum dolor sit amet consectetur 
-            adipisicing elit. Architecto ad 
-             nulla sed veritatis a earum dolores.</div>
-             <div class="price">$299</div>
-             <button class="add">Add to cart</button>
+
+    <div class="details-box">
+        
+<div class="description">
+
+</div>        
     </div>
-</div>  
-
-
-<div class="item">
-    <div class="imag">
-        <img src="./assest/Negroni.png">
-    </div>
-    <div class="content">   
-        <div class="title">Red Shake 1</div>
-        <div class="details">Lorem, ipsum dolor sit amet consectetur 
-            adipisicing elit. Architecto ad 
-             nulla sed veritatis a earum dolores.</div>
-             <div class="price">$299</div>
-             <button class="add">Add to cart</button>
-    </div>
-</div>  
-
-<div class="item">
-    <div class="imag">
-        <img src="./assest/Negroni.png">
-    </div>
-    <div class="content">   
-        <div class="title">Red Shake 4</div>
-        <div class="details">Lorem, ipsum dolor sit amet consectetur 
-            adipisicing elit. Architecto ad 
-             nulla sed veritatis a earum dolores.</div>
-             <div class="price">$299</div>
-             <button class="add">Add to cart</button>
-    </div>
-</div>  
-
-
-
-<div class="item">
-    <div class="imag">
-        <img src="./assest/Negroni.png">
-    </div>
-    <div class="content">   
-        <div class="title">Red Shake 7</div>
-        <div class="details">Lorem, ipsum dolor sit amet consectetur 
-            adipisicing elit. Architecto ad 
-             nulla sed veritatis a earum dolores.</div>
-             <div class="price">$299</div>
-             <button class="add">Add to cart</button>
-    </div>
-</div>  
-
-
-
-<div class="item">
-    <div class="imag">
-        <img src="./assest/Negroni.png">
-    </div>
-    <div class="content">   
-        <div class="title">Red Shake 1</div>
-        <div class="details">Lorem, ipsum dolor sit amet consectetur 
-            adipisicing elit. Architecto ad 
-             nulla sed veritatis a earum dolores.</div>
-             <div class="price">$299</div>
-             <button class="add">Add to cart</button>
-    </div>
-</div>  
-
-
-
-
-<div class="item">
-    <div class="imag">
-        <img src="./assest/Negroni.png">
-    </div>
-    <div class="content">   
-        <div class="title">Red Shake 1</div>
-        <div class="details">Lorem, ipsum dolor sit amet consectetur 
-            adipisicing elit. Architecto ad 
-             nulla sed veritatis a earum dolores.</div>
-             <div class="price">$299</div>
-             <button class="add">Add to cart</button>
-    </div>
-</div>  
-
-
-
-<div class="item">
-    <div class="imag">
-        <img src="./assest/Negroni.png">
-    </div>
-    <div class="content">   
-        <div class="title">Red Shake 1</div>
-        <div class="details">Lorem, ipsum dolor sit amet consectetur 
-            adipisicing elit. Architecto ad 
-             nulla sed veritatis a earum dolores.</div>
-             <div class="price">$299</div>
-             <button class="add">Add to cart</button>
-    </div>
-</div>  
-
-
-
-
-<div class="item">
-    <div class="imag">
-        <img src="./assest/Negroni.png">
-    </div>
-    <div class="content">   
-        <div class="title">Red Shake 1</div>
-        <div class="details">Lorem, ipsum dolor sit amet consectetur 
-            adipisicing elit. Architecto ad 
-             nulla sed veritatis a earum dolores.</div>
-             <div class="price">$299</div>
-             <button class="add">Add to cart</button>
-    </div>
-</div>  
-
-
-
-
-
-<div class="item">
-    <div class="imag">
-        <img src="./assest/Negroni.png">
-    </div>
-    <div class="content">   
-        <div class="title">Red Shake 1</div>
-        <div class="details">Lorem, ipsum dolor sit amet consectetur 
-            adipisicing elit. Architecto ad 
-             nulla sed veritatis a earum dolores.</div>
-             <div class="price">$299</div>
-             <button class="add">Add to cart</button>
-    </div>
-</div>  
-
-
-
-
-<div class="item">
-    <div class="imag">
-        <img src="./assest/Negroni.png">
-    </div>
-    <div class="content">   
-        <div class="title">Red Shake 1</div>
-        <div class="details">Lorem, ipsum dolor sit amet consectetur 
-            adipisicing elit. Architecto ad 
-             nulla sed veritatis a earum dolores.</div>
-             <div class="price">$299</div>
-             <button class="add">Add to cart</button>
-    </div>
-</div>  
-
-
-
-
-
-<div class="item">
-    <div class="imag">
-        <img src="./assest/Negroni.png">
-    </div>
-    <div class="content">   
-        <div class="title">Red Shake 1</div>
-        <div class="details">Lorem, ipsum dolor sit amet consectetur 
-            adipisicing elit. Architecto ad 
-             nulla sed veritatis a earum dolores.</div>
-             <div class="price">$299</div>
-             <button class="add">Add to cart</button>
-    </div>
-</div>  
-
-
-
-
-
-<div class="item">
-    <div class="imag">
-        <img src="./assest/Negroni.png">
-    </div>
-    <div class="content">   
-        <div class="title">Red Shake 1</div>
-        <div class="details">Lorem, ipsum dolor sit amet consectetur 
-            adipisicing elit. Architecto ad 
-             nulla sed veritatis a earum dolores.</div>
-             <div class="price">$299</div>
-             <button class="add">Add to cart</button>
-    </div>
-</div>  
-
-
-
-
-
-<div class="item">
-    <div class="imag">
-        <img src="./assest/Negroni.png">
-    </div>
-    <div class="content">   
-        <div class="title">Red Shake 1</div>
-        <div class="details">Lorem, ipsum dolor sit amet consectetur 
-            adipisicing elit. Architecto ad 
-             nulla sed veritatis a earum dolores.</div>
-             <div class="price">$299</div>
-             <button class="add">Add to cart</button>
-    </div>
-</div>  
-
-
-
-
-
-<div class="item">
-    <div class="imag">
-        <img src="./assest/Negroni.png">
-    </div>
-    <div class="content">   
-        <div class="title">Red Shake 1</div>
-        <div class="details">Lorem, ipsum dolor sit amet consectetur 
-            adipisicing elit. Architecto ad 
-             nulla sed veritatis a earum dolores.</div>
-             <div class="price">$299</div>
-             <button class="add">Add to cart</button>
-    </div>
-</div>  
-
-
-
-
-
-<div class="item">
-    <div class="imag">
-        <img src="./assest/Negroni.png">
-    </div>
-    <div class="content">   
-        <div class="title">Red Shake 1</div>
-        <div class="details">Lorem, ipsum dolor sit amet consectetur 
-            adipisicing elit. Architecto ad 
-             nulla sed veritatis a earum dolores.</div>
-             <div class="price">$299</div>
-             <button class="add">Add to cart</button>
-    </div>
-</div>  
-
-
-
-
-
-<div class="item">
-    <div class="imag">
-        <img src="./assest/Negroni.png">
-    </div>
-    <div class="content">   
-        <div class="title">Red Shake 1</div>
-        <div class="details">Lorem, ipsum dolor sit amet consectetur 
-            adipisicing elit. Architecto ad 
-             nulla sed veritatis a earum dolores.</div>
-             <div class="price">$299</div>
-             <button class="add">Add to cart</button>
-    </div>
-</div>  
-
-
-
-
-
-<div class="item">
-    <div class="imag">
-        <img src="./assest/Negroni.png">
-    </div>
-    <div class="content">   
-        <div class="title">Red Shake 1</div>
-        <div class="details">Lorem, ipsum dolor sit amet consectetur 
-            adipisicing elit. Architecto ad 
-             nulla sed veritatis a earum dolores.</div>
-             <div class="price">$299</div>
-             <button class="add">Add to cart</button>
-    </div>
-</div>  
-
-
-
-
-
-
-
-
-<ul class="listpage">
-    <li class="Previ">Prev</li>
-    <li class="active">1</li>
-    <li class="active">2</li>
-    <li class="active">3</li>
-    <li class="Nexts">Next</li>
-</ul>
-
+        
 </div>
-</div>
-
-
 
 <footer class="footer">
     <div class="footlogo">
@@ -405,15 +113,26 @@
 <li><a href="../HomePage/FAQs/index.html">FAQs</a></li>
 <li><a href="../HomePage/Contact/index.html" target="_blank">Contact us</a></li>
         </ul>
-    
-
     <div class="reserved">
     <p> 2023 SipCraft. All Rights Reserved.</p>
 </div>
 </footer>
-
+<script src="./data.js"></script>
 <!-- <script src="https://kit.fontawesome.com/d0e69c3701.js" crossorigin="anonymous"></script>/ -->
     <script src="./script.js"></script>
     
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
