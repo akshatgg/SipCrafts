@@ -3,7 +3,7 @@ let shopItems =[
         "id": 1,
         "name" :"Negoni" ,
         "price":"550" ,
-       "content":"lorem 3fqfg gks sk gs gs sjbsf sf sefb e gs" , 
+       "content":"lorem 3fqfg gks sk gs g+s sjbsf sf sefb e gs" , 
        "img":"./assest/Negroni.png",
     },
     {

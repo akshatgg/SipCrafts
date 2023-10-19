@@ -88,7 +88,7 @@ let product=[...document.querySelectorAll('.scrolling')]
 let aftbtn=[...document.querySelectorAll('.aftbtn')]
 let prebtn=[...document.querySelectorAll('.prebtn')]
 
-
+ 
 product.forEach((item,i)=>
 {
     let containerdimension=item.getBoundingClientRect();
@@ -179,36 +179,3 @@ let calculate=()=>{
   calculate()
 generateshop();
 
-
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  let description = document.getElementById("description");
-
-  let shopItems = []; // Initialize an empty array to hold the data
-
-  let hoverjuice = () => {
-    description.addEventListener('mouseover', () => {
-      // Use fetch to load the shopItems from an external JSON file
-      fetch('shopItems.json')
-        .then(response => response.json())
-        .then(data => {
-          shopItems = data; // Assign the loaded data to the shopItems array
-          description.innerHTML = shopItems.map((y) => {
-            let { id, name, price, content, img } = y;
-            return `
-              <div class="hover">
-                <img src="${img}" alt="${name}" />
-                <div class="con">
-                  ${content}
-                </div>
-              </div>
-            `;
-          }).join('');
-        })
-        .catch(error => console.error('Error loading shopItems:', error));
-    });
-  }
-
-  hoverjuice();
-});
