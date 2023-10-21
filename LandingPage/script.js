@@ -36,7 +36,6 @@ function displayProducts(pageNumber) {
 // Initial display
 displayProducts(currentPage);
 
-// Add event listeners to handle pagination
 document.getElementById("prevPage").addEventListener("click", () => {
   if (currentPage > 1) {
     currentPage--;
@@ -52,7 +51,6 @@ document.getElementById("nextPage").addEventListener("click", () => {
   }
 });
 
-// Add event listeners for page numbers
 for (let i = 1; i <= 3; i++) {
   document.getElementById(`page${i}`).addEventListener("click", () => {
     currentPage = i;
