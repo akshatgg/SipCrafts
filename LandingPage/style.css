@@ -228,9 +228,7 @@ body {
     }
     
     
-    button{
-        padding: 0px;
-    }
+   
     .count{
 transform: translate(-10px,0px);
         border-radius: 50px;
@@ -431,3 +429,6 @@ cursor: pointer;
     font-size: 20px;
 }
 
+.on{
+    background-color: #000000
+}
