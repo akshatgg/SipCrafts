@@ -16,7 +16,7 @@ function displayProducts(pageNumber) {
     // Create the product content
     const productContent = `
     <div id="${product.id}">
-      <div class="imag">
+      <div class="imag" id=image>
         <img src="${product.img}" alt="${product.name}">
       </div>
       <div class="content">
@@ -105,29 +105,29 @@ product.forEach((item, i) => {
 // local storage of cart
 // Wrap your code in a DOMContentLoaded event listener
 let basket = JSON.parse(localStorage.getItem("data")) || [];
+let shop = document.getElementById("shop");
 document.addEventListener("DOMContentLoaded", function() {
   
   // Assuming you have selected the "shop" element correctly
-  let shop = document.getElementById("shop");
 
-  let generateshop = () => {
-    shop.innerHTML = shopItems.map((x) => {
-      let { id, name, price, content, img } = x;
+  // let generateshop = () => {
+  //   shop.innerHTML = shopItems.map((x) => {
+  //     let { id, name, price, content, img } = x;
 
-      return `
-        <div class="item" id="${id}">
-          <div class="imag">
-            <img src="${img}" alt="" />
-          </div>
-          <div class="content">
-            <div class="title">${name}</div>
-            <div class="details">${content}</div>
-            <div class="price">${price}</div>
-         <button class="add" id="add" onclick="addCart('${id}','${name}','${price}','${img}')">Add to cart</button>
-          </div>
-        </div>`;
-    });
-  };
+  //     return `
+  //       <div class="item" id="${id}">
+  //         <div class="imag">
+  //           <img src="${img}" alt="" />
+  //         </div>
+  //         <div class="content">
+  //           <div class="title">${name}</div>
+  //           <div class="details">${content}</div>
+  //           <div class="price">${price}</div>
+  //        <button class="add" id="add" onclick="addCart('${id}','${name}','${price}','${img}')">Add to cart</button>
+  //         </div>
+  //       </div>`;
+  //   });
+  // };
 
   // // Call generateshop to populate the "shop" element
   // generateshop();
@@ -144,7 +144,7 @@ let addCart = (id, img, name, price) => {
   });
   localStorage.setItem("data", JSON.stringify(basket));
   calculate();
-  generateshop();
+  // generateshop();
 };
 
 
@@ -169,20 +169,30 @@ let calculate = () => {
 };
 
 calculate();
-generateshop();
+// generateshop();
 
-let Idfetch = () => {
-  let product = document.getElementById("shop");
-  product.addEventListener("mouseenter", () => {
-    console.log("hiii");
-      
+
+
+
+// Wrap your code in a DOMContentLoaded event listener
+document.addEventListener("DOMContentLoaded", function () {
+  // Your existing code
+
+  // Function to handle hovering over a product image
+  function handleImageHover(product) {
+    const productImage = product.querySelector("img");
+
+    productImage.addEventListener("mouseenter", () => {
+      console.log("hii");
+    });
+  }
+
+  // Find all product items and attach hover behavior
+  const productItems = document.querySelectorAll(".item");
+  productItems.forEach((product) => {
+    handleImageHover(product);
   });
-
-};
-
-
-Idfetch();
-
+});
 
 
 
