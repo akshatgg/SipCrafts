@@ -1,132 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>shakes</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap" rel="stylesheet" >
-<link rel="stylesheet" href="./style.css">
-<script src="https://kit.fontawesome.com/d0e69c3701.js" crossorigin="anonymous"></script>
-</head>
-<body>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/d0e69c3701.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <div class="nav">
-        <img src="../HomePage/assest/WhatsApp Image 2023-09-18 at 11.30.26 PM.jpeg" class="logo" />
-        <ul class="info">
-            
-            <li><a href="../HomePage/index.html" class="des">Home</a></li>           
-            <li><a href="../HomePage/About/index.html" class="des">About</a></li>
-            <li><a href="../HomePage/Contact/index.html" class="des">Contact</a></li>
-            <li><a href="../HomePage/FAQs/index.html" class="des">FAQs</a></li>
-        </ul>
-        
-        <button  onclick="window.location.href='./Cart.html';"   style="background-color: white;"  class="cart"><i class="fa-solid fa-cart-arrow-down fa-2xl"></i></button>
-<div class="count" id="cart_count">0</div>
-        <button class="btn" onclick="showPopup()">Login</button>
+      <img
+        src="../HomePage/assest/WhatsApp Image 2023-09-18 at 11.30.26 PM.jpeg"
+        class="logo"
+      />
+      <ul class="info">
+        <li><a href="../HomePage/index.html" class="des">Home</a></li>
+        <li><a href="../HomePage/About/index.html" class="des">About</a></li>
+        <li>
+          <a href="../HomePage/Contact/index.html" class="des">Contact</a>
+        </li>
+        <li><a href="../HomePage/FAQs/index.html" class="des">FAQs</a></li>
+      </ul>
+
+      <button
+        onclick="window.location.href='./Cart.html';"
+        style="background-color: white"
+        class="cart"
+      >
+        <i class="fa-solid fa-cart-arrow-down fa-2xl"></i>
+      </button>
+      <div class="count" id="cart_count">0</div>
+      <button class="btn" onclick="showPopup()">Login</button>
     </div>
-    
 
-
-
-<div class="flex">
-<div class="offer">
-    <button class="prebtn"><i class="fa-solid fa-arrow-left fa-2xl"></i></button>
-    <button class="aftbtn"><i class="fa-solid fa-arrow-right fa-2xl"></i></button>
-    <div class="scrolling">
-    <div class="image">
-    <img src="./assest/Cosmopolitan.png" alt="" height="500px" width="2050px" class="advertise">
-</div>
-<div class="image">
-    <img src="./assest/simple-and-stylish-fruit-juice-drink-web-banner_5759534.jpg" alt="" height="500px" width="2050px" class="advertise">
-</div>
-<div class="image">
-    <img src="./assest/33ppIkbEsTdmi.png" alt="" height="500px" width="2000px" class="advertise">
-</div>
-<div class="image">
-    <img src="./assest/summer-orange-juice-soft-drink-product-promotion-banner_5495361.png" alt="" height="500px" width="2050px" class="advertise">
-</div>
-<div class="image">
-    <img src="./assest/6fe827c1065c94ce41254b6965dca825_17958.png" alt="" height="500px" width="2050px" class="advertise">
-</div>
-<div class="image">
-    <img src="./assest/85d03819c60f9642ec3b54237c9559c2_17959.png" alt="" height="500px" width="2050px" class="advertise">
-</div>
-
-
-</div>
-    </div>
-  
-
-
-
-
-
-
-<div class="main-cont">
-    
-    <div class="container"  >
-        <div class="list-box">
-
-        
-            <div class="list"  id="shop" >
-
-
-
-            </div>  
-            <div>   
-                <ul class="listpage">
-                    <li class="Previ">Prev</li>
-                    <li class="active">1</li>
-                    <li class="active">2</li>
-                    <li class="active">3</li>
-                    <li class="Nexts">Next</li>
-                </ul>
-            </div>
+    <div class="flex">
+      <div class="offer">
+        <button class="prebtn">
+          <i class="fa-solid fa-arrow-left fa-2xl"></i>
+        </button>
+        <button class="aftbtn">
+          <i class="fa-solid fa-arrow-right fa-2xl"></i>
+        </button>
+        <div class="scrolling">
+          <div class="image">
+            <img
+              src="./assest/Cosmopolitan.png"
+              alt=""
+              height="500px"
+              width="2050px"
+              class="advertise"
+            />
+          </div>
+          <div class="image">
+            <img
+              src="./assest/simple-and-stylish-fruit-juice-drink-web-banner_5759534.jpg"
+              alt=""
+              height="500px"
+              width="2050px"
+              class="advertise"
+            />
+          </div>
+          <div class="image">
+            <img
+              src="./assest/33ppIkbEsTdmi.png"
+              alt=""
+              height="500px"
+              width="2000px"
+              class="advertise"
+            />
+          </div>
+          <div class="image">
+            <img
+              src="./assest/summer-orange-juice-soft-drink-product-promotion-banner_5495361.png"
+              alt=""
+              height="500px"
+              width="2050px"
+              class="advertise"
+            />
+          </div>
+          <div class="image">
+            <img
+              src="./assest/6fe827c1065c94ce41254b6965dca825_17958.png"
+              alt=""
+              height="500px"
+              width="2050px"
+              class="advertise"
+            />
+          </div>
+          <div class="image">
+            <img
+              src="./assest/85d03819c60f9642ec3b54237c9559c2_17959.png"
+              alt=""
+              height="500px"
+              width="2050px"
+              class="advertise"
+            />
+          </div>
         </div>
-    </div>
-
-    <div class="details-box">
-        
-<div class="description">
-    
-        <!-- Product content goes here -->
       </div>
-      
-      <!-- Repeat for other products -->
-      
-</div>        
+
+      <div class="main-cont">
+        <div class="container">
+          <div class="list-box">
+            <div class="list" id="shop">
+              <!-- Products will be listed here -->
+            </div>
+            <div>
+              <ul class="listpage">
+                <li class="Previ" id="prevPage">Prev</li>
+                <li class="active" id="page1">1</li>
+                <li class="active" id="page2">2</li>
+                <li class="active" id="page3">3</li>
+                <li class="Nexts" id="nextPage">Next</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="details-box">
+          <div class="description">
+            <!-- Product content goes here -->
+          </div>
+
+          <!-- Repeat for other products -->
+        </div>
+      </div>
     </div>
-        
-</div>
 
-<footer class="footer">
-    <div class="footlogo">
-        <img src="../HomePage/assest/WhatsApp Image 2023-09-18 at 11.30.26 PM.jpeg" class="logo"/>
+    <footer class="footer">
+      <div class="footlogo">
+        <img
+          src="../HomePage/assest/WhatsApp Image 2023-09-18 at 11.30.26 PM.jpeg"
+          class="logo"
+        />
+      </div>
 
-    </div>
+      <div class="icon">
+        <a href="https://www.instagram.com/akshat__30/" target="blank"
+          ><i class="fa-brands fa-instagram fa-2xl fa-beat-fade"></i
+        ></a>
+        <a href="https://twitter.com/akshat___30" target="_blank"
+          ><i class="fa-brands fa-twitter fa-2xl fa-beat-fade"></i
+        ></a>
+      </div>
 
-    <div class="icon">
-        <a href="https://www.instagram.com/akshat__30/" target="blank"><i class="fa-brands fa-instagram fa-2xl fa-beat-fade"></i></a>
-        <a href="https://twitter.com/akshat___30" target="_blank"><i class="fa-brands fa-twitter fa-2xl fa-beat-fade"></i></a>
-    </div>
-
-    
-        <ul class="grid">
-<li class="touch">Get in Touch</li>
-<br>
-<li><a href="../HomePage/Contact/index.html" target="blank">E-mail</a></li>
-<li><a href="../HomePage/FAQs/index.html">FAQs</a></li>
-<li><a href="../HomePage/Contact/index.html" target="_blank">Contact us</a></li>
-        </ul>
-    <div class="reserved">
-    <p> 2023 SipCraft. All Rights Reserved.</p>
-</div>
-</footer>
-<script src="./data.js"></script>
-<!-- <script src="https://kit.fontawesome.com/d0e69c3701.js" crossorigin="anonymous"></script>/ -->
+      <ul class="grid">
+        <li class="touch">Get in Touch</li>
+        <br />
+        <li>
+          <a href="../HomePage/Contact/index.html" target="blank">E-mail</a>
+        </li>
+        <li><a href="../HomePage/FAQs/index.html">FAQs</a></li>
+        <li>
+          <a href="../HomePage/Contact/index.html" target="_blank"
+            >Contact us</a
+          >
+        </li>
+      </ul>
+      <div class="reserved">
+        <p>2023 SipCraft. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <script src="./data.js"></script>
+    <!-- <script src="https://kit.fontawesome.com/d0e69c3701.js" crossorigin="anonymous"></script>/ -->
     <script src="./script.js"></script>
-    
-</body>
+  </body>
 </html>
