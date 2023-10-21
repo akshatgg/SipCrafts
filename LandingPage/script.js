@@ -1,85 +1,66 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const shopItems = [
-    // Your item data here
-  ];
+const itemsPerPage = 6; // Number of items to display per page
+let currentPage = 1;
 
-  const itemsPerPage = 6;
-  let currentPage = 1;
+function displayProducts(pageNumber) {
+  const shopList = document.getElementById("shop");
+  shopList.innerHTML = ""; // Clear the product list
 
-  const listContainer = document.getElementById("shop");
-  const prevButton = document.querySelector(".prev");
-  const nextButton = document.querySelector(".next");
-  const pageList = document.querySelector(".page-list");
+  const startIndex = (pageNumber - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
 
-  function loadItems() {
-    listContainer.innerHTML = "";
-    const startIndex = (currentPage - 1) * itemsPerPage;
-    const endIndex = startIndex + itemsPerPage;
+  for (let i = startIndex; i < endIndex && i < shopItems.length; i++) {
+    const product = shopItems[i];
+    const productDiv = document.createElement("div");
+    productDiv.classList.add("item");
 
-    for (let i = startIndex; i < endIndex && i < shopItems.length; i++) {
-      const item = shopItems[i];
-      const itemElement = createItemElement(item);
-      listContainer.appendChild(itemElement);
-    }
-  }
-
-  function createItemElement(item) {
-    // Create and return an HTML element for the shop item
-    const itemElement = document.createElement("div");
-    itemElement.classList.add("item");
-    itemElement.innerHTML = `
+    // Create the product content
+    const productContent = `
+    <div id="${product.id}">
       <div class="imag">
-        <img src="${item.img}" alt="${item.name}" />
+        <img src="${product.img}" alt="${product.name}">
       </div>
       <div class="content">
-        <div class="title">${item.name}</div>
-        <div class="details">${item.content}</div>
-        <div class="price">${item.price}</div>
+        <div class="title">${product.name}</div>
+        <div class="details">${product.content}</div>
+        <div class="price">Price: $${product.price}</div>
+        <button class="add" onclick="addCart('${product.id}','${product.img}','${product.name}','${product.price}')">Add to Cart</button>
       </div>
+      </div>  
     `;
-    return itemElement;
+
+    productDiv.innerHTML = productContent;
+    shopList.appendChild(productDiv);
   }
+}
 
-  function updatePagination() {
-    pageList.innerHTML = ""; // Clear the page buttons
+// Initial display
+displayProducts(currentPage);
 
-    const totalPages = Math.ceil(shopItems.length / itemsPerPage);
-
-    for (let i = 1; i <= totalPages; i++) {
-      const pageButton = document.createElement("li");
-      pageButton.textContent = i;
-      pageButton.addEventListener("click", () => {
-        currentPage = i;
-        loadItems();
-        updatePagination();
-      });
-      pageList.appendChild(pageButton);
-    }
-
-    prevButton.disabled = currentPage === 1;
-    nextButton.disabled = currentPage === totalPages;
+document.getElementById("prevPage").addEventListener("click", () => {
+  if (currentPage > 1) {
+    currentPage--;
+    displayProducts(currentPage);
   }
-
-  loadItems();
-  updatePagination();
-
-  prevButton.addEventListener("click", () => {
-    if (currentPage > 1) {
-      currentPage--;
-      loadItems();
-      updatePagination();
-    }
-  });
-
-  nextButton.addEventListener("click", () => {
-    if (currentPage < Math.ceil(shopItems.length / itemsPerPage)) {
-      currentPage++;
-      loadItems();
-      updatePagination();
-    }
-  });
 });
-  
+
+document.getElementById("nextPage").addEventListener("click", () => {
+  const totalPages = Math.ceil(shopItems.length / itemsPerPage);
+  if (currentPage < totalPages) {
+    currentPage++;
+    displayProducts(currentPage);
+  }
+});
+
+for (let i = 1; i <= 3; i++) {
+  document.getElementById(`page${i}`).addEventListener("click", () => {
+    currentPage = i;
+    displayProducts(currentPage);
+  });
+}
+
+
+
+
 
 
 
@@ -117,12 +98,14 @@ product.forEach((item, i) => {
 
 
 
+//making local storage//
+
 
 
 // local storage of cart
 // Wrap your code in a DOMContentLoaded event listener
+let basket = JSON.parse(localStorage.getItem("data")) || [];
 document.addEventListener("DOMContentLoaded", function() {
-  let basket = JSON.parse(localStorage.getItem("data")) || [];
   
   // Assuming you have selected the "shop" element correctly
   let shop = document.getElementById("shop");
@@ -146,12 +129,12 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   };
 
-  // Call generateshop to populate the "shop" element
-  generateshop();
+  // // Call generateshop to populate the "shop" element
+  // generateshop();
 } );
 
 
-let addCart = (id, name, price, img) => {
+let addCart = (id, img, name, price) => {
   basket.push({
     id: id,
     item: 1,
@@ -161,6 +144,7 @@ let addCart = (id, name, price, img) => {
   });
   localStorage.setItem("data", JSON.stringify(basket));
   calculate();
+  generateshop();
 };
 
 
@@ -196,4 +180,12 @@ let Idfetch = () => {
 
 };
 
+
 Idfetch();
+
+
+
+
+
+
+
