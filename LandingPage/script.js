@@ -57,3 +57,46 @@ for (let i = 1; i <= 3; i++) {
     displayProducts(currentPage);
   });
 }
+
+
+
+
+
+
+
+
+//scro;;ing///
+let product = [...document.querySelectorAll(".scrolling")];
+let aftbtn = [...document.querySelectorAll(".aftbtn")];
+let prebtn = [...document.querySelectorAll(".prebtn")];
+
+product.forEach((item, i) => {
+  let containerdimension = item.getBoundingClientRect();
+  let containerwidth = containerdimension.width;
+
+  aftbtn[i].addEventListener("click", () => {
+    item.scrollLeft += containerwidth;
+  });
+  prebtn[i].addEventListener("click", () => {
+    item.scrollLeft -= containerwidth;
+  });
+
+  function scrollToNextImage() {
+    item.scrollLeft += containerwidth;
+  }
+
+  // Function to scroll to the next image every 5 seconds
+  function autoSlide() {
+    setInterval(scrollToNextImage, 7000); // 5000 milliseconds (5 seconds)
+  }
+
+  autoSlide();
+});
+
+
+
+
+
+
+
+
