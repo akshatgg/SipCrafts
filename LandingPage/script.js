@@ -98,5 +98,13 @@ product.forEach((item, i) => {
 
 
 
+//making local storage//
+
+
+
+
+
+
+
 
 
