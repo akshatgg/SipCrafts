@@ -23,9 +23,9 @@ function displayProducts(pageNumber) {
         <div class="title">${product.name}</div>
         <div class="details">${product.content}</div>
         <div class="price">Price: $${product.price}</div>
-        <button class="add" onclick="addToCart(${product.id})">Add to Cart</button>
+        <button class="add" onclick="addCart('${product.id}','${product.img}','${product.name}','${product.price}')">Add to Cart</button>
       </div>
-      </div>
+      </div>  
     `;
 
     productDiv.innerHTML = productContent;
@@ -101,6 +101,86 @@ product.forEach((item, i) => {
 //making local storage//
 
 
+
+// local storage of cart
+// Wrap your code in a DOMContentLoaded event listener
+let basket = JSON.parse(localStorage.getItem("data")) || [];
+document.addEventListener("DOMContentLoaded", function() {
+  
+  // Assuming you have selected the "shop" element correctly
+  let shop = document.getElementById("shop");
+
+  let generateshop = () => {
+    shop.innerHTML = shopItems.map((x) => {
+      let { id, name, price, content, img } = x;
+
+      return `
+        <div class="item" id="${id}">
+          <div class="imag">
+            <img src="${img}" alt="" />
+          </div>
+          <div class="content">
+            <div class="title">${name}</div>
+            <div class="details">${content}</div>
+            <div class="price">${price}</div>
+         <button class="add" id="add" onclick="addCart('${id}','${name}','${price}','${img}')">Add to cart</button>
+          </div>
+        </div>`;
+    });
+  };
+
+  // // Call generateshop to populate the "shop" element
+  // generateshop();
+} );
+
+
+let addCart = (id, img, name, price) => {
+  basket.push({
+    id: id,
+    item: 1,
+    name: name,
+    price: price,
+    img: img,
+  });
+  localStorage.setItem("data", JSON.stringify(basket));
+  calculate();
+  generateshop();
+};
+
+
+
+
+// number of cart items //
+
+
+
+
+
+let calculate = () => {
+  let cart_count = document.getElementById("cart_count");
+  // let BtnAddToCart=document.getElementById("add")
+  // let count=0;
+  // BtnAddToCart.addEventListener('onclick',()=>{
+  //   count=count+1
+  //   cart_count.innerHTML=count;
+  //   })
+  let cart_amount = basket.length;
+  cart_count.innerHTML = cart_amount;
+};
+
+calculate();
+generateshop();
+
+let Idfetch = () => {
+  let product = document.getElementById("shop");
+  product.addEventListener("mouseenter", () => {
+    console.log("hiii");
+      
+  });
+
+};
+
+Idfetch();
 
 
 
