@@ -30,6 +30,7 @@ function displayProducts(pageNumber) {
 
     productDiv.innerHTML = productContent;
     shopList.appendChild(productDiv);
+    handleImageHover(productDiv);
   }
 }
 
@@ -174,7 +175,7 @@ calculate();
 
 
 // Wrap your code in a DOMContentLoaded event listener
-document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () {
   // Your existing code
   
   // Function to handle hovering over a product image
@@ -205,7 +206,7 @@ document.addEventListener("DOMContentLoaded", function () {
   productItems.forEach((product) => {
     handleImageHover(product);
   });
-});
+// });
 
 
 
