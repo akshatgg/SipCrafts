@@ -173,18 +173,28 @@ calculate();
 
 
 
-
 // Wrap your code in a DOMContentLoaded event listener
 document.addEventListener("DOMContentLoaded", function () {
   // Your existing code
-
+  
   // Function to handle hovering over a product image
   function handleImageHover(product) {
+    let description=document.getElementById("descriptions")
     const productImage = product.querySelector("img");
 
     productImage.addEventListener("mouseenter", () => {
-      console.log("hii");
+      description.innerHTML=shopItems.map((y)=>{
+     let {id,name,price,content,img}=y
+     return `
+     <div class="contain">
+     <div class="img">
+     <img src="${img}" alt="">
+     </div>
+
+     </div>
+     `
     });
+  })
   }
 
   // Find all product items and attach hover behavior
@@ -199,3 +209,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
+//adding + and - symbol to increase your quantity //
+let quantity=()=>{
+  let cart=document.querySelector(".add")
+  cart.addEventListener('click',()=>{
+    
+  })
+}
