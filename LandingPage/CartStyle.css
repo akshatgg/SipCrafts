@@ -5,7 +5,7 @@
 
 body{
     background-image: linear-gradient(to top right,#CC64A2,#5c3075);
-    min-height: 200vh;
+    min-height: 150vh;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -180,4 +180,16 @@ p{
  transform: scale(1.1); /* Scale the button by a factor of 1.1 (10% increase) */
     transition: transform 0.5s; 
     opacity:1.1
+}
+
+
+
+
+/* style to the amount you are going to be paid */
+.show_total_amount{
+    margin-top: 150px;
+    margin-left: 900px;
+    font-size: 30px;
+    font-weight:900;
+
 }
