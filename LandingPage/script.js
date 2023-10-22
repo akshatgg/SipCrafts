@@ -184,7 +184,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     productImage.addEventListener("mouseenter", () => {
       description.innerHTML=shopItems.map((y)=>{
-     let {id,name,price,content,img}=y
+        let {id,name,price,content,img}=y
      return `
      <div class="contain">
      <div class="img">
@@ -193,6 +193,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
      </div>
      `
+    });
+    productImage.addEventListener("mouseleave", () => {
+      description.innerHTML = ''; // Clear the description when mouse leaves
     });
   })
   }
