@@ -193,3 +193,43 @@ p{
     font-weight:900;
 
 }
+/* Button styling */
+.Buy {
+    padding-left: 33px;
+    padding-right: 33px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 20px;
+    margin-left: 800px;
+    margin-top: 50px;
+    background-color: #3498db; /* Default background color */
+    color: #fff; /* Default text color */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  }
+  
+  .buy {
+    padding-left: 65px;
+    padding-right: 65px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 20px;
+    margin-left: 12px;
+    background-color: #e74c3c; /* Default background color */
+    color: #fff; /* Default text color */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  }
+  
+  /* Hover effect */
+  .Buy:hover {
+    background-color: #2980b9; /* New background color on hover */
+    color: #fff; /* New text color on hover */
+  }
+  
+  .buy:hover {
+    background-color: #c0392b; /* New background color on hover */
+    color: #fff; /* New text color on hover */
+  }
