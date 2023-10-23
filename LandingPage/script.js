@@ -13,10 +13,13 @@ function displayProducts(pageNumber) {
     const productDiv = document.createElement("div");
     productDiv.classList.add("item");
 
+    // Set the product.id as the id attribute
+    productDiv.id = product.id;
+
     // Create the product content
     const productContent = `
-    <div id="${product.id}">
-      <div class="imag" id=image>
+    <div>
+      <div class="imag" id="image">
         <img src="${product.img}" alt="${product.name}">
       </div>
       <div class="content">
@@ -25,7 +28,7 @@ function displayProducts(pageNumber) {
         <div class="price">Price: $${product.price}</div>
         <button class="add" onclick="addCart('${product.id}','${product.img}','${product.name}','${product.price}')">Add to Cart</button>
       </div>
-      </div>  
+    </div>  
     `;
 
     productDiv.innerHTML = productContent;
@@ -175,41 +178,49 @@ calculate();
 
 
 // Wrap your code in a DOMContentLoaded event listener
-// document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () { 
   // Your existing code
   
   // Function to handle hovering over a product image
   function handleImageHover(product) {
-    let description=document.getElementById("descriptions")
+    let description = document.getElementById("descriptions");
     const productImage = product.querySelector("img");
-
+  
     productImage.addEventListener("mouseenter", () => {
-      description.innerHTML=shopItems.map((y)=>{
-        let {id,name,price,content,img}=y
-     return `
-     <div class="contain">
-     <div class="img">
-     <img src="${img}" alt="">
-     </div>
-
-     </div>
-     `
+      const productId = product.getAttribute("id");
+      console.log(productId);
+  
+      // Find the matching product in the shopItems array
+      let productData = null;
+      for (let i = 0; i < shopItems.length; i++) {
+        if (shopItems[i].id === parseInt(productId)) {
+          productData = shopItems[i];
+          break;
+        }
+      }
+  
+      if (productData) {
+        description.innerHTML = `
+          <div class="contain">
+            <div class="img">
+              <img src="${productData.img}" alt="">
+            </div>
+          </div>
+        `;
+      }
     });
+  
     productImage.addEventListener("mouseleave", () => {
-      description.innerHTML = ''; // Clear the description when mouse leaves
+      description.innerHTML = ''; // Clear the description when the mouse leaves
     });
-  })
   }
-
+  
   // Find all product items and attach hover behavior
   const productItems = document.querySelectorAll(".item");
   productItems.forEach((product) => {
     handleImageHover(product);
   });
-// });
-
-
-
+  
 
 
 
