@@ -27,6 +27,23 @@ let generateCart = () => {
      `;
     }));
   }
+  else {
+    swal({
+      title: "Your Cart is Empty!",
+      icon: "info",
+      button: {
+        text: "Get Back",
+        closeModal: false,
+      },
+      allowOutsideClick: false, // Disable interaction with elements outside the dialog
+    }).then((value) => {
+      if (value) {
+        window.location.href = './index.html';
+      }
+    });
+  }
+  
+  
 };
 generateCart();
 calculate();
