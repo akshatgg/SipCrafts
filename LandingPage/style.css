@@ -13,21 +13,22 @@ body {
   align-items: center;
 }
 .details-box {
-  height: 750px;
-  width: 550px;
+  height: 800px;
+  width: 950px;
   padding: 20px;
   border-radius: 20px;
   font-size: 20px;
   color: #000000;
   text-align: center;
   background-color: #d69ad2;
-  margin-top: auto;
+  margin-top: 90px;
 }
 .container {
   height: 1000px;
   width: 900px;
   /* margin-left: 550px; */
   margin-top: 100px;
+  margin-left: 90px;
 }
 .list {
   display: grid;
@@ -379,4 +380,24 @@ a {
 }
 .touch {
   font-size: 20px;
+}
+
+
+
+
+
+
+
+
+/* Add this CSS to your stylesheet */
+.contain .img img{
+  height: 350px;
+ /* Apply a transition to the opacity property */
+}
+
+.cont{
+  font-size: larger;
+  font-weight: 900;
+  color: #5c3075;
+  font-style: italic;
 }

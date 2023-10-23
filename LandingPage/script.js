@@ -205,6 +205,9 @@ calculate();
             <div class="img">
               <img src="${productData.img}" alt="">
             </div>
+            <div class='cont'>
+            "${productData.making}"
+            </div>
           </div>
         `;
       }
