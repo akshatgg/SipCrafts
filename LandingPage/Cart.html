@@ -1,52 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap" rel="stylesheet" >
-    <link rel="stylesheet" href="./CartStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./CartStyle.css" />
     <!-- <link rel="stylesheet" href="./style.css"> -->
-    <script src="https://kit.fontawesome.com/d0e69c3701.js" crossorigin="anonymous"></script>
-</head>
+    <script
+      src="https://kit.fontawesome.com/d0e69c3701.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-
-
-<body>
-    
-    
+  <body>
     <!-- navbar -->
 
     <div class="nav">
-        <img src="../HomePage/assest/WhatsApp Image 2023-09-18 at 11.30.26 PM.jpeg" class="logo" />
-        <ul class="info">
-            
-            <li><a href="../HomePage/About/index.html" class="des">About</a></li>
-            <li><a href="../HomePage/index.html" class="des">Home</a></li>           
-            <li><a href="../HomePage/Contact/index.html" class="des">Contact</a></li>
-            <li><a href="../HomePage/FAQs/index.html" class="des">FAQs</a></li>
-        </ul>
-        
-        <button style="background-color: white;"  class="cart"><i class="fa-solid fa-cart-arrow-down fa-2xl"></i></button>
-<div class="count" id="cart_count">0</div>
-        <button class="btn" onclick="showPopup()">Login</button>
+      <img
+        src="../HomePage/assest/WhatsApp Image 2023-09-18 at 11.30.26 PM.jpeg"
+        class="logo"
+      />
+      <ul class="info">
+        <li><a href="../HomePage/index.html" class="des">Home</a></li>
+        <li><a href="/LandingPage/index.html" class="des">Products</a></li>
+        <li>
+          <a href="../HomePage/Contact/index.html" class="des">Contact</a>
+        </li>
+        <li><a href="../HomePage/FAQs/index.html" class="des">FAQs</a></li>
+      </ul>
+
+      <button style="background-color: white" class="cart">
+        <i class="fa-solid fa-cart-arrow-down fa-2xl"></i>
+      </button>
+      <div class="count" id="cart_count">0</div>
+      <button class="btn" onclick="showPopup()">Login</button>
     </div>
 
-<!--cart page-->
-<div class="cartpage">
-    <div class="shopping-cart" id="shoping-cart">
-        <div class="label" id="label">
-
-
-
-        </div>
+    <!--cart page-->
+    <div class="cartpage">
+      <div class="shopping-cart" id="shoping-cart">
+        <div class="label" id="label"></div>
+      </div>
     </div>
+
+
+
+
+    <!-- adding total amount you want to paid -->
+<div class="show_total_amount">
+  Total Price :<span class="total">0</span>
 </div>
 
-</body>
-<script src="./CartScript.js"></script>
-<script src="./script.js"></script>
-<script src="./data.js"></script>
+
+<!-- adding button to place your order and go back to your page -->
+<div class="ButtonToBuy">
+  <a href="./Checkout/checkout.html"><button class="Buy" id="place-order">Place Your Order</button></a>
+  <button class="buy"><a href="./index.html">Get Back</a></button>
+
+</div>
+  </body>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="./CartScript.js"></script>
+  <script src="./script.js"></script>
+  <script src="./data.js"></script>
 </html>

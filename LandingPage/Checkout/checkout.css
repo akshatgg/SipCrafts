@@ -1,0 +1,61 @@
+body {
+  background-color: #000000;
+  background-image: linear-gradient(to top right,#CC64A2,#5c3075);
+
+  color: white;
+}
+.main-h1 {
+  text-align: center;
+}
+.checkout-main {
+  /* display: grid;
+  grid-template-columns: repeat(2,auto); */
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+
+  & input,
+  select {
+    width: 20rem;
+    height: 1.5rem;
+  }
+  & textarea {
+    width: 20rem;
+  }
+}
+.address-form {
+  box-sizing: border-box;
+  border-radius: 3%;
+  height: fit-content;
+  width: 30rem;
+
+  padding: 2rem 4rem;
+  border: 1px solid;
+
+  font-size: 1rem;
+
+  & #btn-save-address {
+    cursor: pointer;
+    height: 2rem;
+    width: 5rem;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    /* font-weight: 500; */
+    
+  }
+  & #btn-save-address:hover {
+    background-color: #4e4d4d;
+    color: #ffffff;
+  }
+}
+
+.payment-details {
+  box-sizing: border-box;
+  padding: 1rem;
+  min-height: 32rem;
+  width: 30rem;
+  border: 1px solid;
+  font-size: 20px;
+}

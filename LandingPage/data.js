@@ -3,15 +3,18 @@ let shopItems =[
         "id": 1,
         "name" :"Negoni" ,
         "price":"550" ,
-       "content":"lorem 3fqfg gks sk gs gs sjbsf sf sefb e gs" , 
+       "content":"lorem 3fqfg gks sk gs g+s sjbsf sf sefb e gs" , 
        "img":"./assest/Negroni.png",
+       "making":"Click here for:KIET ERP Portal KIET Web Site KIET Email Office o365 Login For any type of IT services please Contact us: Email- itsupport@kiet.edu, Helpline and whatsapp No:8744097774 (Please ignore calls on personal mobile number)",
     },
     {
         "id":2 ,
         "name" :"Blue lagoon" ,
         "price":"450" ,
        "content":"lorem 3fqfg gks sk gs gs sjbsf sf sef djjw  dn" , 
+       "making":"* first",
        "img":"./assest/blue lagoon.png",
+
     },
     {
         "id":3 ,
@@ -19,6 +22,7 @@ let shopItems =[
         "price":"680" ,
        "content":"lorem 3fqfg gks sk gs gs sjbsf sf sef djjw  dn" , 
        "img":"./assest/Boulevardier.png",
+       "making":"* first",
     },
     {
         "id":4 ,
@@ -26,6 +30,7 @@ let shopItems =[
         "price":"700" ,
        "content":"lorem 3fqfg gks sk gs gs sjbsf sf sef djjw  dn" , 
        "img":"./assest/Espresso Martini.png",
+       "making":"* first",
     },
     {
         "id":5 ,
@@ -33,6 +38,7 @@ let shopItems =[
         "price":"600" ,
        "content":"lorem 3fqfg gks sk gs gs sjbsf sf sef djjw  dn" , 
        "img":"./assest/Gimlet.png",
+       "making":"* first",
     },
     {
         "id":6 ,
@@ -40,6 +46,7 @@ let shopItems =[
         "price":"550" ,
        "content":"lorem 3fqfg gks sk gs gs sjbsf sf sef djjw  dn" , 
        "img":"./assest/luckin.png",
+       "making":"* first",
     },
     {
         "id":7 ,
@@ -47,6 +54,8 @@ let shopItems =[
         "price":"650" ,
        "content":"lorem 3fqfg gks sk gs gs sjbsf sf sef djjw  dn" , 
        "img":"./assest/Mai Tai.png",
+       "making":"* first",
+       
     },
     {
         "id": 8,
@@ -54,6 +63,7 @@ let shopItems =[
         "price":"820" ,
        "content":"lorem 3fqfg gks sk gs gs sjbsf sf sef djjw  dn" , 
        "img":"./assest/Mimosa.png",
+       "making":"* first",
     },
     {
         "id":9 ,
@@ -61,6 +71,7 @@ let shopItems =[
         "price":"340" ,
        "content":"lorem 3fqfg gks sk gs gs sjbsf sf sef djjw  dn" , 
        "img":"./assest/Mojito.png",
+       "making":"* first",
     },
     {
         "id": 10,
@@ -68,6 +79,7 @@ let shopItems =[
         "price":"120" ,
        "content":"lorem 3fqfg gks sk gs gs sjbsf sf sef djjw  dn" , 
        "img":"./assest/Orange.png",
+       "making":"* first",
     },
     {
         "id":11 ,
@@ -75,6 +87,7 @@ let shopItems =[
         "price":"340" ,
        "content":"lorem 3fqfg gks sk gs gs sjbsf sf sef djjw  dn" , 
        "img":"./assest/sangria.png",
+       "making":"* first",
     },
     {
         "id": 12,
@@ -82,6 +95,7 @@ let shopItems =[
         "price":"200" ,
        "content":"lorem 3fqfg gks sk gs gs sjbsf sf sef djjw  dn" , 
        "img":"./assest/Sarec.png",
+       "making":"* first",
     },
     {
         "id": 13,
@@ -89,6 +103,7 @@ let shopItems =[
         "price":"240" ,
        "content":"lorem 3fqfg gks sk gs gs sjbsf sf sef djjw  dn" , 
        "img":"./assest/sangria.png",
+       "making":"* first",
     },
     {
         "id": 14,
@@ -96,6 +111,7 @@ let shopItems =[
         "price":"2000" ,
        "content":"lorem 3fqfg gks sk gs gs sjbsf sf sef djjw  dn" , 
        "img":"./assest/White Russian.png",
+       "making":"* first",
     },
     {
         "id": 15,
@@ -103,6 +119,7 @@ let shopItems =[
         "price":"3000" ,
        "content":"lorem 3fqfg gks sk gs gs sjbsf sf sef djjw  dn" , 
        "img":"./assest/Belaire.png",
+       "making":"* first",
     },
     {
         "id": 16,
@@ -110,6 +127,8 @@ let shopItems =[
         "price":"200" ,
        "content":"lorem 3fqfg gks sk gs gs sjbsf sf sef djjw  dn" , 
        "img":"./assest/Mojitoo.png",
+       "making":"* first",
+
     },
     {
         "id": 17,
@@ -117,6 +136,7 @@ let shopItems =[
         "price":"200" ,
        "content":"lorem 3fqfg gks sk gs gs sjbsf sf sef djjw  dn" , 
        "img":"./assest/luckin.png",
+       "making":"* first",
     },
     {
         "id": 18,
@@ -124,6 +144,7 @@ let shopItems =[
         "price":"300" ,
        "content":"lorem 3fqfg gks sk gs gs sjbsf sf sef djjw  dn" , 
        "img":"./assest/sangria.png",
+       "making":"* first",
     },
     
     ]
