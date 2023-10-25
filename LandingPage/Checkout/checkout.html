@@ -10,9 +10,9 @@
     <h1 class="text-center text-5xl py-3 pb-20  hover:ext-base">Checkout</h1>
 
     <!-- Address Form -->
-    <div class="flex justify-center gap-16">
-        <div class="flex-direction:column">
-        <h2 class="text-2xl pb-3">Shipping Address</h2>
+    <div class="flex justify-center gap-16 ">
+        <div class="flex-direction:column w-2/6">
+        <h2 class="text-3xl pb-3 text-center">Shipping Address</h2>
     <form action="process_address.php" method="post">
         <label for="street">Street Address:</label>
         <input type="text" id="street" name="street" required><br><br>
@@ -26,9 +26,9 @@
 </div>
 
     <!-- Payment Options -->
-    <div class="flex-direction:column">
+    <div class="flex-direction:column w-2/6 ">
 
-    <h2 class="text-2xl pb-3">Payment Method</h2>
+    <h2 class="text-3xl pb-3 text-center">Payment Method</h2>
     <form action="process_payment.php" method="post">
         <input type="radio" id="creditCard" name="paymentMethod" value="creditCard">
         <label for="creditCard">Credit Card</label><br>
