@@ -62,7 +62,6 @@ let remove_from_Cart = (id) => {
 };
 
 //adding total amount you want to paid//
-
 // Define TotalAmount function
 let TotalAmount = () => {
     let total = 0; // Initialize total to 0
