@@ -8,11 +8,41 @@
     <script src="https://kit.fontawesome.com/d0e69c3701.js" crossorigin="anonymous"></script>
 </head>
 <body>
+<!-- navbar -->
+<div class="nav bg-black" >
+    <img
+      src="../../HomePage/assest/WhatsApp Image 2023-09-18 at 11.30.26 PM.jpeg"
+      class="logo"
+    />
+    <ul class="info">
+      <li><a href="../HomePage/index.html" class="des">Home</a></li>
+      <li><a href="./index.html" class="des">Products</a></li>
+      <li>
+        <a href="../HomePage/Contact/index.html" class="des">Contact</a>
+      </li>
+      <li><a href="../HomePage/FAQs/index.html" class="des">FAQs</a></li>
+    </ul>
+
+    <button
+      onclick="window.location.href='./Cart.html';"
+      style="background-color: white"
+      class="cart"
+    >
+      <i class="fa-solid fa-cart-arrow-down fa-2xl"></i>
+    </button>
+    <div class="count" id="cart_count">0</div>
+    <button class="btn" onclick="showPopup()">Login</button>
+  </div>
+
+
+
+  
+<!-- conatainer for payment and address -->
     <h1 class="text-center text-5xl py-3 pb-20">Checkout</h1>
 
+    <div class="flex justify-center gap-1 max-h-screen">
     <!-- Address Form -->
-    <div class="flex justify-center gap-16">
-        <div class="w-2/6 shadow-2xl">
+        <div class="w-2/3  mx-8 shadow-2xl ">
             <h2 class="text-3xl pb-3 text-center">Shipping Address</h2>
             <form action="process_address.php" method="post">
                 <label for="street">Street Address:</label>
@@ -30,7 +60,7 @@
         </div>
 
         <!-- Payment Options -->
-        <div class="w-2/6 h-auto shadow-2xl">
+        <div class="w-3/4 shadow-2xl mr-8                                                  ">
             <h2 class="text-3xl pb-3 text-center">Payment Method</h2>
             <form action="process_payment.php" method="post">
                 <div class="flex flex-row gap-3">
@@ -43,9 +73,6 @@
                     <label for="gpay" class="text-3xl ">Google Pay</label>
                     <i class="fa-brands fa-google-pay fa-3x mt-2 mx-2"></i>
                 </div>
-
-
-
                 <div class="flex flex-row gap-3">
                     <input type="radio" id="phonePay" name="paymentMethod" value="phonePay">
                     <label for="phonePay" class="text-3xl">PhonePe</label>

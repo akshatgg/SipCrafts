@@ -75,3 +75,129 @@ h2:first-of-type {
   }
   /* Modify other styles as needed for smaller screens */
 }
+
+
+.nav {
+  background-color: linear-gradient(to top right, #cc64a2, #5c3075);
+  height: 100px;
+  display: flex;
+}
+.logo {
+  height: 70px;
+  margin-top: 15px;
+  padding-left: 30px;
+}
+.info {
+  color: antiquewhite;
+  display: flex;
+  gap: 135px;
+
+  font-size: 30px;
+  text-decoration: none;
+  list-style: none;
+  margin-top: 32px;
+  margin-left: 410px;
+}
+.btn {
+  height: 52px;
+  width: 143px;
+  margin-top: 25px;
+  margin-left: 50px;
+  font-size: 26px;
+  font-weight: bold;
+  border-radius: 10px;
+  color:#f5f5f5
+}
+.btn:hover {
+  color: #040404;
+  background-color: rgb(250, 246, 246);
+}
+.cart {
+  padding-top: 10px;
+  margin-top: 25px;
+  margin-left: 290px;
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+  transition: background-color 0.3s; /* Add a smooth transition effect */
+}
+
+.cart:hover {
+  background-color: lightgray; /* Change the background color on hover */
+}
+
+.cart i {
+  font-size: 40px;
+  transition: color 0.3s; /* Add a smooth transition effect */
+}
+
+.cart:hover i {
+  color: red; /* Change the color of the icon on hover */
+}
+
+img {
+  padding: 0px;
+}
+
+.count {
+  transform: translate(-10px, 0px);
+  border-radius: 50px;
+  height: 40px;
+  padding-top: 20px;
+  font-size: 30px;
+  font-weight: 900;
+  background-color: #dbd3de;
+  padding: 0px;
+  display: inline-block;
+}
+.login_page {
+  display: none;
+  height: 800px;
+  width: 700px;
+  background-color: #fff;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  /* background-color: rgb(255, 252, 252); */
+  height: 800px;
+  width: 800px;
+  /* margin-left: 650px; */
+  margin-top: 50px;
+}
+a {
+  /* text-decoration: none; */
+  color: #ede0e3;
+  text-decoration: none;
+  font-weight: 1000;
+}
+.hov {
+  color: rgb(242, 238, 238);
+}
+
+/* Style for the list items */
+.des {
+  position: relative;
+  list-style: none; /* Remove default list bullet */
+}
+
+/* Create the small block */
+.des::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px; /* Adjust the height as needed */
+  bottom: 0;
+  left: 0;
+  background-color: #d7a4f0; /* Color of the block */
+  transition: width 0.3s ease-in-out;
+  transform-origin: left; /* Make the block expand from the left */
+}
+
+/* Show the block when hovering over the list item */
+.des:hover::before {
+  width: 100%; /* Expand to 100% width on hover */
+}
