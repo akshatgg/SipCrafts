@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Diagram</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        .circle {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 10px;
+            background-color: white;
+        }
+        .active {
+            background-color: #333; /* Dark color for active step */
+        }
+    </style>
+</head>
+<body>
+    <div class="text-center p-4">
+        <div>
+            <span class="circle active" id="addressCircle"></span>
+            <span class="circle" id="orderSummaryCircle"></span>
+            <span class="circle" id="paymentCircle"></span>
+        </div>
+        <div>
+            <p>Address</p>
+            <p>Order Summary</p>
+            <p>Payment</p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to toggle active state
+        const addressCircle = document.getElementById('addressCircle');
+        const orderSummaryCircle = document.getElementById('orderSummaryCircle');
+        const paymentCircle = document.getElementById('paymentCircle');
+
+        function setActive(step) {
+            addressCircle.classList.remove('active');
+            orderSummaryCircle.classList.remove('active');
+            paymentCircle.classList.remove('active');
+
+            if (step === 'address') {
+                addressCircle.classList.add('active');
+            } else if (step === 'orderSummary') {
+                orderSummaryCircle.classList.add('active');
+            } else if (step === 'payment') {
+                paymentCircle.classList.add('active');
+            }
+        }
+
+        // Simulate the progression through steps
+        setActive('address'); // Set the initial step (e.g., address)
+
+        // You can call setActive('orderSummary') or setActive('payment') when the user progresses through steps.
+    </script>
+</body>
+</html>
