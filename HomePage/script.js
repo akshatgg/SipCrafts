@@ -46,7 +46,3 @@ var passsignin=document.getElementById("passwords");
 
     });
   
-
-
-
-
