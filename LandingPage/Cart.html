@@ -10,6 +10,8 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+
     <link rel="stylesheet" href="./CartStyle.css" />
     <!-- <link rel="stylesheet" href="./style.css"> -->
     <script
@@ -17,54 +19,44 @@
       crossorigin="anonymous"
     ></script>
   </head>
-
   <body>
     <!-- navbar -->
-
-    <div class="nav">
-      <img
-        src="../HomePage/assest/WhatsApp Image 2023-09-18 at 11.30.26 PM.jpeg"
-        class="logo"
-      />
-      <ul class="info">
-        <li><a href="../HomePage/index.html" class="des">Home</a></li>
-        <li><a href="/LandingPage/index.html" class="des">Products</a></li>
-        <li>
-          <a href="../HomePage/Contact/index.html" class="des">Contact</a>
-        </li>
-        <li><a href="../HomePage/FAQs/index.html" class="des">FAQs</a></li>
-      </ul>
-
-      <button style="background-color: white" class="cart">
-        <i class="fa-solid fa-cart-arrow-down fa-2xl"></i>
-      </button>
-      <div class="count" id="cart_count">0</div>
-      <button class="btn" onclick="showPopup()">Login</button>
+    <div class="nav grid grid-rows-1 grid-flow-col">
+        <img src="../HomePage/assest/WhatsApp Image 2023-09-18 at 11.30.26 PM.jpeg" class="logo h-24" />
+        <ul class="info grid grid-rows-1 grid-flow-col text-3xl font-semibold mt-6 col-start-4 col-span-7 text-black">
+            <li><a href="../HomePage/index.html" class="des">Home</a></li>
+            <li><a href="/LandingPage/index.html" class="des">Products</a></li>
+            <li><a href="../HomePage/Contact/index.html" class="des">Contact</a></li>
+            <li><a href="../HomePage/FAQs/index.html" class="des">FAQs</a></li>
+        </ul>
+        <div class="col-start-12 grid grid-flow-col">
+            <button class="cart h-11 rounded-2xl  mt-5 bg-white w-14 ">
+                <i class="fa-solid fa-cart-arrow-down fa-2xl"></i>
+            </button>
+            <!-- Move the "count" div inside the "cart" div -->
+            <div class="cart-count bg-white h-10 mt-5 rounded-full flex items-center justify-center translate-y-9">
+                <div class="font-extrabold text-3xl" id="cart_count">0</div>
+            </div>
+            <button class="btn bg-white w-24 h-11 mt-5 rounded-xl col-start-13 font-bold text-2xl mr-5 hover:bg-black hover:text-white" onclick="showPopup()">Login</button>
+        </div>
     </div>
-
     <!--cart page-->
     <div class="cartpage">
-      <div class="shopping-cart" id="shoping-cart">
-        <div class="label" id="label"></div>
-      </div>
+        <div class="shopping-cart" id="shoping-cart">
+            <div class="label" id="label"></div>
+        </div>
     </div>
-
-
-
-
     <!-- adding total amount you want to paid -->
-<div class="show_total_amount">
-  Total Price :<span class="total">0</span>
-</div>
+    <div class="show_total_amount">
+        Total Price :<span class="total">0</span>
+    </div>
+    <!-- adding button to place your order and go back to your page -->
+    <div class="ButtonToBuy">
+        <a href="./Checkout/checkout.html"><button class="Buy" id="place-order">Place Your Order</button></a>
+        <button class="buy"><a href="./index.html">Get Back</a></button>
+    </div>
+</body>
 
-
-<!-- adding button to place your order and go back to your page -->
-<div class="ButtonToBuy">
-  <a href="./Checkout/checkout.html"><button class="Buy" id="place-order">Place Your Order</button></a>
-  <button class="buy"><a href="./index.html">Get Back</a></button>
-
-</div>
-  </body>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script src="./CartScript.js"></script>
   <script src="./script.js"></script>

@@ -13,38 +13,17 @@ body{
 /* navbar style */
 
 
-.nav{
-    background-color: linear-gradient(to top right,#CC64A2,#5c3075);;
-    height: 100px;
-    display: flex;
-    
 
+
+.cart-count{
+    transform: translate(-100%,-50%);
 }
-.logo{
-    height: 70px;
-    margin-top:15px;
-    padding-left:30px ;
-}
-
-.info{
-    color: antiquewhite;
-    display: flex;
-    gap: 135px; 
-
-    font-size: 30px;
-    text-decoration: none;
-    list-style: none;
-    margin-top: 32px;
-    margin-left: 410px;
-    
-
-}
-
 
 /* Style for the list items */
 .des {
     position: relative;
     list-style: none; /* Remove default list bullet */
+    
 }
 
 /* Create the small block */
@@ -52,11 +31,11 @@ body{
     content: "";
     position: absolute;
     width: 0;
-    height: 2px; /* Adjust the height as needed */
+    height: 2px;    
     bottom: 0;
     left: 0;
-    background-color: #d7a4f0; /* Color of the block */
-    transition: width 0.3s ease-in-out;
+    background-color: #ddd6d6; /* Color of the block */
+    transition: width 0.4s ease-in-out;
     transform-origin: left; /* Make the block expand from the left */
 }
 
@@ -64,71 +43,6 @@ body{
 .des:hover::before {
     width: 100%; /* Expand to 100% width on hover */
 }
-
-.cart {
-    padding-top:10px ;
-    margin-top: 25px;
-    margin-left: 290px;
-    height: 50px;
-    width: 50px;
-    border-radius: 5px;
-    transition: background-color 0.3s; /* Add a smooth transition effect */
-}
-
-.cart:hover {
-    background-color: lightgray; /* Change the background color on hover */
-}
-
-.cart i {
-    font-size: 40px;
-    transition: color 0.3s; /* Add a smooth transition effect */
-}
-
-.cart:hover i {
-    color: red; /* Change the color of the icon on hover */
-}
-
-.count{
-    transform: translate(-10px,0px);
-            border-radius: 50px;
-            height: 40px;
-            padding-top: 20px;
-            font-size: 30px;
-            font-weight: 900;
-            background-color: #dbd3de;
-            padding: 0px;
-            display: inline-block;
-        }
-
-
-.btn{
-    height: 52px;
-    width: 143px;
-    margin-top: 25px;
-    margin-left: 50px;
-    font-size: 26px;
-    font-weight: bold;
-    border-radius: 10px;
-    
-
-}
-.btn:hover{
-    color: #ede0e3;
-    background-color: black;
-    
-}
-
-a{
-    /* text-decoration: none; */
-    color: #ede0e3;
-   text-decoration: none;
-   font-weight: 1000;
-}
-
-
-
-
-
 
 
 /* Cart Items Style */
