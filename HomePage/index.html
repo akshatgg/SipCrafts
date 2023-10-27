@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sip Crafts</title>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <link rel="stylesheet" href="./style.css" />
     <script
       src="https://kit.fontawesome.com/d0e69c3701.js"
@@ -43,19 +43,21 @@
     </style>
   </head>
   <body>
-     <div class="nav">
-      <img
-        src="./assest/WhatsApp Image 2023-09-18 at 11.30.26 PM.jpeg"
-        class="logo"
-      />
-      <ul class="info">
-        <li><a href="./index.html" class="des" id="hov">Home</a></li>
-        <li><a href="../LandingPage/index.html" class="des">Product</a></li>
-        <li><a href="./Contact/index.html" class="des">Contact</a></li>
-        <li><a href="./FAQs/index.html" class="des">FAQs</a></li>
-         </ul>
-      <button class="btn" onclick="showPopup()" id="logi">Login</button>
-    </div>
+    <div class="nav grid grid-rows-1 grid-flow-col bg-black h-24">
+  <img
+    src="./assest/WhatsApp Image 2023-09-18 at 11.30.26 PM.jpeg"
+    class="logo h-20"
+  />
+  
+    <ul class="info grid grid-rows-1 grid-flow-col mt-5 col-start-5 col-span-6">
+      <li><a href="./index.html" class="des text-gray-300 text-3xl" id="hov">Home</a></li>
+      <li><a href="../LandingPage/index.html" class="des text-gray-300 text-3xl">Product</a></li>
+      <li><a href="./Contact/index.html" class="des text-gray-300 text-3xl">Contact</a></li>
+      <li><a href="./FAQs/index.html" class="des text-gray-300 text-3xl">FAQs</a></li>
+    </ul>
+  
+  <button class="btn text-gray-900 mt-4 rounded-lg text-3xl w-36 h-12 bg-white font-medium hover:bg-black hover:text-white col-start-13" onclick="showPopup()" id="logi">Login</button>
+</div>
 
     <div class="popup-container" id="loginPopup">
       <div class="container">
