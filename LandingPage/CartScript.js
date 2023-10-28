@@ -55,7 +55,8 @@ let remove_from_Cart = (id) => {
   }
   basket = basket.filter((x) => x.id != id);
   localStorage.setItem("data", JSON.stringify(basket));
-  
+  location.reload();
+
   calculate();
   generateCart();
   TotalAmount();
@@ -63,13 +64,22 @@ let remove_from_Cart = (id) => {
 
 //adding total amount you want to paid//
 // Define TotalAmount function
+let gstelement=document.querySelector(".gst");
+let totalElement = document.querySelector(".total"); // Use a class selector
 let TotalAmount = () => {
-    let total = 0; // Initialize total to 0
-    basket.forEach((x) => {
-      total += parseInt(x.price, 10); // Parse price as an integer and add to the total
-    });
+  let total = 0; // Initialize total to 0
   
-    let totalElement = document.querySelector(".total"); // Use a class selector
+  basket.forEach((x) => {
+    
+    total += parseInt(x.price, 10); // Parse price as an integer and add to the total
+
+  });
+  let gst=0
+  basket.forEach((x)=>{
+    gst += parseInt((x.price*0.18), 10);
+    
+  })
+  gstelement.innerHTML=gst;
     totalElement.innerHTML = total; // Display the total price
   };
   
@@ -79,5 +89,26 @@ let TotalAmount = () => {
 
 
 
+let cocktails=document.querySelector(".cocktails")
+//every item price shows and sum//
+let items = () => {
+  if (basket.length !== 0) {
+    const itemDescriptions = basket.map((x) => {
+      let { id, name, price, img, content } = x;
+      return `<div>* ${name} : ${price}</div>`;
+    });
+    cocktails.innerHTML = itemDescriptions.join(''); // Join the array without a comma
+  }
+};
 
-  ``
+items();
+
+let totalprice=document.querySelector(".totalprice")
+
+let price=()=>{
+let total =0;
+total = parseInt(totalElement.innerHTML, 10) + parseInt(gstelement.innerHTML, 10);
+    totalprice.innerHTML=total;
+}
+price()
+  

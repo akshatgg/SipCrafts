@@ -8,7 +8,7 @@ function closePopup() {
     loginPopup.style.display = 'none';
 }
 
-window.onload = showPopup;   
+// window.onload = showPopup;   
 
 var signinbtn = document.getElementById("signinbtn");
 var signupbtn = document.getElementById("signupbtn");
