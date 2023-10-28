@@ -8,32 +8,21 @@
     <script src="https://kit.fontawesome.com/d0e69c3701.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<!-- navbar -->
-<div class="nav bg-black" >
-    <img
-      src="../../HomePage/assest/WhatsApp Image 2023-09-18 at 11.30.26 PM.jpeg"
-      class="logo"
-    />
-    <ul class="info">
-      <li><a href="../HomePage/index.html" class="des">Home</a></li>
-      <li><a href="./index.html" class="des">Products</a></li>
-      <li>
-        <a href="../HomePage/Contact/index.html" class="des">Contact</a>
-      </li>
-      <li><a href="../HomePage/FAQs/index.html" class="des">FAQs</a></li>
-    </ul>
+<!-- navbar --> <div class="nav grid grid-rows-1 grid-flow-col bg-black h-28">
+  <img
+  src="../../HomePage/assest/WhatsApp Image 2023-09-18 at 11.30.26 PM.jpeg"
+  class="logo h-20 mt-3"
+/>
 
-    <button
-      onclick="window.location.href='./Cart.html';"
-      style="background-color: white"
-      class="cart"
-    >
-      <i class="fa-solid fa-cart-arrow-down fa-2xl"></i>
-    </button>
-    <div class="count" id="cart_count">0</div>
-    <button class="btn" onclick="showPopup()">Login</button>
-  </div>
+  <ul class="info grid grid-rows-1 grid-flow-col mt-8 col-start-5 col-span-6">
+    <li><a href="../../HomePage/index.html" class="des text-gray-300 text-3xl" id="hov">Home</a></li>
+    <li><a href="../index.html" class="des text-gray-300 text-3xl">Product</a></li>
+    <li><a href="../../HomePage/Contact/index.html" class="des text-gray-300 text-3xl">Contact</a></li>
+    <li><a href="../../HomePage/FAQs/index.html" class="des text-gray-300 text-3xl">FAQs</a></li>
+  </ul>
 
+<button class="btn text-gray-900 mt-4 rounded-lg text-3xl w-36 h-12 bg-white font-medium hover:bg-black hover:text-white col-start-13" onclick="showPopup()" id="logi">Login</button>
+</div>
 
 
   
