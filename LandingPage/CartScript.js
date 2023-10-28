@@ -91,16 +91,16 @@ let TotalAmount = () => {
 
 let cocktails=document.querySelector(".cocktails")
 //every item price shows and sum//
-let items=()=>{
-  if(basket.length != 0){
-  return cocktails.innerHTML=basket.map((x)=>{
-    let {id, name, price, img, content}=x
-    return `
-    <div>${name} : ${price}</div>
-    `
-  })
+let items = () => {
+  if (basket.length !== 0) {
+    const itemDescriptions = basket.map((x) => {
+      let { id, name, price, img, content } = x;
+      return `<div>* ${name} : ${price}</div>`;
+    });
+    cocktails.innerHTML = itemDescriptions.join(''); // Join the array without a comma
   }
-}
+};
+
 items();
 
 let totalprice=document.querySelector(".totalprice")

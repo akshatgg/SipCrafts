@@ -23,7 +23,7 @@
     <!-- navbar -->
     <div class="nav grid grid-rows-1 grid-flow-col">
         <img src="../HomePage/assest/WhatsApp Image 2023-09-18 at 11.30.26 PM.jpeg" class="logo h-20 mt-4" />
-        <ul class="info grid grid-rows-1 grid-flow-col text-3xl font-semibold mt-6 col-start-4 col-span-7 text-black">
+        <ul class="info grid grid-rows-1 grid-flow-col text-3xl font-semibold mt-6 col-start-4 col-span-7 text-pink-300">
             <li><a href="../HomePage/index.html" class="des">Home</a></li>
             <li><a href="/LandingPage/index.html" class="des">Products</a></li>
             <li><a href="../HomePage/Contact/index.html" class="des">Contact</a></li>
@@ -42,23 +42,32 @@
     </div>
     <!--cart page-->
     <div class="cartpage">
-        <div class="shopping-cart" id="shoping-cart">
-            <div class="label" id="label"></div>
+        <div class="shopping-cart shadow-2xl" id="shoping-cart">
+            <div class="label l" id="label"></div>
         </div>
     </div>
+
     <!-- adding total amount you want to paid -->
     <div class="grid grid-rows-1 grid-cols-12 mt-20 ">
-    <div class="show_total_amount grid align-middle rounded-3xl justify-center col-start-2 col-span-5 text-3xl bg-pink-300 text-black mb-6">
+    <div class="show_total_amount grid align-middle rounded-3xl justify-center col-start-4 col-span-5 text-3xl bg-pink-300 text-black mb-6">
         <div class="cocktails"> </div>
+        <hr class="border-pink-500 ">
       <div> Price :<span class="total">0</span></div>
       <div> GST: <span class="gst">0</span></div>
+      <hr class="border-pink-500">
       <div class="totalp">Total :<span class="totalprice"></span> </div>
     </div>
+
     <!-- adding button to place your order and go back to your page --> 
-    <div class="ButtonToBuy bg-pink-300 col-start-8 rounded-3xl col-span-4 flex flex-col justify-center align-middle mb-6">
-        <a href="./Checkout/checkout.html"><button class="Buy bg-blue-500 text-center text-2xl pl-5 pr-5 ml-28 pt-2 pb-2" id="place-order ">Place Your Order</button></a>
-        <a href="./index.html"><button class="buy bg-red-500 text-2xl pl-5 pr-5 ml-36 my-6 pt-2 pb-2">Get Back</button></a>
-    </div>
+    <div class="ButtonToBuy bg-pink-300 col-start-3 col-span-7 rounded-3xl mb-6 grid grid-rows-3 grid-flow-col justify-center items-center">
+      <a href="./Checkout/checkout.html">
+          <button class="Buy bg-blue-500 text-center text-2xl pl-5 pr-5 pt-2 pb-2" id="place-order">Place Your Order</button>
+      </a>
+      <a href="./index.html">
+          <button class="buy bg-red-500 text-2xl pl-5 pr-5 my-1 mx-10 pt-2 pb-2">Get Back</button>
+      </a>
+  </div>
+  
   </div>
 </body>
 
