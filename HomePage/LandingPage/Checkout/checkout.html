@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Checkout Page</title>
-    <!-- Add your CSS file here -->
-    <link rel="stylesheet" href="./checkout.css">
+    <head>
+        <title>Checkout Page</title>
+        <!-- Add your CSS file here -->
+        <link rel="stylesheet" href="./checkout.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <script src="./checkout.js  "></script>
     <script src="https://kit.fontawesome.com/d0e69c3701.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <script src="./checkout.js  "></script>
+    <!-- <script src="./Pay.js"></script> -->
     <!-- navbar --> <div class="nav grid grid-rows-1 grid-flow-col bg-black h-28">
   <img
   src="../../assest/WhatsApp Image 2023-09-18 at 11.30.26 PM.jpeg"
@@ -52,26 +53,26 @@
     <!-- Payment Options -->
     <div class="w-3/4 shadow-2xl mr-8">
         <h2 class="text-3xl pb-3 text-center">Payment Method</h2>
-            <form action="process_payment.php" method="post">
-                <div class="flex flex-row gap-3">
-                    <input type="radio" id="creditCard" name="paymentMethod" value="creditCard" >
-                    <label for="creditCard" class="text-3xl">Credit Card</label>
-                    <i class="fa-solid fa-credit-card fa-2x mt-3 mx-2"></i>
-                </div>
-                <div class="flex flex-row gap-3">
-                    <input type="radio" id="gpay" name="paymentMethod" value="gpay">
-                    <label for="gpay" class="text-3xl ">Google Pay</label>
-                    <i class="fa-brands fa-google-pay fa-3x mt-2 mx-2"></i>
-                </div>
-                <div class="flex flex-row gap-3">
-                    <input type="radio" id="phonePay" name="paymentMethod" value="phonePay">
-                    <label for="phonePay" class="text-3xl">PhonePe</label>
-                </div>
-                <div class="text-center">
-                    <button type="submit" id="payment" class="bg-green-600 pl-6 pr-6 pt-2 pb-2 mt-3 text-white hover:bg-green-700 text-lg"  onclick="Pay()">  Proceed to Payment    </button>
-                </div>
-            </form>
-        </div>
+        <form action="process_payment.php" method="post">
+            <div class="flex flex-row gap-3">
+                <input type="radio" id="creditCard" name="paymentMethod" value="creditCard" >
+                <label for="creditCard" class="text-3xl">Credit Card</label>
+                <i class="fa-solid fa-credit-card fa-2x mt-3 mx-2"></i>
+            </div>
+            <div class="flex flex-row gap-3">
+                <input type="radio" id="gpay" name="paymentMethod" value="gpay">
+                <label for="gpay" class="text-3xl ">Google Pay</label>
+                <i class="fa-brands fa-google-pay fa-3x mt-2 mx-2"></i>
+            </div>
+            <div class="flex flex-row gap-3">
+                <input type="radio" id="phonePay" name="paymentMethod" value="phonePay">
+                <label for="phonePay" class="text-3xl">PhonePe</label>
+            </div>
+            <div class="text-center">
+                <button id="payment" type="button" class="bg-green-600 pl-6 pr-6 pt-2 pb-2 mt-3 text-white hover:bg-green-700 text-lg"  onclick="Pay()">  Proceed to Payment    </button>
+            </div>
+        </form>
     </div>
+</div>
 </body>
 </html>
