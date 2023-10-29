@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Checkout Page</title>
+        <!-- Add your CSS file here -->
+        <link rel="stylesheet" href="./checkout.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <script src="https://kit.fontawesome.com/d0e69c3701.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <script src="./checkout.js  "></script>
+    <!-- <script src="./Pay.js"></script> -->
+    <!-- navbar --> <div class="nav grid grid-rows-1 grid-flow-col bg-black h-28">
+  <img
+  src="../../assest/WhatsApp Image 2023-09-18 at 11.30.26 PM.jpeg"
+  class="logo h-20 mt-3"
+  />
+  
+  <ul class="info grid grid-rows-1 grid-flow-col mt-8 col-start-5 col-span-6">
+      <li><a href="../../index.html" class="des text-gray-300 text-3xl" id="hov">Home</a></li>
+      <li><a href="../index.html" class="des text-gray-300 text-3xl">Product</a></li>
+      <li><a href="../../Contact/index.html" class="des text-gray-300 text-3xl">Contact</a></li>
+      <li><a href="../../FAQs/index.html" class="des text-gray-300 text-3xl">FAQs</a></li>
+    </ul>
+    
+    <button class="btn text-gray-900 mt-4 rounded-lg text-3xl w-36 h-12 bg-white font-medium hover:bg-black hover:text-white col-start-13" onclick="showPopup()" id="logi">Login</button>
+</div>
+
+
+
+<!-- conatainer for payment and address -->
+<h1 class="text-center text-5xl py-3 pb-20">Checkout</h1>
+
+<div class="flex justify-center gap-1 max-h-screen">
+    <!-- Address Form -->
+    <div class="w-2/3  mx-8 shadow-2xl ">
+        <h2 class="text-3xl pb-3 text-center">Shipping Address</h2>
+        <form action="process_address.php" method="post">
+            <label for="street">Street Address:</label>
+            <input type="text" id="street" name="street" required><br><br>
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required><br><br>
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required><br><br>
+            <label for="zip">ZIP Code:</label>
+            <input type="text" id="zip" name="zip" required><br><br>
+            <div class="text-center">
+                <button type="submit" class="bg-green-600 pl-6 pr-6 pt-2 pb-2 text-white hover:bg-green-700 text-lg">Submit</button>
+            </div>
+        </form>
+    </div>
+    
+    <!-- Payment Options -->
+    <div class="w-3/4 shadow-2xl mr-8">
+        <h2 class="text-3xl pb-3 text-center">Payment Method</h2>
+        <form action="process_payment.php" method="post">
+            <div class="flex flex-row gap-3">
+                <input type="radio" id="creditCard" name="paymentMethod" value="creditCard" >
+                <label for="creditCard" class="text-3xl">Credit Card</label>
+                <i class="fa-solid fa-credit-card fa-2x mt-3 mx-2"></i>
+            </div>
+            <div class="flex flex-row gap-3">
+                <input type="radio" id="gpay" name="paymentMethod" value="gpay">
+                <label for="gpay" class="text-3xl ">Google Pay</label>
+                <i class="fa-brands fa-google-pay fa-3x mt-2 mx-2"></i>
+            </div>
+            <div class="flex flex-row gap-3">
+                <input type="radio" id="phonePay" name="paymentMethod" value="phonePay">
+                <label for="phonePay" class="text-3xl">PhonePe</label>
+            </div>
+            <div class="text-center">
+                <button id="payment" type="button" class="bg-green-600 pl-6 pr-6 pt-2 pb-2 mt-3 text-white hover:bg-green-700 text-lg"  onclick="Pay()">  Proceed to Payment    </button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
