@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact us</title>
+    
     <link rel="stylesheet" href="./style.css" />
     <script
-      src="https://kit.fontawesome.com/d0e69c3701.js"
-      crossorigin="anonymous"
-    ></script>
+    src="https://kit.fontawesome.com/d0e69c3701.js"crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     
     <style>
         /* Add CSS styles for the pop-up container */
@@ -21,7 +21,7 @@
           height : 100%;
           background-color: rgba(0, 0, 0, 0.7);
         }
-  
+        
         .container {
           position: absolute;
           top: 100px;
@@ -40,30 +40,33 @@
           font-size: 24px;
           cursor: pointer;
         }
-      </style>
+        </style>
 </head>
 <body>
-    <div class="nav">
-        <img
-          src="../assest/WhatsApp Image 2023-09-18 at 11.30.26 PM.jpeg"
-          class="logo"
-        />
-        <ul class="info">
-          <li><a href="../index.html" class="des" id="hov">Home</a></li>
-          <li><a href="../LandingPage/index.html" class="des">Products</a></li>
-          <li><a href="../Contact/index.html" class="des" id="colorContact">Contact</a></li>
-          <li><a href="../FAQs/index.html" class="des">FAQs</a></li>
-           </ul>
-        <button class="btn" onclick="showPopup()" id="logi">Login</button>
-      </div>
   
-      <div class="popup-container" id="loginPopup">
-        <div class="container">
-          <span class="close-btn" onclick="closePopup()">&times;</span>
-          <h1 id="title">Sign up</h1>
-          <br />
-          <form onsubmit="return false;" onsubmit="signup(event)">
-            <br />
+  <div class="nav grid grid-rows-1 grid-flow-col bg-black h-28">
+    <img
+    src="../assest/WhatsApp Image 2023-09-18 at 11.30.26 PM.jpeg"
+    class="logo h-20 mt-3"
+    />
+    
+    <ul class="info grid grid-rows-1 grid-flow-col mt-8 col-start-5 col-span-6">
+      <li><a href="./index.html" class="des text-gray-300 text-3xl" id="hov">Home</a></li>
+      <li><a href="./LandingPage/index.html" class="des text-gray-300 text-3xl">Product</a></li>
+      <li><a href="./Contact/index.html" class="des text-gray-300 text-3xl">Contact</a></li>
+      <li><a href="./FAQs/index.html" class="des text-gray-300 text-3xl">FAQs</a></li>
+    </ul>
+    
+    <button class="btn text-gray-900 mt-4 rounded-lg text-3xl w-36 h-12 bg-white font-medium hover:bg-black hover:text-white col-start-13" onclick="showPopup()" id="logi">Login</button>
+  </div>
+  
+  <div class="popup-container" id="loginPopup">
+    <div class="container">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <h1 id="title">Sign up</h1>
+      <br />
+      <form onsubmit="return false;" onsubmit="signup(event)">
+        <br />
             <br />
             <br />
             <div class="input-group">
@@ -79,7 +82,7 @@
                 <i class="fa-solid fa-user"></i>
                 <input type="text" placeholder="Last name" />
               </div>
-  
+              
               <div class="input-field" id="Email">
                 <i class="fa-solid fa-user"></i>
                 <input type="text" placeholder="Email" />
@@ -98,12 +101,12 @@
           </form>
         </div>
       </div>
-
-    <div class="GetInTouch">Get In Touch </div>
-
-    <div class="flex">
+      
+      <div class="GetInTouch">Get In Touch </div>
+      
+      <div class="flex">
         <div class="cont">  
-            <p>
+          <p>
             If you have any questions, please contact us via email, phone, or <br>
             send us a message using the contact form.</p>
             <br>
@@ -113,20 +116,20 @@
             <br>
             <br>
             <br>
-
+            
             <p1>Email</p1><br>
             <p2>akshatggggg@gmail.com</p2>
-<br>
-<br>
-<br>
-<p1>Phone (call/text/WhatsApp)</p1><br>
-<p2>+1 425-780-9593</p2>
-<br>
-<br>
-<br>
-<br>
-<img src="../assest/pablo-de-la-fuente-aD3i5aWJUKM-unsplash.jpg">
-
+            <br>
+            <br>
+            <br>
+            <p1>Phone (call/text/WhatsApp)</p1><br>
+            <p2>+1 425-780-9593</p2>
+            <br>
+            <br>
+            <br>
+            <br>
+            <img src="../assest/pablo-de-la-fuente-aD3i5aWJUKM-unsplash.jpg">
+            
         </div>
         <form class="form" onsubmit="sendEmail(); reset(); return false;">
             <p1>Name</p1><br>
@@ -134,68 +137,71 @@
             <br>
             <br>
             <br>
-
+            
             <p1>Email</p1><span>(required)</span><br>
             <input placeholder="" type="text" class="input" id="emails">
             <br>
             <br>
-
+            
             <br> <p1>Phone</p1><br>
             <input placeholder="" type="text" class="input">
             <br>
             <br>
-
+            
             <br> <p1>Subject</p1><span>(required)</span><br>
             <input placeholder="" type="text" class="input" id="subject">
             <br>
             <br>
-
+            
             <br> <p1>Message</p1><span>(required)</span><br>
             <textarea id="largeinput" rows="4" placeholder="Enter your message" class="input" ></textarea>
             <br>
             <br>
-
+            
             <button id="mailButton" type="submit">Send</button>
-        </form>
-    </div>
-
-
-
-
-
-
-<footer class="footer">
-  <div class="footlogo">
-      <img src="../assest/WhatsApp Image 2023-09-18 at 11.30.26 PM.jpeg" class="logo"/>
-
-  </div>
-
-  <div class="icon">
-      <a href="https://www.instagram.com/akshat__30/" target="blank"><i class="fa-brands fa-instagram fa-2xl fa-beat-fade"></i></a>
-      <a href="https://twitter.com/akshat___30" target="_blank"><i class="fa-brands fa-twitter fa-2xl fa-beat-fade"></i></a>
-  </div>
+          </form>
+        </div>
+        
+        
+        
+        
+        
+        
+        <footer class="footer ">
+          <div class="grid grid-rows-1 grid-cols-11 ">
+          <div class="footlogo row-start-1 col-start-1">
+            <img src="../assest/WhatsApp Image 2023-09-18 at 11.30.26 PM.jpeg" class="logo h-20 w-46"/>
+            
+          </div>
+          
+          <div class="icon col-start-6 row-start-1 mt-8 col-span-5  ">
+            <a href="https://www.instagram.com/akshat__30/" target="blank"><i class="fa-brands fa-instagram fa-2xl fa-beat-fade"></i></a>
+            <a href="https://twitter.com/akshat___30" target="_blank"><i class="fa-brands fa-twitter fa-2xl fa-beat-fade"></i></a>
+          </div>
 
   
-      <ul class="grid">
-<li class="touch">Get in Touch</li>
-<br>
-<li><a href="../HomePage/Contact/index.html" target="blank">E-mail</a></li>
-<li><a href="../HomePage/FAQs/index.html">FAQs</a></li>
-<li><a href="../HomePage/Contact/index.html" target="_blank">Contact us</a></li>
-      </ul>
-  
-
-  <div class="reserved">
-  <p> 2023 SipCraft. All Rights Reserved.</p>
-</div>
-</footer>
-
-
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-      <script src="https://smtpjs.com/v3/smtp.js"></script>
-      <script src="./script.js"></script>
-
-      <script src="./mail.js"></script>   
-</body>
-</html>
-
+          <ul class="grid row-start-1 col-start-11 col-span-2">
+            <li class="touch text-2xl">Get in Touch</li>
+            
+            <li><a href="../HomePage/Contact/index.html" target="blank">E-mail</a></li>
+            <li><a href="../HomePage/FAQs/index.html">FAQs</a></li>
+            <li><a href="../HomePage/Contact/index.html" target="_blank">Contact us</a></li>
+          </ul>
+          
+          
+          <div class="reserved row-start-1 col-start-6 col-span-2 mt-40">
+            <p> 2023 SipCraft. All Rights Reserved.</p>
+          </div>
+        </div>
+        </footer>
+        
+        
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script src="./script.js"></script>
+        
+        <script src="./mail.js"></script>   
+      </body>
+      </html>
+      
+      
