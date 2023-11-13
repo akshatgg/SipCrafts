@@ -7,48 +7,6 @@ body{
     background: rgb(226, 222, 222);
 }
 
-.nav{
-    background-color: black;
-    height: 100px;
-    display: flex;
-    
-
-}
-.logo{
-    height: 70px;
-    margin-top:15px;
-    padding-left:30px ;
-}
-.info{
-    color: antiquewhite;
-    display: flex;
-    gap: 135px; 
-    
-    
-    font-size: 30px;
-    text-decoration: none;
-    list-style: none;
-    margin-top: 32px;
-    margin-left: 410px;
-    
-
-}
-.btn{
-    height: 52px;
-    width: 143px;
-    margin-top: 25px;
-    margin-left: 450px;
-    font-size: 26px;
-    font-weight: bold;
-    border-radius: 10px;
-    
-
-}
-.btn:hover{
-    color: #ede0e3;
-    background-color: black;
-    
-}
 
 
 .container{
@@ -339,67 +297,9 @@ font-size: 25px;
     background-color: #171617;
     
     color: #fff;
+    height: 200px;
     /* text-align: center; */
-
-    margin-top: 410px;
-    padding-top: 0px;
 }
-.reserved{
-    margin-left: 900px;
-    /* margin-bottom: 50px; */
-    position: relative;
-    top: -10px;
-   
-}
-.footlogo{
-   position: relative;
-   top: 12px;
-}
-
-.grid{
-    
-    list-style-type: none;
-    text-decoration: none;
-    display: grid;
-    grid-template-rows: repeat(3,25px);
-    margin-left:1700px ;
-}
-.icon{
-    margin-left: 1000px;
-    
-    
-}
-.icon i{
-    margin-right: 10px;
-}
-
-/* Define the animation keyframes */
-@keyframes beat {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-}
-
-/* Apply the animation to the element */
-.fa-beat-fade {
-    animation: beat-fade 0.5s infinite; /* Adjust the animation duration and other properties as needed */
-    transform-origin: center; /* Optional: Set the transform origin to the center for a better effect */
-}
-
-/* Pause the animation when not hovering */
-.fa-beat-fade:not(:hover) {
-    animation-play-state: paused;
-}
-.touch{
-    font-size: 20px;
-}
-
-
-
-
-
-
-
 
 
 

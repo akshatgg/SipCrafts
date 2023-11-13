@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQs</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FAQs</title>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,500;1,200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,500;1,200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <script src="https://kit.fontawesome.com/d0e69c3701.js" crossorigin="anonymous"></script>
-
+    
     <style>
         /* Add CSS styles for the pop-up container */
         .popup-container {
@@ -44,18 +46,23 @@
     </style>
 </head>
 <body>
-    <div class="nav">
-        <img src="../assest/WhatsApp Image 2023-09-18 at 11.30.26 PM.jpeg" class="logo"/>
-        <ul class="info">
-
-            <li><a href="../index.html" class="des"> Home </a></li>
-            <li><a href="../LandingPage/index.html" class="des">Products</a></li>
-            <li ><a href="../Contact/index.html" class="des">Contact</a></li>
-            <li id="hov"><a href="../FAQs/index.html" class="des">FAQs</a></li>
-        </ul>
-        <button class="btn" onclick="showPopup()">Login</button>
-    </div>
-
+    
+    <div class="nav grid grid-rows-1 grid-flow-col bg-black h-30">
+        <img
+          src="./assest/WhatsApp Image 2023-09-18 at 11.30.26 PM.jpeg"
+          class="logo h-20 mt-3"
+        />
+        
+          <ul class="info grid grid-rows-1 grid-flow-col mt-8 col-start-5 col-span-6">
+            <li><a href="./index.html" class="des text-gray-300 text-3xl" id="hov">Home</a></li>
+            <li><a href="./LandingPage/index.html" class="des text-gray-300 text-3xl">Product</a></li>
+            <li><a href="./Contact/index.html" class="des text-gray-300 text-3xl">Contact</a></li>
+            <li><a href="./FAQs/index.html" class="des text-gray-300 text-3xl">FAQs</a></li>
+          </ul>
+        
+        <button class="btn text-gray-900 mt-4 rounded-lg text-3xl w-36 h-12 bg-white font-medium hover:bg-black hover:text-white col-start-13" onclick="showPopup       " id="logi">Login</button>
+      </div>
+    
     <div class="popup-container" id="loginPopup">
         <div class="container">
             <span class="close-btn" onclick="closePopup()" >&times;</span>
@@ -70,8 +77,8 @@
                         <i class="fa-solid fa-user"></i>
                         <input type="text" placeholder="Name"  >
                     </div>
-
-
+                    
+                    
                     <div class="input-field" id="lastN">
                         <i class="fa-solid fa-user"></i>
                         <input type="text" placeholder="Last name" >
@@ -90,12 +97,12 @@
                         <p>Lost Pssword <a href="../FAQs/index.html">Click here</a></p>  
                     </div>
                     <div class="button">
-                    <button id="signupbtn" onclick="setup()">
-                        Sign up
-                    </button>
-                    <button id="signinbtn" onclick="setup()">
-                        Sign in
-                    </button>
+                        <button id="signupbtn" onclick="setup()">
+                            Sign up
+                        </button>
+                        <button id="signinbtn" onclick="setup()">
+                            Sign in
+                        </button>
                     </div>
                 </div>
             </form>
@@ -104,29 +111,61 @@
     </div>
     <div class="Faq">
         <nav class="im">
-        <img src="../assest/sipcraft-beverage-photo-19.jpg" height="600" width="2100" alt="">
-    </nav>
-    <div class="ques">
-        <p class="ques">Where is our manufacturing facility and why?</p>
-        <p1 class="ans">Where - SipCraft is a U.S. based comp any with a manufacturing facility in Colombo, Sri Lanka.</p1>
-<br>
-
+            <img src="../assest/sipcraft-beverage-photo-19.jpg" class=""  alt="">
+        </nav>
+        <div class="ques">
+            <p class="ques">Where is our manufacturing facility and why?</p>
+            <p1 class="ans">Where - SipCraft is a U.S. based comp any with a manufacturing facility in Colombo, Sri Lanka.</p1>
+            <br>
+            
             <p1>Why - Our strategic location in Sri Lanka allows us to offer lower prices while also helping increase the standard of <br></p1>
-        <p1 class="bre">living for the local community, by creating more jobs and offering wages that are three times the national average.</p1>
-    </div>
+            <p1 class="bre">living for the local community, by creating more jobs and offering wages that are three times the national average.</p1>
+        </div>
     </div>
     <div class="ques">
         <p class="ques">Why do we claim to have lower prices than <br>traditional co-packers?</p>
         <p1 class="ans">Our manufacturing location in Sri Lanka provides significant cost savings in terms of ingredients, packaging, and </p1>
-<br>    
-
-            <p1>building expenses. In comparison to U.S. based manufacturers, our cost-effectiveness is unbeatable. Even  <br></p1>
+        <br>    
+        
+        <p1>building expenses. In comparison to U.S. based manufacturers, our cost-effectiveness is unbeatable. Even  <br></p1>
         <p1 class="bre">including shipping back to the U.S.
-
+            
         </p1>
     </div>
+</div>
+
+
+  
+<footer class="footer ">
+    <div class="grid grid-rows-1 grid-cols-11 ">
+    <div class="footlogo row-start-1 col-start-1">
+      <img src="../assest/WhatsApp Image 2023-09-18 at 11.30.26 PM.jpeg" class="logo h-20 w-46"/>
+      
     </div>
-    <script src="./script.js"></script>
+    
+    <div class="icon col-start-6 row-start-1 mt-8 col-span-5  ">
+      <a href="https://www.instagram.com/akshat__30/" target="blank"><i class="fa-brands fa-instagram fa-2xl fa-beat-fade"></i></a>
+      <a href="https://twitter.com/akshat___30" target="_blank"><i class="fa-brands fa-twitter fa-2xl fa-beat-fade"></i></a>
+    </div>
+
+
+    <ul class="grid row-start-1 col-start-11 col-span-2">
+      <li class="touch text-2xl">Get in Touch</li>
+      
+      <li><a href="../HomePage/Contact/index.html" target="blank">E-mail</a></li>
+      <li><a href="../HomePage/FAQs/index.html">FAQs</a></li>
+      <li><a href="../HomePage/Contact/index.html" target="_blank">Contact us</a></li>
+    </ul>
+    
+    
+    <div class="reserved row-start-1 col-start-6 col-span-2 mt-40">
+      <p> 2023 SipCraft. All Rights Reserved.</p>
+    </div>
+  </div>
+  </footer>
+  
+
+<script src="./script.js"></script>
     
 </body>
 </html>
