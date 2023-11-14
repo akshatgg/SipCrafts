@@ -8,7 +8,7 @@ function closePopup() {
     loginPopup.style.display = 'none';
 }
 
-window.onload = showPopup();   
+// window.onload = showPopup();   
 
 
 let signinbtn = document.getElementById("signinbtn");
@@ -37,3 +37,19 @@ function setup() {
 
 // Call the setup function to set up the event listeners
 setup();
+
+
+
+
+// JavaScript to add a class on the first hover and remove the hover event listener
+
+
+
+document.querySelectorAll('.social-link').forEach(link => {
+    link.addEventListener('mouseenter', function hoverHandler() {
+        if (!this.classList.contains('darken')) {
+            this.classList.add('darken');
+            this.removeEventListener('mouseenter', hoverHandler);
+        }
+    });
+});

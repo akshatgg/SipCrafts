@@ -92,11 +92,32 @@ a{
 
 
 
+.social-link {
+    filter: brightness(100%);
+    transition: filter 0.3s ease-in-out;
+}
 
-.footer {
-    background-color: #171617;
-    
-    color: #fff;
-    height: 200px;
-    /* text-align: center; */
+.social-link.darken:hover {
+    filter: brightness(70%);
+}
+
+
+
+/* Add styling for the Facebook link */
+
+
+/* Combine the styles for Instagram, Twitter, and Facebook links */
+.icon {
+  
+    display: flex;
+    gap: 10px; /* Adjust the gap as needed */
+}
+
+.social-link {
+    filter: brightness(100%);
+    transition: filter 0.3s ease-in-out;
+}
+
+.social-link.darken:hover {
+    filter: brightness(70%);
 }
