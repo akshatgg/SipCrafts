@@ -46,3 +46,11 @@ var passsignin=document.getElementById("passwords");
 
     });
   
+
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var myCarousel = new bootstrap.Carousel(document.getElementById('carouselExampleFade'), {
+            interval: 5000 // Set the interval to 7000 milliseconds (7 seconds)
+        });
+    });

@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sip Crafts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
     <link rel="stylesheet" href="./style.css" />
     <script
@@ -43,7 +44,7 @@
     </style>
   </head>
   <body>
-    <div class="nav grid grid-rows-1 grid-flow-col bg-black h-28">
+    <div class="nav grid grid-rows-1 grid-flow-col bg-black h-21">
   <img
     src="./assest/WhatsApp Image 2023-09-18 at 11.30.26 PM.jpeg"
     class="logo h-20 mt-3"
@@ -56,7 +57,7 @@
       <li><a href="./FAQs/index.html" class="des text-gray-300 text-3xl">FAQs</a></li>
     </ul>
   
-  <button class="btn text-gray-900 mt-4 rounded-lg text-3xl w-36 h-12 bg-white font-medium hover:bg-black hover:text-white col-start-13" onclick="showPopup()" id="logi">Login</button>
+  <button class="btn text-gray-900 mt-4 rounded-lg text-3xl w-36 h-12 bg-white font-medium col-start-13 hover:bg-black hover:text-gray-300" onclick="showPopup()" id="logi">Login</button>
 </div>
 
     <div class="popup-container" id="loginPopup">
@@ -118,6 +119,60 @@
         </form>
       </div>
     </div>
+
+
+
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+              <img src="./assest/slide1.jpg" alt="...">
+          </div>
+          <div class="carousel-item">
+              <img src="./assest/slide3.jpg" alt="...">
+          </div>
+          <div class="carousel-item">
+              <img src="./assest/wallpaperflare.com_wallpaper.jpg" alt="...">
+          </div>
+          <div class="carousel-item">
+              <img src="./assest/slider2.jpg" alt="...">
+          </div>
+          <div class="carousel-item">
+              <img src="./assest/jugoslocos-i8JfQDc4Ha8-unsplash.jpg" alt="...">
+          </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+      </button>
+  </div>
+
+  <div class="order">
+      <p class="text-white-100 text-xl font-medium">The Best quality of cocktails</p>
+      <a href="./LandingPage/index.html"><button>Take Your Order</button></a>
+  </div>
+
+
+
+
+
+
+    <div class="card flex">
+      <img src="./assest/jugoslocos-i8JfQDc4Ha8-unsplash.jpg" class="card-img-top" alt="...">
+    
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+   
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="app.js" type="module"></script>
     <script src="./script.js"></script>
   </body>
