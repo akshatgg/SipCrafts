@@ -214,3 +214,16 @@ a.lost-password:hover {
   background-color: #000;
   color: #fff;
 }
+
+
+.card-img-top {
+    width: 300px; /* Adjust the width as needed */
+    height: 250px; /* Adjust the height as needed */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+  }
+  
+
+
+  .card{
+    display: flex;
+  }
