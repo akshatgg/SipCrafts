@@ -173,7 +173,7 @@ calculate();
       if (productData) {
         description.innerHTML = `
           <div class="contain">
-            <div class="img">
+            <div class="img ">
               <img src="${productData.img}" alt="">
             </div>
             <div class='cont'>
