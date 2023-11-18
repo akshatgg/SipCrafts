@@ -185,10 +185,10 @@
         
         
         
+        <!-- pagination -->
         
-        
-        <div class="main-cont">
-          <div class="container">
+        <div class="main-cont grid grid-rows-1 grid-cols-2 mt-16">
+          <div class=" col-start-1  justify-self-center text-center">
             <div class="list-box">
               <div class="list" id="shop">
                 <!-- Products will be listed here -->
@@ -204,8 +204,8 @@
               </div>
             </div>
           </div>
-          
-          <div class="details-box">
+          <!-- details box -->
+          <div class="details-box col-start-2 h-[90%] w-[85%] rounded-2xl text-2xl text-black justify-self-center text-center">
             <div class="description" id="descriptions">
               <!-- Product content goes here -->
             </div>
@@ -215,23 +215,28 @@
       </div>
     </div>  
     
-    <footer class="footer">
-      <div class="footlogo">
+
+
+
+    <!-- footer  -->
+
+    <footer class="footer grid grid-rows-2 grid-cols-12 ">
+      <div class="footlogo row-start-1 col-span-2">
         <img
-        src="../HomePage/assest/WhatsApp Image 2023-09-18 at 11.30.26 PM.jpeg"
-        class="logo"
+        src="../assest/WhatsApp Image 2023-09-18 at 11.30.26 PM.jpeg "
+        class="h-20"
         />
       </div>
       
-      <div class="icon">
-        <a href="https://www.instagram.com/akshat__30/" target="blank"
-        ><i class="fa-brands fa-instagram fa-2xl fa-beat-fade"></i
+      <div class="icon row-start-2 col-start-7">
+        <a href="https://www.instagram.com/akshat__30/" target="blank" 
+        ><i class="fa-brands fa-instagram fa-2xl fa-beat-fade "></i
           ></a>
           <a href="https://twitter.com/akshat___30" target="_blank"
           ><i class="fa-brands fa-twitter fa-2xl fa-beat-fade"></i
             ></a>
           </div>
-          <ul class="gridss">
+          <ul class="gridss ">
             <li class="touch">Get in Touch</li>
             <br />
             <li>
@@ -244,10 +249,12 @@
               >
             </li>
           </ul>
-          <div class="reserved">
+          <div class="reserved row-start-2 col-start-5 justify-self-end    self-end  col-span-3">
             <p>2023 SipCraft. All Rights Reserved.</p>
           </div>
         </footer>
+
+
 
         <!-- flowbite link -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.1.1/flowbite.min.js"></script>
