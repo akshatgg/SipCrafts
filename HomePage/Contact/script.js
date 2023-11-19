@@ -46,3 +46,12 @@
 
 
 
+
+    document.querySelectorAll('.social-link').forEach(link => {
+        link.addEventListener('mouseenter', function hoverHandler() {
+            if (!this.classList.contains('darken')) {
+                this.classList.add('darken');
+                this.removeEventListener('mouseenter', hoverHandler);
+            }
+        });
+    });
