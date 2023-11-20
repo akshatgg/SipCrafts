@@ -133,23 +133,23 @@
         </div>
         <form class="form" onsubmit="sendEmail(); reset(); return false;">
             <p1>Name</p1><br>
-            <input placeholder="" type="text" class="input">
+            <input placeholder="Name" type="text" class="input">
             <br>
             <br>
             <br>
             
             <p1>Email</p1><span>(required)</span><br>
-            <input placeholder="" type="text" class="input" id="emails">
+            <input placeholder="Email" type="text" class="input" id="emails">
             <br>
             <br>
             
             <br> <p1>Phone</p1><br>
-            <input placeholder="" type="text" class="input">
+            <input placeholder="Phone Number" type="text" class="input">
             <br>
             <br>
             
             <br> <p1>Subject</p1><span>(required)</span><br>
-            <input placeholder="" type="text" class="input" id="subject">
+            <input placeholder="Subject" type="text" class="input" id="subject">
             <br>
             <br>
             
@@ -158,7 +158,7 @@
             <br>
             <br>
             
-            <button id="mailButton" type="submit">Send</button>
+            <button id="mailButton" type="submit" onclick="sendEmail">Send</button>
           </form>
         </div>
         

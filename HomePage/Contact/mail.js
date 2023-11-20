@@ -5,17 +5,13 @@ function sendEmail(){
       //   Username : "akshatg9636@gmail.com",
       //   Password : "BD873DC0467BAF5F29E0DF5ADB7A842C54A1",
         To :"akshatggggg@gmail.com" ,
-        From :"akshatg9636@gmail.com",
+        From :"guptasunny@gmail.com",
         Subject : document.getElementById("subject").value,
         Body : document.getElementById("largeinput").value,
-    }).then(
-      message => {
-        if(message=='OK'){
-          swal("Successfull", "Your Data Successfull Received", "success");
-        }
-        else{
-          swal("Something wrong", "Your Data not Successfull Received" ,"error");
-        }
+      }).then(
+        message => alert(message)
+      );
       }
-    );
-}
+
+
+
