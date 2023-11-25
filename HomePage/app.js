@@ -99,18 +99,18 @@
 
 
 
-
-
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-analytics.js";
+  import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-database.js";
+  import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js";
+
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   const firebaseConfig = {
-    apiKey: "",
+    apiKey: "AIzaSyDvKcQXboatfSFYtlPNetdGwLOeS9T7Jk4",
     authDomain: "auth-4f3a1.firebaseapp.com",
     projectId: "auth-4f3a1",
     storageBucket: "auth-4f3a1.appspot.com",
@@ -122,3 +122,51 @@
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
+  const auth=getAuth(app)
+  const db=getDatabase()
+
+
+function handleSignUp() {
+  let email = document.getElementById('email').value;
+  let password = document.getElementById('password').value;
+  
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // User signed up successfully
+      const user = userCredential.user;
+      console.log('User signed up:', user);
+      alert('User signed up successfully!');
+    })
+
+    .catch((error) => {
+      // Handle errors
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.error('Error signing up:', errorCode, errorMessage);
+      alert(`Error signing up: ${errorMessage}`);
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
