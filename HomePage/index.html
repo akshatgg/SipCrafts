@@ -17,20 +17,20 @@
 
 
 
-
- 
 .form {
-display: flex;
-flex-direction: column;
-gap: 10px;
-padding-left: 2em;
-padding-right: 2em;
-padding-bottom: 0.4em;
-background-color: #171717;
-border-radius: 25px;
-transition: .4s ease-in-out;
-border: 2px solid transparent; /* Add a transparent border */
-transition: border 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 0.4em;
+  background-color: #171717;
+  border-radius: 25px;
+  transition: .4s ease-in-out;
+  border: 2px solid transparent;
+  transition: border 0.3s ease;
+  min-height: 600px; /* Set a minimum height */
+  height: auto; /* Set height to auto to allow it to expand based on content */
 }
 
 .form:hover {
@@ -171,11 +171,15 @@ color: white;
     <form class="form" id="loginpopup">
       <div class="w-10 h-10 text-3xl text-center mr-3 bg-white ml-auto rounded-md hover:bg-red-400" onclick="closepopup()">&times;</div>
       <p id="heading"> Sign Up </p>
+      
       <div class="field">
         <input autocomplete="on" placeholder="First Name" class="input-field" type="text" id="namef">
       </div>
       <div class="field">
         <input autocomplete="on" placeholder="last Name" class="input-field" type="text" id="namel">
+      </div>
+      <div class="field">
+        <input autocomplete="on" placeholder="Phone Number" class="input-field" type="text" id="numb">
       </div>
       <div class="field">
       <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
