@@ -290,7 +290,7 @@ color: white;
 
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
-  import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-database.js";
+  import { getFirestore, doc,setDoc } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js";
   import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js";
 
   // TODO: Add SDKs for Firebase products that you want to use
@@ -311,7 +311,7 @@ color: white;
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const auth=getAuth(app)
-  const db=getDatabase()
+  const db=getFirestore()
   let namef=document.querySelector("#namef")
   let email = document.getElementById('email');
   let password = document.getElementById('password');
@@ -322,16 +322,18 @@ let RegisterUser=evt=> {
 
 
   createUserWithEmailAndPassword(auth, email.value, password.value, namef.value, namel.value)
-    .then((credentials) => {
+    .then(async (credentials) => {
       console.log(credentials);
-      set(ref(db,'UsersAuthList/'+ credentials.user.uid),{
-        firstname:namef.value,
-        lastname:namel.value,
-      })
+      var ref=doc(db,'UsersAuthList'+ credentials.user.uid)
+      
+      await setDoc(ref, {
+        firstname: namef.value,
+        lastname: namel.value,
+      });
       
       alert('User signed up successfully!');
     })
-
+  
     .catch((error) => {
       // Handle errors
       const errorCode = error.code;

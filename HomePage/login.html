@@ -190,7 +190,7 @@ color: white;
       </li>
     </ul>
     <div class="py-1">
-      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white" id="signoutbutton">Sign out</a>
     </div>
 </div>
 
@@ -205,10 +205,11 @@ color: white;
     <button class="close-btn" onclick="closeDashboard()">&times;</button>
     <img src="./assest/user.png" alt="User Logo" class="user-logo"/>
     <form>
-      <input class="inputss" type="text" placeholder="First Name" />
+      <input class="inputss" type="text" placeholder="First Name" />   
       <input class="inputss" type="text" placeholder="Last Name" />
       <input class="inputss" type="tel" placeholder="Phone Number" />
       <input class="inputss" type="text" placeholder="E-mail" />
+      <p class="inputss">jdsjdsnv</p>
     </form>
   </div>
 </div>
@@ -325,7 +326,7 @@ let login=false;
 
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
-  import { getDatabase, get, ref, child } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-database.js";
+  import { getFirestore,doc,getDoc } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js";
   import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js";
 
   // TODO: Add SDKs for Firebase products that you want to use
@@ -364,20 +365,19 @@ profile.style.display='none' ;
     evt.preventDefault();
 
     signInWithEmailAndPassword(auth, email.value, password.value)
-      .then((credentials) => {
-    //     get(child(dbref, 'UsersAuthList/' + credentials.user.uid)).then((snapshot) => {
-    //       if (snapshot.exists) {
-    //         sessionStorage.setItem("user-info", JSON.stringify({
-    //           firstname: snapshot.val.firstname,
-    //           lastname: snapshot.val.lastname,
-    //         }))
-    //         sessionStorage.setItem("user-creds", JSON.stringify(credentials.user));
-    //         // window.location.href = "index.html";
-    //     }
-        
-    // })
-    login=true;
-    updatelogin()
+      .then(async(credentials) => {
+        var ref=doc(db,'UsersAuthList'+ credentials.user.uid)
+        const docSnap=await getDoc(ref);
+        if(docSnap.exists()){
+          sessionStorage.setItem("user-info",JSON.stringify({
+            firstname:docSnap.data().firstname,
+            lastname:docSnap.data().lastname,
+          }))
+          login=true;
+          updatelogin()
+    sessionStorage.setItem("user-creds",JSON.stringify(credentials.user))
+   }
+    
     alert('User signed In successfully!');
 })
 
@@ -402,6 +402,26 @@ const updatelogin=()=>{
 }
   }
   
+
+
+  let UserCreds =JSON.parse(sessionStorage.getItem("user-creds"))
+  let UserInfo =JSON.parse(sessionStorage.getItem("user-info"))
+
+  let MsgHead=document.getElementById('msg')
+  let GreetHead=document.getElementById('greet')
+  let SignoutBtn=document.getElementById('signoutbutton')
+
+ MsgHead.innerText='user with email"${UserCreds.email}"logged in';
+ GreetHead.innerText='welcome"${UserInfo.firstname+" "+UserInfo.lastname}"logged in';
+
+let Signout=()=>{
+  sessionStorage.removeItem("user-creds")
+  sessionStorage.removeItem("user-info")
+  SignoutBtn.addEventListener('click',Signout)
+
+}
+
+
     </script>
   </body>
 </html>
