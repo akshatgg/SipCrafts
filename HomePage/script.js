@@ -46,3 +46,17 @@ const target = {
     target.btn.classList.toggle("following");
   }
   
+
+
+  // dashboard
+  const dashboard=document.querySelector('#dashboard')
+  dashboard.style.display='none'
+let dashboardPopup=()=>{
+dashboard.style.display='block'
+}
+let closeDashboard=()=>{
+  dashboard.style.display='none'
+
+}
+
+  

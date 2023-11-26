@@ -160,7 +160,7 @@ color: white;
       <li><a href="./FAQs/index.html" class="des text-gray-300 text-3xl">FAQs</a></li>
     </ul>
   
-  <!-- <button class=" text-gray-900 mt-4 rounded-lg text-3xl w-36 h-12 bg-white font-medium col-start-13 hover:bg-black hover:text-gray-300" onclick="showpopup()" id="logi">Login</button> -->
+  <button class=" text-gray-900 mt-4 rounded-lg text-3xl w-36 h-12 bg-white font-medium col-start-13 hover:bg-black hover:text-gray-300" onclick="showpopup()" id="logi">Login</button>
 
 
 
@@ -168,7 +168,7 @@ color: white;
 
 
 
-  <div class="col-start-13 text-center place-self-center text-2xl" id="profil">
+  <div class="col-start-13 text-center place-self-center text-2xl" id="profile">
 
 <img id="avatarButton" type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start" class="w-10 h-10 rounded-full cursor-pointer" src="./assest/pablo-de-la-fuente-aD3i5aWJUKM-unsplash.jpg" alt="User dropdown">
 
@@ -180,7 +180,7 @@ color: white;
     </div>
     <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="avatarButton">
       <li>
-        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+        <a onclick="dashboardPopup()" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
       </li>
       <li>
         <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
@@ -197,6 +197,22 @@ color: white;
 </div>
 
 </div>
+
+<!-- Dashboard -->
+
+<div class="dashboard-container" id="dashboard">
+  <div class="dashboard bg-gray-300 rounded-2xl">
+    <button class="close-btn" onclick="closeDashboard()">&times;</button>
+    <img src="./assest/user.png" alt="User Logo" class="user-logo"/>
+    <form>
+      <input class="inputss" type="text" placeholder="First Name" />
+      <input class="inputss" type="text" placeholder="Last Name" />
+      <input class="inputss" type="tel" placeholder="Phone Number" />
+      <input class="inputss" type="text" placeholder="E-mail" />
+    </form>
+  </div>
+</div>
+
 
 
 <!-- login page signup -->
@@ -253,7 +269,7 @@ color: white;
 
 
 <!-- scrolling -->
-    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel " id="carousel">
       <div class="carousel-inner ">
           <div class="carousel-item active ">
               <img src="./assest/slide1.jpg" alt="...">
@@ -266,6 +282,7 @@ color: white;
           </div>
           <div class="carousel-item">
               <img src="./assest/slider2.jpg" alt="...">
+
           </div>
           <div class="carousel-item">
               <img src="./assest/jugoslocos-i8JfQDc4Ha8-unsplash.jpg" alt="...">
@@ -279,6 +296,7 @@ color: white;
       <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
+
       </button>
   </div>
 
