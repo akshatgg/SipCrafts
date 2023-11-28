@@ -207,14 +207,14 @@ color: white;
     <button class="close-btn" onclick="closeDashboard()">&times;</button>
     <img src="./assest/user.png" alt="User Logo" class="user-logo"/>
     <form>
-      <input class="inputss" type="text" placeholder="First Name" />   
+      <!-- <input class="inputss" type="text" placeholder="First Name" />   
       <input class="inputss" type="text" placeholder="Last Name" />
       <input class="inputss" type="tel" placeholder="Phone Number" />
-      <input class="inputss" type="text" placeholder="E-mail" />
-      <p class="inputss" id="msg"></p>
-      <p class="inputss" id="msg"></p>
+      <input class="inputss" type="text" placeholder="E-mail" /> -->
+      <p class="inputss border-0" id="msg"></p>
+      <!-- <p class="inputss" id="greet"></p>
       <p class="inputss"  id="greet"></p>
-      <p class="inputss"   id="msg"></p>
+      <p class="inputss"   id="msg"></p> -->
 
     </form>
   </div>
@@ -400,16 +400,18 @@ function SignInUser(evt) {
   }
 
 
-
-let UserCreds=JSON.parse(sessionStorage.getItem("user-cred"))
+  
+let UserCreds=JSON.parse(sessionStorage.getItem("user-creds"))
 let UserInfo=JSON.parse(sessionStorage.getItem("user-info"))
 
 let MsgHead=document.getElementById('msg')
   let GreetHead=document.getElementById('greet')
   let SignoutBtn=document.getElementById('signoutbutton')
 
- MsgHead.innerText='user with email"${UserCreds.email}"logged in';
- GreetHead.innerText='welcome"${UserInfo.firstname+" "+UserInfo.lastname}"logged in';
+
+ MsgHead.innerText='Name:"{UserCreds.email}"logged in';
+ GreetHead.innerText='welcome ${UserInfo.firstname+ " " +UserInfo.lastname} logged in';
+
 
 let Signout=()=>{
   sessionStorage.removeItem("user-creds")
