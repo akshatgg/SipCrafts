@@ -182,6 +182,7 @@ color: white;
       <li>
         <a onclick="dashboardPopup()" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
       </li>
+      
       <li>
         <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
       </li>
@@ -334,7 +335,7 @@ color: white;
       import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js";
  
       const firebaseConfig = {
-        apiKey: "",
+        apiKey: "AIzaSyDvKcQXboatfSFYtlPNetdGwLOeS9T7Jk4",
         authDomain: "auth-4f3a1.firebaseapp.com",
         databaseURL:'https://auth-4f3a1-default-rtdb.firebaseio.com/',
         projectId: "auth-4f3a1",
@@ -343,6 +344,7 @@ color: white;
     appId: "1:718871430182:web:8166623958be0fa78f12e7",
     measurementId: "G-Q1LLP7LFS2"
 };
+
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app); // Change this line to use getFirestore
