@@ -18,6 +18,22 @@ body {
   height: 250px;
   transition: transform 0.2s;
 }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply the animation to the element you want to animate */
+.item .imag img,
+.item .imag {
+  animation: fadeInUp 0.5s ease-in-out;
+}
 
 .item .imag img:hover {
   transform: translate(0, -50px);
