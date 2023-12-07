@@ -209,17 +209,10 @@ a {
 
 .description .img {
   opacity: 0;
-  animation: fadeIn 0.5s ease-out;
+  animation: fadeIn 0.5s ease-out forwards;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+
 /* image size which is come inside the container when we hover */
 .contain .img img{
   margin-left: 40%;
@@ -258,3 +251,5 @@ a {
   animation: fadeIn 0.5s ease-out;
   /* Add other styling properties as needed */
 }
+
+
