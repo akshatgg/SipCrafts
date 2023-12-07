@@ -150,13 +150,10 @@
       />
 
       <ul
-        class="info grid grid-rows-1 grid-flow-col mt-8 col-start-11 col-span-2 self-center"
+        class="info grid grid-rows-1 grid-flow-col mt-8 col-start-11 col-span-2 self-center "
       >
         <li>
-          <a
-            href="./index.html"
-            class="des text-gray-300 text-2xl justify-center justify-self-center justify-content-center justify-items-center align-middle"
-            id="hov"
+          <a href="./index.html" class="des text-gray-300 text-2xl justify-center justify-self-center justify-content-center justify-items-center align-middle" id="hov"
             >Home</a
           >
         </li>
@@ -430,41 +427,44 @@
       profile.style.display = "none";
       signin.addEventListener("click", SignInUser);
 
-      function SignInUser(evt) {
-        evt.preventDefault();
+    
+function SignInUser(evt) {
+  evt.preventDefault();
 
-        signInWithEmailAndPassword(auth, email.value, password.value)
-          .then((credentials) => {
-            login = true;
-            updatelogin();
-            alert("User signed in successfully!");
+  signInWithEmailAndPassword(auth, email.value, password.value)
+    .then((credentials) => {
+      login = true;
+      updatelogin();
+      alert("User signed in successfully!");
 
-            const userRef = doc(db, "UsersAuthList", credentials.user.email);
-            getDoc(userRef).then((snapshot) => {
-              aps(); // Call the aps function after successful sign-
-              if (snapshot.exists()) {
-                sessionStorage.setItem(
-                  "user-info",
-                  JSON.stringify({
-                    firstname: snapshot.val().firstname,
-                    lastname: snapshot.val().lastname,
-                  })
-                );
-                sessionStorage.setItem(
-                  "user-creds",
-                  JSON.stringify(credentials.user.email)
-                );
-              }
-            });
-          })
-          .catch((error) => {
-            login = false;
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            console.error("Error signing in:", errorCode, errorMessage);
-            alert(`Error signing in: ${errorMessage}`);
-          });
-      }
+      const userRef = doc(db, "UsersAuthList", credentials.user.email);
+      aps(); // Call the aps function after successful sign-in
+      getDoc(userRef).then((snapshot) => {
+        if (snapshot.exists()) {
+          const userData = snapshot.data();
+    console.log("User data:", userData);
+          sessionStorage.setItem(
+            "user-info",
+            JSON.stringify({
+              firstname: snapshot.val().firstname,
+              lastname: snapshot.val().lastname,
+            })
+          );
+          sessionStorage.setItem(
+            "user-creds",
+            JSON.stringify(credentials.user.email)
+          );
+        }
+      });
+    })
+    .catch((error) => {
+      login = false;
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.error("Error signing in:", errorCode, errorMessage);
+      alert(`Error signing in: ${errorMessage}`);
+    });
+}
 
       let logi = document.querySelector("#logi");
       const updatelogin = () => {
@@ -475,28 +475,28 @@
         }
       };
 
-      function aps() {
-        const UserCreds = JSON.parse(sessionStorage.getItem("user-creds"));
-        const UserInfo = JSON.parse(sessionStorage.getItem("user-info"));
-        const MsgHead = document.getElementById("msg");
-        const GreetHead = document.getElementById("greet");
-        const SignoutBtn = document.getElementById("signoutbutton");
+      function aps(){
+      const UserCreds = JSON.parse(sessionStorage.getItem("user-creds"));
+const UserInfo = JSON.parse(sessionStorage.getItem("user-info"));
+const MsgHead = document.getElementById("msg");
+const GreetHead = document.getElementById("greet");
+const SignoutBtn = document.getElementById("signoutbutton");
 
-        // Use UserCreds directly, no need to access the email property
-        const userEmail = UserCreds;
-        console.log("User email:", userEmail);
-        // Add these lines to your script for debugging
-        console.log("Stored user-creds:", sessionStorage.getItem("user-creds"));
-        console.log(
-          "Parsed user-creds:",
-          JSON.parse(sessionStorage.getItem("user-creds"))
-        );
+// Use UserCreds directly, no need to access the email property
+const userEmail = UserCreds;
+console.log("User email:", userEmail);
+// Add these lines to your script for debugging
+console.log("Stored user-creds:", sessionStorage.getItem("user-creds"));
+console.log("Parsed user-creds:", JSON.parse(sessionStorage.getItem("user-creds")));
 
-        MsgHead.innerText = userEmail;
-        GreetHead.innerText = `${UserInfo.firstname} ${UserInfo.lastname}`;
-        console.log(credentials.user.email);
+MsgHead.innerText = userEmail;
+GreetHead.innerText = `${UserInfo.firstname} ${UserInfo.lastname}`;
+      console.log(credentials.user.email);
+
       }
 
+
+      
       // let Signout = () => {
       //   sessionStorage.removeItem("user-creds");
       //   sessionStorage.removeItem("user-info");

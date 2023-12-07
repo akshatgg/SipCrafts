@@ -207,7 +207,19 @@ a {
   animation-play-state: paused;
 }
 
+.description .img {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out;
+}
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /* image size which is come inside the container when we hover */
 .contain .img img{
   margin-left: 40%;
@@ -221,3 +233,28 @@ a {
   margin-top: 50px;
 }
 
+
+
+.item img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.item:hover img {
+  transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.item img {
+  animation: fadeIn 0.5s ease-out;
+  /* Add other styling properties as needed */
+}
