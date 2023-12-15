@@ -1,5 +1,6 @@
 *{
-    margin:0;
+    margin:0%;
+    padding: 0%;
 }
 
 
@@ -130,7 +131,12 @@ body {
 }
 
 
-
+.info{
+  transform: translateY(-10px);
+}
+.infos{
+  transform: translateY(-4px);
+}
 
 /* Dashboard */
 .dashboard-container {

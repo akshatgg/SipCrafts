@@ -18,6 +18,22 @@ body {
   height: 250px;
   transition: transform 0.2s;
 }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply the animation to the element you want to animate */
+.item .imag img,
+.item .imag {
+  animation: fadeInUp 0.5s ease-in-out;
+}
 
 .item .imag img:hover {
   transform: translate(0, -50px);
@@ -191,6 +207,11 @@ a {
   animation-play-state: paused;
 }
 
+.description .img {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
 
 /* image size which is come inside the container when we hover */
 .contain .img img{
@@ -204,4 +225,31 @@ a {
   color: #8b4bb6;
   margin-top: 50px;
 }
+
+
+
+.item img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.item:hover img {
+  transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.item img {
+  animation: fadeIn 0.5s ease-out;
+  /* Add other styling properties as needed */
+}
+
 

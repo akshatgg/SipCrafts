@@ -1,6 +1,5 @@
 const itemsPerPage = 6; // Number of items to display per page
 let currentPage = 1;
-
 function displayProducts(pageNumber) {
   const shopList = document.getElementById("shop");
   shopList.innerHTML = ""; // Clear the product list
@@ -18,17 +17,17 @@ function displayProducts(pageNumber) {
 
     // Create the product content
     const productContent = `
-    <div>
-      <div class="imag" id="image">
-        <img src="${product.img}" alt="${product.name}">
-      </div>
-      <div class="content">
-        <div class="title">${product.name}</div>
-        <div class="details">${product.content}</div>
-        <div class="price">Price: $${product.price}</div>
-        <button class="add" onclick="addCart('${product.id}','${product.img}','${product.name}','${product.price}')">Add to Cart</button>
-      </div>
-    </div>  
+      <div>
+        <div class="imag" id="image">
+          <img src="${product.img}" alt="${product.name}" class="img"> <!-- Add the 'img' class here -->
+        </div>
+        <div class="content">
+          <div class="title">${product.name}</div>
+          <div class="details">${product.content}</div>
+          <div class="price">Price: $${product.price}</div>
+          <button class="add" onclick="addCart('${product.id}','${product.img}','${product.name}','${product.price}')">Add to Cart</button>
+        </div>
+      </div>  
     `;
 
     productDiv.innerHTML = productContent;
