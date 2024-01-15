@@ -183,6 +183,7 @@
       </button>
 
       <!-- //dashbord// -->
+
       <div
         class="col-start-13 text-center place-self-center text-2xl"
         id="profile"
@@ -391,16 +392,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module">
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
-      import {
-        getFirestore,
-        doc,
-        getDoc,
-      } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-firestore.js";
-      import {
-        getAuth,
-        signInWithEmailAndPassword,
-      } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js";
+import { ref, get, onValue, getDatabase } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-database.js";
 
       const firebaseConfig = {
         apiKey: "AIzaSyDvKcQXboatfSFYtlPNetdGwLOeS9T7Jk4",
@@ -414,20 +408,18 @@
       };
 
       const app = initializeApp(firebaseConfig);
-      const auth = getAuth(app);
-      const db = getFirestore(app); // Change this line to use getFirestore
+const auth = getAuth(app);
 
-      let login = false;
-      let loginpopup = document.querySelector("#loginpopup");
-      let email = document.getElementById("email");
-      let password = document.getElementById("password");
-      const signin = document.querySelector("#signin");
-      let profile = document.querySelector("#profile");
+let login = false;
+let loginpopup = document.querySelector("#loginpopup");
+let email = document.getElementById("email");
+let password = document.getElementById("password");
+const signin = document.querySelector("#signin");
+let profile = document.querySelector("#profile");
 
-      profile.style.display = "none";
-      signin.addEventListener("click", SignInUser);
+profile.style.display = "none";
+signin.addEventListener("click", SignInUser);
 
-    
 function SignInUser(evt) {
   evt.preventDefault();
 
@@ -437,17 +429,17 @@ function SignInUser(evt) {
       updatelogin();
       alert("User signed in successfully!");
 
-      const userRef = doc(db, "UsersAuthList", credentials.user.email);
-      aps(); // Call the aps function after successful sign-in
-      getDoc(userRef).then((snapshot) => {
+      const userRef = ref(getDatabase(app), "UsersAuthList/" + credentials.user.uid);
+      onValue(userRef, (snapshot) => {
         if (snapshot.exists()) {
-          const userData = snapshot.data();
-    console.log("User data:", userData);
+          console.log("hi");
+          const userData = snapshot.val();
+          console.log("User data:", userData);
           sessionStorage.setItem(
             "user-info",
             JSON.stringify({
-              firstname: snapshot.val().firstname,
-              lastname: snapshot.val().lastname,
+              firstname: userData.firstname,
+              lastname: userData.lastname,
             })
           );
           sessionStorage.setItem(
@@ -455,6 +447,7 @@ function SignInUser(evt) {
             JSON.stringify(credentials.user.email)
           );
         }
+        aps(); // Call the aps function after successful sign-in
       });
     })
     .catch((error) => {
@@ -466,34 +459,28 @@ function SignInUser(evt) {
     });
 }
 
-      let logi = document.querySelector("#logi");
-      const updatelogin = () => {
-        if (login) {
-          loginpopup.style.display = "none";
-          profile.style.display = "block";
-          logi.style.display = "none";
-        }
-      };
+let logi = document.querySelector("#logi");
+const updatelogin = () => {
+  if (login) {
+    loginpopup.style.display = "none";
+    profile.style.display = "block";
+    logi.style.display = "none";
+  }
+};
 
-      function aps(){
-      const UserCreds = JSON.parse(sessionStorage.getItem("user-creds"));
-const UserInfo = JSON.parse(sessionStorage.getItem("user-info"));
-const MsgHead = document.getElementById("msg");
-const GreetHead = document.getElementById("greet");
-const SignoutBtn = document.getElementById("signoutbutton");
+function aps() {
+  const UserCreds = JSON.parse(sessionStorage.getItem("user-creds"));
+  const UserInfo = JSON.parse(sessionStorage.getItem("user-info"));
+  const MsgHead = document.getElementById("msg");
+  const GreetHead = document.getElementById("greet");
+  const SignoutBtn = document.getElementById("signoutbutton");
 
-// Use UserCreds directly, no need to access the email property
-const userEmail = UserCreds;
-console.log("User email:", userEmail);
-// Add these lines to your script for debugging
-console.log("Stored user-creds:", sessionStorage.getItem("user-creds"));
-console.log("Parsed user-creds:", JSON.parse(sessionStorage.getItem("user-creds")));
+  const userEmail = UserCreds;
+  console.log("User email:", userEmail);
 
-MsgHead.innerText = userEmail;
-GreetHead.innerText = `${UserInfo.firstname} ${UserInfo.lastname}`;
-      console.log(credentials.user.email);
-
-      }
+  MsgHead.innerText = userEmail;
+  GreetHead.innerText = `${UserInfo.firstname} ${UserInfo.lastname}`;
+}
 
 
       

@@ -347,8 +347,9 @@ set(ref(db, 'UsersAuthList/' + credentials.user.uid), {
       console.log(credentials);
       alert('User signed up successfully!');
     })
+
     .catch((error) => {
-    
+
       const errorCode = error.code;
       const errorMessage = error.message;
       console.error('Error signing up:', errorCode, errorMessage);
