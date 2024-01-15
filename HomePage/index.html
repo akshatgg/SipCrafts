@@ -196,6 +196,9 @@ color: white;
       <div class="field">
         <input autocomplete="on" placeholder="last Name" class="input-field" type="text" id="namel">
       </div>
+      <div class="field">
+        <input autocomplete="on" placeholder="Phone Number" class="input-field" type="number" id="numb">
+      </div>
      
       <div class="field">
       <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -206,7 +209,7 @@ color: white;
       1.148 1.503 1.148 1.572 0 2.57-1.415 2.57-3.643zm-7.177.704c0-1.197.54-1.907 1.456-1.907.93 0 1.524.738 1.524 1.907S8.308 
       9.84 7.371 9.84c-.895 0-1.442-.725-1.442-1.914z"></path>
       </svg>
-        <input autocomplete="on" placeholder="Username" class="input-field" type="text" id="email">
+        <input autocomplete="on" placeholder="Mail" class="input-field" type="text" id="email">
       </div>
       <div class="field">
       <svg class="input-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -333,6 +336,7 @@ color: white;
   let email = document.getElementById('email');
   let password = document.getElementById('password');
   let namel=document.querySelector('#namel')
+  let numb=document.querySelector('#numb')
 let login =false;
 
 let RegisterUser = evt => {
@@ -343,6 +347,8 @@ let RegisterUser = evt => {
 set(ref(db, 'UsersAuthList/' + credentials.user.uid), {
     firstname: namef.value,
     lastname: namel.value,
+    number:numb.value,
+
 });
       console.log(credentials);
       alert('User signed up successfully!');
