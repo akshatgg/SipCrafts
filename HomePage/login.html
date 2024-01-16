@@ -428,6 +428,7 @@ function SignInUser(evt) {
   signInWithEmailAndPassword(auth, email.value, password.value)
     .then((credentials) => {
       login = true;
+      localStorage.setItem('login', JSON.stringify(login));
       updatelogin();
       alert("User signed in successfully!");
 
@@ -460,6 +461,7 @@ function SignInUser(evt) {
     })
     .catch((error) => {
       login = false;
+      localStorage.setItem('login', JSON.stringify(login));
       const errorCode = error.code;
       const errorMessage = error.message;
       console.error("Error signing in:", errorCode, errorMessage);
@@ -484,7 +486,7 @@ function aps() {
   const GreetHead = document.getElementById("greet");
   const numb=document.getElementById("numb");
   const SignoutBtn = document.getElementById("signoutbutton");
-  const userEmail = UserCreds;
+    const userEmail = UserCreds;
   console.log("User email:", userEmail);
 
   MsgHead.innerText = userEmail;
@@ -495,11 +497,13 @@ function aps() {
 
 
       
-      let Signout = () => {
-        sessionStorage.removeItem("user-creds");
-        sessionStorage.removeItem("user-info");
-      };
+let Signout = () => {
+  console.log("Signout button clicked");  // Check if this log statement appears in the console
+  sessionStorage.removeItem("user-creds");
+  sessionStorage.removeItem("user-info");
+};
+
       SignoutBtn.addEventListener("click", Signout);
-    </script>
+          </script>
   </body>
 </html>
