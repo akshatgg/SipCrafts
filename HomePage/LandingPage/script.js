@@ -80,8 +80,8 @@ for (let i = 1; i <= 3; i++) {
 // Wrap your code in a DOMContentLoaded event listener
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 let shop = document.getElementById("shop");
-document.addEventListener("DOMContentLoaded", function() {
-  
+document.addEventListener("DOMContentLoaded", function () {
+
   // Assuming you have selected the "shop" element correctly
 
   // let generateshop = () => {
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // // Call generateshop to populate the "shop" element
   // generateshop();
-} );
+});
 
 
 let addCart = (id, img, name, price) => {
@@ -149,60 +149,67 @@ calculate();
 
 // Wrap your code in a DOMContentLoaded event listener
 // document.addEventListener("DOMContentLoaded", function () { 
-  // Your existing code
-  
-  // Function to handle hovering over a product image
-  function handleImageHover(product) {
-    let description = document.getElementById("descriptions");
-    const productImage = product.querySelector("img");
-  
-    productImage.addEventListener("mouseenter", () => {
-      const productId = product.getAttribute("id");
-      console.log(productId);
-  
-      // Find the matching product in the shopItems array
-      let productData = null;
-      for (let i = 0; i < shopItems.length; i++) {
-        if (shopItems[i].id === parseInt(productId)) {
-          productData = shopItems[i];
-          break;
-        }
+// Your existing code
+
+// Function to handle hovering over a product image
+function handleImageHover(product) {
+  let description = document.getElementById("descriptions");
+  const productImage = product.querySelector("img");
+
+  productImage.addEventListener("mouseenter", () => {
+    const productId = product.getAttribute("id");
+    console.log(productId);
+
+    // Find the matching product in the shopItems array
+    let productData = null;
+    for (let i = 0; i < shopItems.length; i++) {
+      if (shopItems[i].id === parseInt(productId)) {
+        productData = shopItems[i];
+        break;
       }
-  
-      if (productData) {
-        description.innerHTML = `
-          <div class="contain">
-            <div class="img ">
-              <img src="${productData.img}" alt="">
-            </div>
-            <div class='cont'>
-            "${productData.making}"
-            </div>
-          </div>
-        `;
-      }
-    });
-  
-    productImage.addEventListener("mouseleave", () => {
-      description.innerHTML = ''; // Clear the description when the mouse leaves
-    });
-  }
-  
-  // Find all product items and attach hover behavior
-  const productItems = document.querySelectorAll(".item");
-  productItems.forEach((product) => {
-    handleImageHover(product);
+    }
+
+    if (productData) {
+      description.innerHTML = `
+        <div class="contain">
+      <div class="img ">
+        <img src="${productData.img}" alt="">
+      </div>
+      <div class="mt-[50px] text-[50px] font-medium font-serif text-purple-700 ">
+        ${productData.name}
+      </div>
+      <div class='cont'>
+        <p class="text-[30px] mb-[20px]"><u>Ingredients</u></p>
+        ${productData.ingredients.split('\n').map(line => `<p>${line}</p>`).join('')}
+      </div>
+    </div>
+      `;
+
+
+
+    }
   });
-  
+
+  productImage.addEventListener("mouseleave", () => {
+    description.innerHTML = ''; // Clear the description when the mouse leaves
+  });
+}
+
+// Find all product items and attach hover behavior
+const productItems = document.querySelectorAll(".item");
+productItems.forEach((product) => {
+  handleImageHover(product);
+});
+
 
 
 
 
 //adding + and - symbol to increase your quantity //
-let quantity=()=>{
-  let cart=document.querySelector(".add")
-  cart.addEventListener('click',()=>{
-    
+let quantity = () => {
+  let cart = document.querySelector(".add")
+  cart.addEventListener('click', () => {
+
   })
 }
 

@@ -5,7 +5,7 @@ console.log(process.env);
 function Pay() {
     
     
-    window.location.href =process.env.link
+    window.location.href =""
     
 }
 Pay()

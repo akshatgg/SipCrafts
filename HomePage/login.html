@@ -412,6 +412,7 @@ import { ref, get, onValue, getDatabase } from "https://www.gstatic.com/firebase
 const auth = getAuth(app);
 
 let login = false;
+localStorage.setItem('login', JSON.stringify(login));
 let loginpopup = document.querySelector("#loginpopup");
 let email = document.getElementById("email");
 let password = document.getElementById("password");
@@ -494,11 +495,11 @@ function aps() {
 
 
       
-      // let Signout = () => {
-      //   sessionStorage.removeItem("user-creds");
-      //   sessionStorage.removeItem("user-info");
-      // };
-      // SignoutBtn.addEventListener("click", Signout);
+      let Signout = () => {
+        sessionStorage.removeItem("user-creds");
+        sessionStorage.removeItem("user-info");
+      };
+      SignoutBtn.addEventListener("click", Signout);
     </script>
   </body>
 </html>
