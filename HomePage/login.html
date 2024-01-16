@@ -41,7 +41,7 @@
       .form:hover {
         transform: scale(1.05);
         border: 1px solid black;
-        border-image-source: linear-gradient(45deg, #f40109, #6302ff);
+        /* border-image-source: linear-gradient(45deg, #f40109, #6302ff); */
         border-image-slice: 1;
         border-width: 2px;
         border-image-width: 1;
@@ -257,9 +257,9 @@
       <input class="inputss" type="text" placeholder="Last Name" />
       <input class="inputss" type="tel" placeholder="Phone Number" />
       <input class="inputss" type="text" placeholder="E-mail" /> -->
-          <p class="inputss" id="msg"></p>
-          <p class="inputss" id="greet"></p>
-          <p class="inputss" id="numb"></p>
+      <div class="flex"><p class="inputss">Name:</p><p class="inputss" id="greet"></p></div>
+      <div class="flex"><p class="inputss">Mail:</p><p class="inputss" id="msg"></p></div>
+      <div class="flex"><p class="inputss">Contact:</p><p class="inputss" id="numb"></p></div>
         </form>
       </div>
     </div>
