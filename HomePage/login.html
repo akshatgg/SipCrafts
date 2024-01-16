@@ -41,7 +41,7 @@
       .form:hover {
         transform: scale(1.05);
         border: 1px solid black;
-        border-image-source: linear-gradient(45deg, #f40109, #6302ff);
+        /* border-image-source: linear-gradient(45deg, #f40109, #6302ff); */
         border-image-slice: 1;
         border-width: 2px;
         border-image-width: 1;
@@ -257,9 +257,9 @@
       <input class="inputss" type="text" placeholder="Last Name" />
       <input class="inputss" type="tel" placeholder="Phone Number" />
       <input class="inputss" type="text" placeholder="E-mail" /> -->
-          <p class="inputss" id="msg"></p>
-          <p class="inputss" id="greet"></p>
-          <p class="inputss" id="numb"></p>
+      <div class="flex"><p class="inputss">Name:</p><p class="inputss" id="greet"></p></div>
+      <div class="flex"><p class="inputss">Mail:</p><p class="inputss" id="msg"></p></div>
+      <div class="flex"><p class="inputss">Contact:</p><p class="inputss" id="numb"></p></div>
         </form>
       </div>
     </div>
@@ -412,6 +412,7 @@ import { ref, get, onValue, getDatabase } from "https://www.gstatic.com/firebase
 const auth = getAuth(app);
 
 let login = false;
+localStorage.setItem('login', JSON.stringify(login));
 let loginpopup = document.querySelector("#loginpopup");
 let email = document.getElementById("email");
 let password = document.getElementById("password");
@@ -427,6 +428,7 @@ function SignInUser(evt) {
   signInWithEmailAndPassword(auth, email.value, password.value)
     .then((credentials) => {
       login = true;
+      localStorage.setItem('login', JSON.stringify(login));
       updatelogin();
       alert("User signed in successfully!");
 
@@ -459,6 +461,7 @@ function SignInUser(evt) {
     })
     .catch((error) => {
       login = false;
+      localStorage.setItem('login', JSON.stringify(login));
       const errorCode = error.code;
       const errorMessage = error.message;
       console.error("Error signing in:", errorCode, errorMessage);
@@ -483,7 +486,7 @@ function aps() {
   const GreetHead = document.getElementById("greet");
   const numb=document.getElementById("numb");
   const SignoutBtn = document.getElementById("signoutbutton");
-  const userEmail = UserCreds;
+    const userEmail = UserCreds;
   console.log("User email:", userEmail);
 
   MsgHead.innerText = userEmail;
@@ -494,11 +497,13 @@ function aps() {
 
 
       
-      // let Signout = () => {
-      //   sessionStorage.removeItem("user-creds");
-      //   sessionStorage.removeItem("user-info");
-      // };
-      // SignoutBtn.addEventListener("click", Signout);
-    </script>
+let Signout = () => {
+  console.log("Signout button clicked");  // Check if this log statement appears in the console
+  sessionStorage.removeItem("user-creds");
+  sessionStorage.removeItem("user-info");
+};
+
+      SignoutBtn.addEventListener("click", Signout);
+          </script>
   </body>
 </html>

@@ -5,15 +5,22 @@ let shopItems =[
         "price":"550" ,
        "content":"lorem 3fqfg gks sk gs g+s sjbsf sf sefb e gs" , 
        "img":"./assest/Negroni.png",
-       "making":"Click here for:KIET ERP Portal KIET Web Site KIET Email Office o365 Login For any type of IT services please Contact us: Email- itsupport@kiet.edu, Helpline and whatsapp No:8744097774 (Please ignore calls on personal mobile number)",
+       "ingredients": `1=>  1 oz (30 ml) Gin 
+       2=>  1 oz (30 ml) Campari 
+       3=>  1 oz (30 ml) Sweet Vermouth 
+       4=>  Orange twist or slice for garnish`,
+       
+       
     },
     {
         "id":2 ,
         "name" :"Blue lagoon" ,
         "price":"450" ,
        "content":"lorem 3fqfg gks sk gs gs sjbsf sf sef djjw  dn" , 
-       "making":"* first",
        "img":"./assest/blue lagoon.png",
+       "ingredients": `1=>  1 oz (30 ml) Vodka
+      2=>  1 oz (30 ml) Blue Curacao
+      3=>  Lemonade`
 
     },
     {
@@ -22,7 +29,11 @@ let shopItems =[
         "price":"680" ,
        "content":"lorem 3fqfg gks sk gs gs sjbsf sf sef djjw  dn" , 
        "img":"./assest/Boulevardier.png",
-       "making":"* first",
+       "ingredients": `1=>  1.5 oz (45 ml) Bourbon
+       2=>  1 oz (30 ml) Campari
+       3=>  1 oz (30 ml) Sweet Vermouth
+       4=>  Orange twist for garnish`
+
     },
     {
         "id":4 ,
@@ -30,7 +41,11 @@ let shopItems =[
         "price":"700" ,
        "content":"lorem 3fqfg gks sk gs gs sjbsf sf sef djjw  dn" , 
        "img":"./assest/Espresso Martini.png",
-       "making":"* first",
+       "ingredients":`1=>  1 oz (30 ml) Vodka
+       2=>  1 oz (30 ml) Coffee Liqueur (e.g., Kahlúa)
+       3=>  1 oz (30 ml) Freshly Brewed Espresso
+       4=>  1/2 oz (15 ml) Simple Syrup (adjust to taste)
+       5=>  Ice`
     },
     {
         "id":5 ,
@@ -38,7 +53,10 @@ let shopItems =[
         "price":"600" ,
        "content":"lorem 3fqfg gks sk gs gs sjbsf sf sef djjw  dn" , 
        "img":"./assest/Gimlet.png",
-       "making":"* first",
+       "ingredients":`1=>  2 oz (60 ml) Gin
+       2=>  3/4 oz (22.5 ml) Simple Syrup
+       3=>  3/4 oz (22.5 ml) Lime Juice
+       4=>  Ice `
     },
     {
         "id":6 ,
@@ -46,7 +64,10 @@ let shopItems =[
         "price":"550" ,
        "content":"lorem 3fqfg gks sk gs gs sjbsf sf sef djjw  dn" , 
        "img":"./assest/luckin.png",
-       "making":"* first",
+       "ingredients":`1=>  2 oz (60 ml) Gin
+       2=>  3/4 oz (22.5 ml) Simple Syrup
+       3=>  3/4 oz (22.5 ml) Lime Juice
+       4=>  Ice`
     },
     {
         "id":7 ,
@@ -54,7 +75,10 @@ let shopItems =[
         "price":"650" ,
        "content":"lorem 3fqfg gks sk gs gs sjbsf sf sef djjw  dn" , 
        "img":"./assest/Mai Tai.png",
-       "making":"* first",
+       "ingredients":`1=>  2 oz (60 ml) Gin
+       2=>  3/4 oz (22.5 ml) Simple Syrup
+       3=>  3/4 oz (22.5 ml) Lime Juice
+       4=>  Ice`
        
     },
     {
@@ -63,7 +87,10 @@ let shopItems =[
         "price":"820" ,
        "content":"lorem 3fqfg gks sk gs gs sjbsf sf sef djjw  dn" , 
        "img":"./assest/Mimosa.png",
-       "making":"* first",
+       "ingredients":`1=>  2 oz (60 ml) Gin
+       2=>  3/4 oz (22.5 ml) Simple Syrup
+       3=>  3/4 oz (22.5 ml) Lime Juice
+       4=>  Ice`
     },
     {
         "id":9 ,
@@ -71,7 +98,10 @@ let shopItems =[
         "price":"340" ,
        "content":"lorem 3fqfg gks sk gs gs sjbsf sf sef djjw  dn" , 
        "img":"./assest/Mojito.png",
-       "making":"* first",
+       "ingredients":`1=>  2 oz (60 ml) Gin
+       2=>  3/4 oz (22.5 ml) Simple Syrup
+       3=>  3/4 oz (22.5 ml) Lime Juice
+       4=>  Ice`
     },
     {
         "id": 10,
@@ -79,7 +109,10 @@ let shopItems =[
         "price":"120" ,
        "content":"lorem 3fqfg gks sk gs gs sjbsf sf sef djjw  dn" , 
        "img":"./assest/Orange.png",
-       "making":"* first",
+       "ingredients":`1=>  2 oz (60 ml) Gin
+       2=>  3/4 oz (22.5 ml) Simple Syrup
+       3=>  3/4 oz (22.5 ml) Lime Juice
+       4=>  Ice`
     },
     {
         "id":11 ,
@@ -87,7 +120,10 @@ let shopItems =[
         "price":"340" ,
        "content":"lorem 3fqfg gks sk gs gs sjbsf sf sef djjw  dn" , 
        "img":"./assest/sangria.png",
-       "making":"* first",
+       "ingredients":`1=>  2 oz (60 ml) Gin
+       2=>  3/4 oz (22.5 ml) Simple Syrup
+       3=>  3/4 oz (22.5 ml) Lime Juice
+       4=>  Ice`
     },
     {
         "id": 12,
@@ -95,7 +131,10 @@ let shopItems =[
         "price":"200" ,
        "content":"lorem 3fqfg gks sk gs gs sjbsf sf sef djjw  dn" , 
        "img":"./assest/Sarec.png",
-       "making":"* first",
+       "ingredients":`1=>  2 oz (60 ml) Gin
+       2=>  3/4 oz (22.5 ml) Simple Syrup
+       3=>  3/4 oz (22.5 ml) Lime Juice
+       4=>  Ice`
     },
     {
         "id": 13,
@@ -103,7 +142,10 @@ let shopItems =[
         "price":"240" ,
        "content":"lorem 3fqfg gks sk gs gs sjbsf sf sef djjw  dn" , 
        "img":"./assest/sangria.png",
-       "making":"* first",
+       "ingredients":`1=>  2 oz (60 ml) Gin
+       2=>  3/4 oz (22.5 ml) Simple Syrup
+       3=>  3/4 oz (22.5 ml) Lime Juice
+       4=>  Ice`
     },
     {
         "id": 14,
@@ -111,7 +153,10 @@ let shopItems =[
         "price":"2000" ,
        "content":"lorem 3fqfg gks sk gs gs sjbsf sf sef djjw  dn" , 
        "img":"./assest/White Russian.png",
-       "making":"* first",
+       "ingredients":`1=>  2 oz (60 ml) Gin
+       2=>  3/4 oz (22.5 ml) Simple Syrup
+       3=>  3/4 oz (22.5 ml) Lime Juice
+       4=>  Ice`
     },
     {
         "id": 15,
@@ -119,7 +164,10 @@ let shopItems =[
         "price":"3000" ,
        "content":"lorem 3fqfg gks sk gs gs sjbsf sf sef djjw  dn" , 
        "img":"./assest/Belaire.png",
-       "making":"* first",
+       "ingredients":`1=>  2 oz (60 ml) Gin
+       2=>  3/4 oz (22.5 ml) Simple Syrup
+       3=>  3/4 oz (22.5 ml) Lime Juice
+       4=>  Ice`
     },
     {
         "id": 16,
@@ -127,7 +175,10 @@ let shopItems =[
         "price":"200" ,
        "content":"lorem 3fqfg gks sk gs gs sjbsf sf sef djjw  dn" , 
        "img":"./assest/Mojitoo.png",
-       "making":"* first",
+       "ingredients":`1=>  2 oz (60 ml) Gin
+       2=>  3/4 oz (22.5 ml) Simple Syrup
+       3=>  3/4 oz (22.5 ml) Lime Juice
+       4=>  Ice`
 
     },
     {
@@ -136,7 +187,10 @@ let shopItems =[
         "price":"200" ,
        "content":"lorem 3fqfg gks sk gs gs sjbsf sf sef djjw  dn" , 
        "img":"./assest/luckin.png",
-       "making":"* first",
+       "ingredients":`1=>  2 oz (60 ml) Gin
+       2=>  3/4 oz (22.5 ml) Simple Syrup
+       3=>  3/4 oz (22.5 ml) Lime Juice
+       4=>  Ice`
     },
     {
         "id": 18,
@@ -144,7 +198,10 @@ let shopItems =[
         "price":"300" ,
        "content":"lorem 3fqfg gks sk gs gs sjbsf sf sef djjw  dn" , 
        "img":"./assest/sangria.png",
-       "making":"* first",
+       "ingredients":`1=>  2 oz (60 ml) Gin
+       2=>  3/4 oz (22.5 ml) Simple Syrup
+       3=>  3/4 oz (22.5 ml) Lime Juice
+       4=>  Ice`
     },
     
     ]
