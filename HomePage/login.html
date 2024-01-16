@@ -257,8 +257,9 @@
       <input class="inputss" type="text" placeholder="Last Name" />
       <input class="inputss" type="tel" placeholder="Phone Number" />
       <input class="inputss" type="text" placeholder="E-mail" /> -->
-          <p class="inputss border-0" id="msg"></p>
+          <p class="inputss" id="msg"></p>
           <p class="inputss" id="greet"></p>
+          <p class="inputss" id="numb"></p>
         </form>
       </div>
     </div>
@@ -446,6 +447,12 @@ function SignInUser(evt) {
             "user-creds",
             JSON.stringify(credentials.user.email)
           );
+          sessionStorage.setItem(
+            "user-phone",
+            JSON.stringify({
+              number:userData.number,
+            })
+          )
         }
         aps(); // Call the aps function after successful sign-in
       });
@@ -471,15 +478,18 @@ const updatelogin = () => {
 function aps() {
   const UserCreds = JSON.parse(sessionStorage.getItem("user-creds"));
   const UserInfo = JSON.parse(sessionStorage.getItem("user-info"));
+  const UserPhone=JSON.parse(sessionStorage.getItem("user-phone"));
   const MsgHead = document.getElementById("msg");
   const GreetHead = document.getElementById("greet");
+  const numb=document.getElementById("numb");
   const SignoutBtn = document.getElementById("signoutbutton");
-
   const userEmail = UserCreds;
   console.log("User email:", userEmail);
 
   MsgHead.innerText = userEmail;
   GreetHead.innerText = `${UserInfo.firstname} ${UserInfo.lastname}`;
+  numb.innerText=`${UserPhone.number}`;
+
 }
 
 
