@@ -11,7 +11,7 @@ function closepopup() {
 // popup.style.display = 'none';
 
 
-// window.addEventListener('load', showpopup);
+window.addEventListener('load', showpopup);
 
 
 
