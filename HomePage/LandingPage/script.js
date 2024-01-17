@@ -24,7 +24,7 @@ function displayProducts(pageNumber) {
         <div class="content">
           <div class="title">${product.name}</div>
           <div class="details">${product.content}</div>
-          <div class="price">Price: $${product.price}</div>
+          <div class="price">Price: ${product.price}</div>
           <button class="add" onclick="addCart('${product.id}','${product.img}','${product.name}','${product.price}')">Add to Cart</button>
         </div>
       </div>  
@@ -175,7 +175,7 @@ function handleImageHover(product) {
       <div class="img ">
         <img src="${productData.img}" alt="">
       </div>
-      <div class="mt-[50px] text-[50px] font-medium font-serif text-purple-700 ">
+      <div class="mt-[50px] text-[50px] font-medium font-serif text-white ">
         ${productData.name}
       </div>
       <div class='cont'>

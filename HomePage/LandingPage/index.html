@@ -25,7 +25,7 @@
 
 
   </head>
-  <body class="overflow-x-hidden min-h-[200vh]">
+  <body class="overflow-x-hidden min-h-[200vh] h-screen w-full bg-gradient-to-b from-black via-black to-gray-800">
 
     <!-- navbar -->
     <div class="grid grid-rows-1 grid-cols-12 text-center ">
@@ -33,24 +33,24 @@
       src="../assest/WhatsApp Image 2023-09-18 at 11.30.26 PM.jpeg"
       class=" h-12 col-start-1 col-span-2 self-center"
       />
-      <ul class=" col-start-8 col-span-3  grid grid-rows-1 grid-flow-col  text-black items-center">
-        <li><a href="../index.html" class="des text-2xl place-content-center  hover:text-white">Home</a></li>
-        <li><a href="./index.html" class="des text-2xl text-center  hover:text-white">Products</a></li>
+      <ul class=" col-start-8 col-span-3  grid grid-rows-1 grid-flow-col  text-white items-center">
+        <li><a href="../index.html" class="des text-2xl place-content-center ">Home</a></li>
+        <li><a href="./index.html" class="des text-2xl text-center  ">Products</a></li>
         <li>
-          <a href="../Contact/index.html" class="des text-2xl text-center  hover:text-white">Contact</a>
+          <a href="../Contact/index.html" class="des text-2xl text-center  ">Contact</a>
         </li>
-        <li><a href="../FAQs/index.html" class="des text-2xl text-center  hover:text-white  ">FAQs</a></li>
+        <li><a href="../FAQs/index.html" class="des text-2xl text-center    ">FAQs</a></li>
       </ul>
       
       <button
       onclick="window.location.href='./Cart.html';"
       
-        class="cart col-start-11 text-lg bg-white mt-4 h-10 w-10 hover:bg-black hover:text-white self-center justify-center justify-items-center justify-self-center "
+        class="cart col-start-11 text-lg  mt-4 h-10 w-10  text-white self-center justify-center justify-items-center justify-self-center "
         
       >
       <i class="fa-solid fa-cart-arrow-down fa-2xl"></i>
     </button>
-    <div class="count col-start-11 translate-y-[-190%] translate-x-[12%] text-2xl  rounded-2xl font-extrabold " id="cart_count">0</div>
+    <div class="count col-start-11 translate-y-[-190%] text-white translate-x-[12%] text-2xl  rounded-2xl font-extrabold " id="cart_count">0</div>
     <button class="btn col-start-12 row-start-1 bg-white w-16 h-10 mt-5 text-2xl rounded-lg hover:bg-black hover:text-white font-extrabold " onclick="showPopup()">Login</button>
   </div>
      

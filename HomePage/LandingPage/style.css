@@ -1,11 +1,10 @@
 
 body {
-  background-image: linear-gradient(to top right, #cc64a2, #5c3075);
   font-family: "Poppins", sans-serif;
 }
 
 .details-box {
-  background-color: #d69ad2;
+  background-color: #222222 ;
 }
 
 .list {
@@ -42,7 +41,7 @@ body {
 .item .imag {
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(to top right, #d89cd1, #d499d4);
+  background-color: #222222;
   border-radius: 20px;
 }
 
@@ -59,7 +58,7 @@ body {
 
 .add {
 
-  background-color:#db96db;
+  background-color:#222222;
 
   border-radius: 40px;
   /* margin-left: 70px; */
@@ -81,7 +80,6 @@ body {
 .add:hover {
   transform: scale(1.1);
   opacity: 2;
-  color: rgb(156, 34, 26);
 }
 .content {
   background-color: #ffffff26;
@@ -187,7 +185,7 @@ a {
   align-items: center;
 }
 .footer {
-  background-color: #371b3d;
+  background-color: #1A222E;
   color: #fff;
 
   margin-top: 410px;
@@ -222,7 +220,7 @@ a {
 .cont{
   font-size: x-large;
   font-weight: 800;
-  color: #8b4bb6;
+  color: white;
   margin-top: 50px;
 }
 
