@@ -24,7 +24,7 @@ function displayProducts(pageNumber) {
         <div class="content">
           <div class="title">${product.name}</div>
           <div class="details">${product.content}</div>
-          <div class="price">Price: ${product.price}</div>
+          <div class="price">Price: &#x20B9;${product.price}</div>
           <button class="add" onclick="addCart('${product.id}','${product.img}','${product.name}','${product.price}')">Add to Cart</button>
         </div>
       </div>  
