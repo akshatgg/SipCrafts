@@ -421,6 +421,9 @@ const getLoginStatus = () => {
   return JSON.parse(sessionStorage.getItem('login'));
 };
 
+
+
+
 // Function to update the UI based on login status
 const updatelogin = () => {
   let loginS = JSON.parse(sessionStorage.getItem('login'));
@@ -430,6 +433,7 @@ const updatelogin = () => {
     profile.style.display = "block";
     logi.style.display = "none";
     aps()
+
   } else {
     // Your code for when login is false
     console.log('User is not logged in.');
@@ -462,7 +466,6 @@ signin.addEventListener("click", SignInUser);
 
 function SignInUser(evt) {
   evt.preventDefault();
-
   signInWithEmailAndPassword(auth, email.value, password.value)
     .then((credentials) => {
       sessionStorage.setItem('login', JSON.stringify(true));
