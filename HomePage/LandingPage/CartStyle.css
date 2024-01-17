@@ -4,7 +4,6 @@
 }
 
 body{
-    background-image: linear-gradient(to top right,#CC64A2,#5c3075);
     min-height: 150vh;
     font-family: 'Poppins', sans-serif;
 }
@@ -23,6 +22,7 @@ body{
 .des {
     position: relative;
     list-style: none; /* Remove default list bullet */
+    color: white;
     
 }
 
@@ -61,8 +61,8 @@ body{
 display: flex;
 justify-content: space-around;
 align-items: center;
-border: 2px solid #e4bbf2;
-background-color: #d69ad2;
+/* border: 2px solid white; */
+background-color: #222222;
 margin-left: 20px;
 margin-right: 20px;
 border-radius: 20px;
@@ -75,7 +75,7 @@ img{
 
 p{
     font-size: 25px;
-    color: #070707;
+    color: white;
     font-weight: 900;
 }
 .rmv_btn{
@@ -84,7 +84,9 @@ p{
     padding-left: 30px;
     padding-right:30px;
     font-size: 20px;
-    background-color: #887b8f;
+    background-color: #EF4444;
+    color: white;
+    font-weight: 900;
     border-radius: 20px;
     transition: transform 0.5s; 
     opacity: 0.8; /* Adjust the opacity value (0.7) as needed (0 is completely transparent, 1 is fully opaque) */
@@ -100,12 +102,13 @@ p{
 
 
 /* style to the amount you are going to be paid */
-/* .show_total_amount{
-    margin-top: 150px;
-    margin-left: 900px;
-    font-size: 30px;
-    font-weight:900;
+.show_total_amount{
+  background-color: #222222;
+  color: #ddd6d6;
 
-} */
+}
+.ButtonToBuy{
+
+}
 /* Button styling */
 

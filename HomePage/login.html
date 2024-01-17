@@ -153,7 +153,7 @@
         class="info grid grid-rows-1 grid-flow-col mt-8 col-start-11 col-span-2 self-center "
       >
         <li>
-          <a href="./index.html" class="des text-gray-300 text-2xl justify-center justify-self-center justify-content-center justify-items-center align-middle" id="hov"
+          <a href="./login.html" class="des text-gray-300 text-2xl justify-center justify-self-center justify-content-center justify-items-center align-middle" id="hov"
             >Home</a
           >
         </li>
@@ -408,16 +408,54 @@ import { ref, get, onValue, getDatabase } from "https://www.gstatic.com/firebase
         measurementId: "G-Q1LLP7LFS2",
       };
 
-      const app = initializeApp(firebaseConfig);
+
+  
+
+
+/// Function to set login status in sessionStorage
+const setLoginStatus = (status) => {
+  sessionStorage.setItem('login', JSON.stringify(status));
+};
+
+// Function to get login status from sessionStorage
+const getLoginStatus = () => {
+  return JSON.parse(sessionStorage.getItem('login'));
+};
+
+// Function to update the UI based on login status
+const updatelogin = () => {
+  let loginS = JSON.parse(sessionStorage.getItem('login'));
+  if (loginS) {
+    console.log("user log in");
+    loginpopup.style.display = "none";
+    profile.style.display = "block";
+    logi.style.display = "none";
+  } else {
+    // Your code for when login is false
+    console.log('User is not logged in.');
+    loginpopup.style.display = "block";
+    profile.style.display = "none";
+    logi.style.display = "block";
+  }
+};
+
+// Call updatelogin when the page loads to update the UI
+window.addEventListener('load', updatelogin);
+
+const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-let login = false;
-localStorage.setItem('login', JSON.stringify(login));
+// Set login status to false if not already set
+if (!getLoginStatus()) {
+  sessionStorage.setItem('login', JSON.stringify(false));
+}
+aps()
 let loginpopup = document.querySelector("#loginpopup");
 let email = document.getElementById("email");
 let password = document.getElementById("password");
 const signin = document.querySelector("#signin");
 let profile = document.querySelector("#profile");
+let SignoutBtn = document.querySelector("#signoutbutton");
 
 profile.style.display = "none";
 signin.addEventListener("click", SignInUser);
@@ -427,17 +465,14 @@ function SignInUser(evt) {
 
   signInWithEmailAndPassword(auth, email.value, password.value)
     .then((credentials) => {
-      login = true;
-      localStorage.setItem('login', JSON.stringify(login));
+      sessionStorage.setItem('login', JSON.stringify(true));
       updatelogin();
       alert("User signed in successfully!");
 
       const userRef = ref(getDatabase(app), "UsersAuthList/" + credentials.user.uid);
       onValue(userRef, (snapshot) => {
         if (snapshot.exists()) {
-          console.log("hi");
           const userData = snapshot.val();
-          console.log("User data:", userData);
           sessionStorage.setItem(
             "user-info",
             JSON.stringify({
@@ -452,16 +487,15 @@ function SignInUser(evt) {
           sessionStorage.setItem(
             "user-phone",
             JSON.stringify({
-              number:userData.number,
+              number: userData.number,
             })
-          )
+          );
         }
         aps(); // Call the aps function after successful sign-in
       });
     })
     .catch((error) => {
-      login = false;
-      localStorage.setItem('login', JSON.stringify(login));
+      sessionStorage.setItem('login', JSON.stringify(false));
       const errorCode = error.code;
       const errorMessage = error.message;
       console.error("Error signing in:", errorCode, errorMessage);
@@ -469,41 +503,32 @@ function SignInUser(evt) {
     });
 }
 
-let logi = document.querySelector("#logi");
-const updatelogin = () => {
-  if (login) {
-    loginpopup.style.display = "none";
-    profile.style.display = "block";
-    logi.style.display = "none";
-  }
-};
-
 function aps() {
   const UserCreds = JSON.parse(sessionStorage.getItem("user-creds"));
   const UserInfo = JSON.parse(sessionStorage.getItem("user-info"));
-  const UserPhone=JSON.parse(sessionStorage.getItem("user-phone"));
+  const UserPhone = JSON.parse(sessionStorage.getItem("user-phone"));
   const MsgHead = document.getElementById("msg");
   const GreetHead = document.getElementById("greet");
-  const numb=document.getElementById("numb");
-  const SignoutBtn = document.getElementById("signoutbutton");
-    const userEmail = UserCreds;
+  const numb = document.getElementById("numb");
+
+  const userEmail = UserCreds;
   console.log("User email:", userEmail);
 
   MsgHead.innerText = userEmail;
   GreetHead.innerText = `${UserInfo.firstname} ${UserInfo.lastname}`;
-  numb.innerText=`${UserPhone.number}`;
-
+  numb.innerText = `${UserPhone.number}`;
 }
 
-
-      
 let Signout = () => {
-  console.log("Signout button clicked");  // Check if this log statement appears in the console
-  sessionStorage.removeItem("user-creds");
-  sessionStorage.removeItem("user-info");
+  console.log("Signout button clicked");
+  sessionStorage.setItem('login', JSON.stringify(false));
+  updatelogin(); // Update the UI based on the new login status
 };
 
-      SignoutBtn.addEventListener("click", Signout);
+SignoutBtn.addEventListener("click", Signout);
+
+
+
           </script>
   </body>
 </html>

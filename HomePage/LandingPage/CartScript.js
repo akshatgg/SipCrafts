@@ -20,7 +20,7 @@ let generateCart = () => {
      <div class='cart-items'>
      <img src='${img}' alt='' />
      </div>
-     <p>${price}</p>
+     <p>&#x20B9;${price}</p>
      <button class="rmv_btn" onclick="remove_from_Cart(${id})">Remove</button>
      </div>
      
