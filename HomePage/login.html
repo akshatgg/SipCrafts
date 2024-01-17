@@ -411,8 +411,7 @@ import { ref, get, onValue, getDatabase } from "https://www.gstatic.com/firebase
 
   
 
-
-/// Function to set login status in sessionStorage
+// Function to set login status in sessionStorage
 const setLoginStatus = (status) => {
   sessionStorage.setItem('login', JSON.stringify(status));
 };
@@ -449,7 +448,7 @@ const auth = getAuth(app);
 if (!getLoginStatus()) {
   sessionStorage.setItem('login', JSON.stringify(false));
 }
-aps()
+
 let loginpopup = document.querySelector("#loginpopup");
 let email = document.getElementById("email");
 let password = document.getElementById("password");
@@ -526,7 +525,6 @@ let Signout = () => {
 };
 
 SignoutBtn.addEventListener("click", Signout);
-
 
 
           </script>
